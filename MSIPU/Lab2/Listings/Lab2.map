@@ -16,10 +16,9 @@ Image Symbol Table
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
     1.s                                      0x00000000   Number         0  1.o ABSOLUTE
-    program                                  0x08000000   Section      312  1.o(program)
+    program                                  0x08000000   Section      280  1.o(program)
     reset                                    0x08000000   Section        0  1.o(reset)
     start                                    0x08000009   Thumb Code     0  1.o(program)
-    tab                                      0x080000f8   Data           8  1.o(program)
     stack                                    0x20000000   Section     1024  1.o(stack)
     stack_top                                0x20000400   Data           0  1.o(stack)
 
@@ -27,7 +26,7 @@ Image Symbol Table
 
     Symbol Name                              Value     Ov Type        Size  Object(Section)
 
-    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$STANDARDLIB$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$STANDARDLIB$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
 
 
 
@@ -37,17 +36,17 @@ Memory Map of the image
 
   Image Entry point : 0x08000009
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00000138, Max: 0x00020000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00000118, Max: 0x00020000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00000138, Max: 0x00020000, ABSOLUTE)
+    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00000118, Max: 0x00020000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x08000000   0x08000000   0x00000000   Data   RO            2    reset               1.o
-    0x08000000   0x08000000   0x00000138   Code   RO            3  * program             1.o
+    0x08000000   0x08000000   0x00000118   Code   RO            3  * program             1.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08000138, Size: 0x00000400, Max: 0x00008000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08000118, Size: 0x00000400, Max: 0x00008000, ABSOLUTE)
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
@@ -61,10 +60,10 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       312         72          0          0       1024        284   1.o
+       280         36          0          0       1024        288   1.o
 
     ----------------------------------------------------------------------
-       312         72          0          0       1024        284   Object Totals
+       280         36          0          0       1024        288   Object Totals
          0          0          0          0          0          0   (incl. Generated)
          0          0          0          0          0          0   (incl. Padding)
 
@@ -79,15 +78,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-       312         72          0          0       1024        284   Grand Totals
-       312         72          0          0       1024        284   ELF Image Totals
-       312         72          0          0          0          0   ROM Totals
+       280         36          0          0       1024        288   Grand Totals
+       280         36          0          0       1024        288   ELF Image Totals
+       280         36          0          0          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                  312 (   0.30kB)
+    Total RO  Size (Code + RO Data)                  280 (   0.27kB)
     Total RW  Size (RW Data + ZI Data)              1024 (   1.00kB)
-    Total ROM Size (Code + RO Data + RW Data)        312 (   0.30kB)
+    Total ROM Size (Code + RO Data + RW Data)        280 (   0.27kB)
 
 ==============================================================================
 

@@ -1,4 +1,4 @@
-;LR_PORTS
+;		LR_1__ports
 	area stack, noinit, readwrite
 	space 0x400	
 stack_top	
@@ -10,9 +10,8 @@ stack_top
 start
 	bl		pp1	
 m
-;	bl 		pp2
-;	bl 		PP3
-	bl      pp4
+	;bl 		pp2
+	bl 		pp3
 	b	m
 pp1						
 	ldr r0, =0x400a8000	;baza A 
@@ -20,7 +19,6 @@ pp1
 	ldr r2, =0x400b8000	;baza C
 	ldr r3, =0x400c8000	;baza E
 	ldr r4, =0x40020000	;baza RST_CLK 
-	ldr r5, = tab	;baza tab
 	ldr r6, =0x40090000	;baza DAC 
 	
 	ldr r7, =0x0be60010 ; _PER_CLOCK_	
@@ -54,47 +52,58 @@ pp1
 	str	r7, [r6];	cfg..
 	bx    lr
 pp2 
-	ldrb r7, [r1];		data PortB
-	tsts r7, #0x40;maska bit6-right
-	andeq	r12,  #0xfd;bit1=0
-	tsts 	r7, #0x20;maska bit5-up
-	orreq	r12, #0x01;bit0=1
-	ldrb	r7, [r3];data PortE
-	tsts	r7,  #0x02;maska bit1-down
-	andeq	r12, #0xfe;bit0=0
-	tsts	r7,  #0x08;maska bit3-left
-	orreq	r12, #0x02;bit1=1
-	str 	r12, [r2]; 	ou t vd1, vd2
-	bx    lr	
-PP3
-	tsts	r12,  #0x01 
-	addeq	 r11,  #1; counter
-	addne	 r11,  #-1
-	mov r7, r11, lsl #1
-	and r7, #0x1f;massiv-index 	
-	add r7, r5;	adr	in taab
-	ldrh r10, [r7]; f(n)
-	tsts	r12,  #0x02 	
-	streq  r10, [r0]
-	streq	r10, [r6,#0x08]
-	strne  r11, [r0]
-	strne	r11, [r6,#0x08]	
-	mov r9, #0xff
-tau	subs r9, #1
-	bpl tau
-	bx    lr	
+	mov r10, #0x1
+	str  r10, [r0]
+m1	
+	bl tau
+	eor r10, #0x2
+	str r10, [r0]
+	bl tau
+	eor r10, #0x1
+	str r10, [r0]
+	bl tau 
+	eor r10, #0x4
+	str r10, [r0]
+	b m1
 	
-pp4 
-	;r8 - counter r9 - direction 0 - up 1 - down
-	tsts r9, #0x01
-	addeq	 r8,  #1; counter
-	addne	 r8,  #-1
-	str r8, [r0]
-	tsts r8, 0x00FF
-	eoreq r9, 0x01
+pp3
+	push {lr}
+	bl point
+	bl line
+	bl point
+	bl tau
+	pop {lr}
 	bx lr
-tab	dcw 1000,1382,1708,1924	
-	dcw 2000,1924,1708,1382 
-	dcw 1000,618,292,76	
-	dcw 0,76,292,618		
-		END
+
+point
+	push {lr}
+	bl invertBit
+	bl tau
+	bl invertBit
+	bl tau
+	pop {lr}
+	bx lr
+
+line
+	push {lr}
+	bl invertBit
+	bl tau
+	bl tau
+	bl invertBit
+	bl tau
+	pop {lr}
+	bx lr
+invertBit
+	ldr r10, [r0]
+	eor r10, #0x1
+	str r10, [r0]
+	bx lr
+
+tau	
+	mov r9, #20000
+tau1
+	subs r9, #1
+	bpl tau1
+	bx    lr	
+
+	end
