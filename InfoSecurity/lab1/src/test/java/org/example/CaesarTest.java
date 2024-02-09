@@ -75,9 +75,9 @@ class CaesarTest {
 
         @Test
         public void negative_shift() {
-            assertThrows(IllegalArgumentException.class, () -> {
-                sut.encrypt("abz", -1);
-            });
+            var result = sut.encrypt("zab", -2);
+
+            assertEquals("xyz", result);
         }
 
         @Test
@@ -86,6 +86,57 @@ class CaesarTest {
 
             assertEquals("bcd def", result);
         }
+    }
+
+    @Nested
+    class DecryptTest {
+
+        @Test
+        public void decrypt_from_encrypt() {
+            var source = "some source words zz";
+
+            var encrypted = sut.encrypt(source, 3);
+
+            var decrypted = sut.decrypt(encrypted, 3);
+
+            assertEquals(decrypted, source);
+        }
+
+        @Test
+        public void decrypt_as_encrtypt_with_reversed_shift() {
+            var source = "some source words zz";
+
+            var encrypted = sut.encrypt(source, 3);
+
+            var decrypted = sut.encrypt(encrypted, -3);
+
+            assertEquals(decrypted, source);
+        }
+
+        @Test
+        public void decrypt_by_force_with_min_and_max() {
+            var source = "some source words zz";
+            var encrypted = sut.encrypt(source, 5);
+
+            List<String> result = sut.tryDecrypt(encrypted, 1, 6);
+
+            assertEquals(6, result.size());
+            System.out.println(result);
+            assertTrue(result.contains(source));
+        }
+
+        @Test
+        public void generic_decrypt_by_force() {
+            var source = "some source words zz";
+            var encrypted = sut.encrypt(source, 5);
+
+            List<String> result = sut.tryDecrypt(encrypted);
+
+            assertEquals('z' - 'a' + 1, result.size());
+            System.out.println(result);
+            assertTrue(result.contains(source));
+        }
+
     }
 
 }
