@@ -4,7 +4,7 @@ import java.util.List;
 public final class Caesar {
     private final char start;
     private final char end;
-    private final char size;
+    private final int size;
 
     // Алфавит задается начальным и конечным символом таблицы unicode
     public Caesar(char start, char end) {
@@ -70,5 +70,17 @@ public final class Caesar {
 
     public List<String> tryDecrypt(String encrypted) {
         return tryDecrypt(encrypted, 0, size - 1);
+    }
+
+    public char getStart() {
+        return start;
+    }
+
+    public char getEnd() {
+        return end;
+    }
+
+    public int getSize() {
+        return size;
     }
 }
