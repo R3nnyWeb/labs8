@@ -42,35 +42,6 @@ public class CardanoTest {
         assertEqualsMatrix(grid, sourceGrid());
     }
 
-    @Test
-    public void move_left_4_times() {
-        var grid = sourceGrid();
-
-
-        for (int i = 0; i < 4; i++) {
-            grid = Cardano.moveLeft(grid);
-        }
-
-        assertEqualsMatrix(grid, sourceGrid());
-    }
-
-    @Test
-    public void move_left_once() {
-        var grid = sourceGrid();
-
-        var rotated = new boolean[][]{
-                {false, false, false, false, false},
-                {true, false, true, false, false},
-                {false, false, false, false, true},
-                {true, false, false, true, false},
-                {false, false, false, false, true},
-        };
-
-        grid = Cardano.moveLeft(grid);
-
-        assertEqualsMatrix(rotated, grid);
-    }
-
     private static boolean[][] sourceGrid() {
         return new boolean[][]{
                 {false, true, false, true, false},
@@ -87,9 +58,6 @@ public class CardanoTest {
         String source = "ППЕЕПОРИИАВС РВАЕЬНТНЬАМУ";
 
         boolean[][] grid = sourceGrid();
-        for (int i = 0; i < 3; i++) {
-            grid = Cardano.moveRight(grid);
-        }
 
         var decrypted = Cardano.decrypt(source, grid);
 

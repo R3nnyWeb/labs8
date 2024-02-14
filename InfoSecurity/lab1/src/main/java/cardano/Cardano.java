@@ -21,8 +21,8 @@ public class Cardano {
 
         var sb = new StringBuilder();
         for (int i = 0; i < 4; i++) {
-            sb.insert(0, readFromTable(table, grid));
-            grid = moveLeft(grid);
+            sb.append(readFromTable(table, grid));
+            grid = moveRight(grid);
         }
         return sb.toString();
     }
@@ -34,19 +34,6 @@ public class Cardano {
             for (int j = 0; j < size; j++) {
                 if (grid[i][j]) {
                     result[j][size - i - 1] = true;
-                }
-            }
-        }
-        return result;
-    }
-
-    static boolean[][] moveLeft(boolean[][] grid) {
-        int size = getSize(grid);
-        boolean[][] result = new boolean[size][size];
-        for (int i = 0; i < size; i++) {
-            for (int j = 0; j < size; j++) {
-                if (grid[i][j]) {
-                    result[size - j - 1][i] = true;
                 }
             }
         }
@@ -69,7 +56,6 @@ public class Cardano {
         }
         return table;
     }
-
 
     private static String tableToString(boolean[][] grid, char[][] table) {
         var sb = new StringBuilder();
