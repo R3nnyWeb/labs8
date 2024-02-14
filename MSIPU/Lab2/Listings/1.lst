@@ -16,7 +16,7 @@ ARM Macro Assembler    Page 1
    10 00000008         start
    11 00000008 F000 F803       bl               pp1
    12 0000000C         m
-   13 0000000C         ;bl   pp2
+   13 0000000C         ;7bl   pp2
    14 0000000C F000 F843       bl               pp3
    15 00000010 E7FC            b                m
    16 00000012         pp1
