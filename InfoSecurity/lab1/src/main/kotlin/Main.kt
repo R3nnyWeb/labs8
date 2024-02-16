@@ -1,6 +1,7 @@
 import cardano.CardanoController
 import io.javalin.Javalin
 
+
 fun main() {
     val app = Javalin.create { config ->
         config.bundledPlugins.enableCors { cors ->
