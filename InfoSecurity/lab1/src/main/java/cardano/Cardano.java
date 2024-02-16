@@ -3,16 +3,25 @@ package cardano;
 public class Cardano {
 
     public static String encrypt(String source, boolean[][] grid) {
-        //Делаем таблицу с использованием сетки
-        var table = encryptToTable(source, grid);
+        var sb = new StringBuilder();
+        //заполняем пробелами
+        sb.append(" ".repeat(grid.length * grid.length));
 
-        //Центральную ячейку пробелом
-        if (grid.length % 2 != 0) {
-            int center = grid.length / 2;
-            table[center][center] = ' ';
+        char[] chars = source.toCharArray();
+        int writtenCount = 0;
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < grid.length; j++) {
+                for (int k = 0; k < grid.length; k++) {
+                    if (grid[j][k]) {
+                        //записали на нужное место
+                        sb.setCharAt(j * grid.length + k, chars[writtenCount++]);
+                    }
+                }
+            }
+            //повернули сетку
+            grid = moveRight(grid);
         }
-        //прошлись по таблице для вывода результата
-        return tableToString(table);
+        return sb.toString();
     }
 
     public static String decrypt(String encrypted, boolean[][] grid) {
@@ -42,18 +51,24 @@ public class Cardano {
         return result;
     }
 
-    private static char[][] encryptToTable(String source, boolean[][] grid) {
-        char[][] table = new char[grid.length][grid.length];
+    private static StringBuilder encryptToTable(String source, boolean[][] grid) {
+        var sb = new StringBuilder();
+        sb.append(" ".repeat(grid.length * grid.length));
 
         char[] chars = source.toCharArray();
         int writtenCount = 0;
         for (int i = 0; i < 4; i++) {
-            //записали, используя сетку
-            writtenCount = writeToTable(chars, writtenCount, table, grid);
+            for (int j = 0; j < grid.length; j++) {
+                for (int k = 0; k < grid.length; k++) {
+                    if (grid[j][k]) {
+                        sb.setCharAt(j * grid.length + k, chars[writtenCount++]);
+                    }
+                }
+            }
             //повернули сетку
             grid = moveRight(grid);
         }
-        return table;
+        return sb;
     }
 
     private static String tableToString(char[][] table) {
@@ -71,13 +86,7 @@ public class Cardano {
 
 
     private static int writeToTable(char[] chars, int writtenCount, char[][] table, boolean[][] grid) {
-        for (int i = 0; i < grid.length; i++) {
-            for (int j = 0; j < grid.length; j++) {
-                if (grid[i][j]) {
-                    table[i][j] = chars[writtenCount++];
-                }
-            }
-        }
+
         return writtenCount;
     }
 
