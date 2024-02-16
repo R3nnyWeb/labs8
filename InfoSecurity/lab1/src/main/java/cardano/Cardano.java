@@ -34,7 +34,8 @@ public class Cardano {
             for (int j = 0; j < grid.length; j++) {
                 if (grid[i][j]) {
                     //поворот на 90
-                    result[j][grid.length - i - 1] = true;
+                    if(grid[j][grid.length - i - 1]) throw new IllegalArgumentException("Сетка не валидна");
+                    else result[j][grid.length - i - 1] = true;
                 }
             }
         }
@@ -60,7 +61,8 @@ public class Cardano {
 
         for (int i = 0; i < table.length; i++) {
             for (int j = 0; j < table.length; j++) {
-                sb.append(table[i][j]);
+                if(table[i][j] == 0) throw new IllegalArgumentException("Сетка не валидна");
+                else sb.append(table[i][j]);
             }
         }
 
