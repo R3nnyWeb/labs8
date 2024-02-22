@@ -5,7 +5,7 @@ public class Cardano {
     public static String encrypt(String source, boolean[][] grid) {
         var sb = new StringBuilder();
         //заполняем пробелами
-        sb.append(" ".repeat(grid.length * grid.length));
+        sb.append("#".repeat(grid.length * grid.length));
 
         char[] chars = source.toCharArray();
         int writtenCount = 0;
@@ -21,6 +21,14 @@ public class Cardano {
             //повернули сетку
             grid = moveRight(grid);
         }
+
+        if (grid.length % 2 != 0) {
+            sb.setCharAt(grid.length * grid.length / 2, ' ');
+        }
+
+        var result = sb.toString();
+        if (result.contains("#")) throw new IllegalArgumentException("Сетка не валидна");
+
         return sb.toString();
     }
 
@@ -39,6 +47,7 @@ public class Cardano {
             //поворот сетки
             grid = moveRight(grid);
         }
+        if(grid.length * grid.length != sb.length() + 1) throw new IllegalArgumentException("Сетка не валидна");
         return sb.toString();
     }
 
