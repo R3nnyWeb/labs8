@@ -15,24 +15,24 @@ ARM Macro Assembler    Page 1
     9 00000000                 entry
    10 00000000         start
    11 00000000 F000 F805       bl               pp1         ;
-   12 00000004 F000 F853       bl               pp2         ;
-   13 00000008 F000 F855 
+   12 00000004 F000 F83B       bl               pp2         ;
+   13 00000008 F000 F83D 
                        m       bl               pp3         ;
    14 0000000C         ; bl  pp4  ;
    15 0000000C         ; bl  pp5  ;
    16 0000000C E7FC            b                m           ;
    17 0000000E         pp1
-   18 0000000E 4834            ldr              r0, =0x40020000 ;BazAdr RST_CLK
+   18 0000000E 4820            ldr              r0, =0x40020000 ;BazAdr RST_CLK
                                                             
-   19 00000010 4934            ldr              r1, =0x40070000 ;BazAdr Tim1
-   20 00000012 4A35            ldr              r2, =0x40078000 ;BazAdr Tim2
-   21 00000014 4B35            ldr              r3, =0x400a8000 ;BazAdr Port_A 
+   19 00000010 4920            ldr              r1, =0x40070000 ;BazAdr Tim1
+   20 00000012 4A21            ldr              r2, =0x40078000 ;BazAdr Tim2
+   21 00000014 4B21            ldr              r3, =0x400a8000 ;BazAdr Port_A 
                                                             
-   22 00000016 4C36            ldr              r4, =0x400b8000 ;BazAdr  Port_C
+   22 00000016 4C22            ldr              r4, =0x400b8000 ;BazAdr  Port_C
                                                             
-   23 00000018 4D36            ldr              r5,=0x400c8000 ;BazAdr Port_E 
-   24 0000001A 4E37            ldr              r6,=0x40090000 ;BazAdr DAC
-   25 0000001C 4F37            ldr              r7,=0x0aa4c010 ; per_clock
+   23 00000018 4D22            ldr              r5,=0x400c8000 ;BazAdr Port_E 
+   24 0000001A 4E23            ldr              r6,=0x40090000 ;BazAdr DAC
+   25 0000001C 4F23            ldr              r7,=0x0aa4c010 ; per_clock
    26 0000001E 61C7            str              r7, [r0, #0x1c] ;
    27 00000020 F04F 7740       ldr              r7, =0x03000000 ;Tim-1-2-Clk
    28 00000024 6247            str              r7, [r0, #0x24]
@@ -55,13 +55,13 @@ ARM Macro Assembler    Page 1
    45 00000056 61AF            str              r7, [r5,#0x18] ;PWR
    46 00000058 F04F 0708       mov              r7, #0x08   ; _DAC_
    47 0000005C 6037            str              r7, [r6]    ; 
-   48 0000005E 4F27            ldr              r7,=0x0aa4c010 ; per_clock
+   48 0000005E 4F13            ldr              r7,=0x0aa4c010 ; per_clock
    49 00000060 61C7            str              r7, [r0, #0x1c] ; ldr  r7, =0x0
                                                             3000000;Tim-1-2-Clk
                                                             
    50 00000062 6247            str              r7, [r0, #0x24]
    51 00000064         
-   52 00000064 F04F 0700       mov              r7,  # 0    ;PSG _Tim1, Tim2_
+   52 00000064 F04F 070A       mov              r7,  # 0xA  ;PSG _Tim1, Tim2_
    53 00000068 604F            str              r7, [r1, #0x04] ; 
 
 
@@ -76,45 +76,46 @@ ARM Macro Assembler    Page 2
    58 00000074 F04F 0701       mov              r7, #0x01   ;CNTRL
    59 00000078 60CF            str              r7, [r1, #0x0c] ;
    60 0000007A 60D7            str              r7, [r2, #0x0c] ;
-   61 0000007C F240 0719       movw             r7, #25     ;ch1_CCR 
-   62 00000080 610F            str              r7, [r1, #0x10] ;
-   63 00000082 6117            str              r7, [r2, #0x10] ;
-   64 00000084 F240 070F       movw             r7, #15     ;ch2_CCR 
-   65 00000088 614F            str              r7, [r1, #0x14] ;
-   66 0000008A 6157            str              r7, [r2, #0x14] ;
-   67 0000008C F44F 6740       mov              r7, # 0x0c00 ;CH1_CNTRL
-   68 00000090 620F            str              r7,[r1, #0x20] ;
-   69 00000092 6217            str              r7,[r2, #0x20] ;
-   70 00000094 F44F 6740       mov              r7, # 0x0c00 ;CH2_CNTRL
-   71 00000098 624F            str              r7,[r1, #0x24] ;
-   72 0000009A 6257            str              r7,[r2, #0x24] ;
-   73 0000009C F640 1709       movw             r7, # 0x909 ;CH1_CNTRL1;  
-   74 000000A0 630F            str              r7, [r1, #0x30] ;  
-   75 000000A2 6317            str              r7, [r2, #0x30] ; 
-   76 000000A4 F640 1009       movw             r0, #0x909  ;CH2_CNTRL1;
-   77 000000A8 6348            str              r0, [r1, #0x34] ;
-   78 000000AA 6350            str              r0, [r2, #0x34] ;
-   79 000000AC 4770            bx               lr
-   80 000000AE         pp2
-   81 000000AE F240 37B8       movw             r7, #0x03b8
-   82 000000B2         ; mov r7, #0  
-   83 000000B2 609F            str              r7, [r3,#0x08] ; _FUNC
-   84 000000B4 4770            bx               lr
-   85 000000B6         pp3
-   86 000000B6 F10B 0B01       add              r11, #0x01
-   87 000000BA F00B 0CFF       and              r12, r11, 0xff
-   88 000000BE F10C 0C00       add              r12,  0x0   ; N(t)
-   89 000000C2 F8C3 C000       str              r12,[r3]
-   90 000000C6 F8C6 C008       str              r12,[r6,#0x08]
-   91 000000CA F8C1 C005       str              r12,[r1,#0x05]
-   92 000000CE F8C2 B010       str              r11, [r2,#0x10]
-   93 000000D2 F640 79FF       mov              r9, #0xfff
-   94 000000D6 F1B9 0901 
-                       tau     subs             r9, #1
-   95 000000DA D5FC            bpl              tau
-   96 000000DC 4770            bx               lr
-   97 000000DE                 END
-              00 00 40020000 
+   61 0000007C         ; movw  r7, #25  ;ch1_CCR 
+   62 0000007C         ; str  r7, [r1, #0x10];
+   63 0000007C         ;  str  r7, [r2, #0x10];
+   64 0000007C         ; movw  r7, #15  ;ch2_CCR 
+   65 0000007C         ; str  r7, [r1, #0x14];
+   66 0000007C         ;  str  r7, [r2, #0x14];
+   67 0000007C         ; mov  r7, # 0x0c00 ;CH1_CNTRL
+   68 0000007C         ; str  r7,[r1, #0x20] ;
+   69 0000007C         ; str  r7,[r2, #0x20] ;
+   70 0000007C         ; mov  r7, # 0x0c00 ;CH2_CNTRL
+   71 0000007C         ; str  r7,[r1, #0x24] ;
+   72 0000007C         ; str  r7,[r2, #0x24] ;
+   73 0000007C         ; movw  r7, # 0x909 ;CH1_CNTRL1;  
+   74 0000007C         ; str  r7, [r1, #0x30];  
+   75 0000007C         ; str  r7, [r2, #0x30]; 
+   76 0000007C         ; movw r0, #0x909  ;CH2_CNTRL1;
+   77 0000007C         ; str  r0, [r1, #0x34];
+   78 0000007C         ; str  r0, [r2, #0x34];*/
+   79 0000007C 4770            bx               lr
+   80 0000007E         pp2
+   81 0000007E         ; movw r7, #0x03b8
+   82 0000007E F04F 0700       mov              r7, #0
+   83 00000082 609F            str              r7, [r3,#0x08] ; _FUNC
+   84 00000084 4770            bx               lr
+   85 00000086         pp3
+   86 00000086 F8D1 A000       ldr              r10, [r1]
+   87 0000008A F8C3 A000       str              r10, [r3]
+   88 0000008E         ; add r11, #0x01 
+   89 0000008E         ; and r12, r11, 0xff
+   90 0000008E         ; add r12,  0x0; N(t)
+   91 0000008E         ; str r12,[r3]   
+   92 0000008E         ; str r12,[r6,#0x08]
+   93 0000008E         ; str r12,[r1,#0x05]
+   94 0000008E         ; str r11, [r2,#0x10]
+   95 0000008E         ; mov r9, #0xfff
+   96 0000008E         ;tau subs r9, #1
+   97 0000008E         ; bpl tau   */
+   98 0000008E 4770            bx               lr
+   99 00000090                 END
+              40020000 
               40070000 
               40078000 
               400A8000 
@@ -127,6 +128,12 @@ ork --depend=.\objects\ex1.d -o.\objects\ex1.o -I.\RTE\_Target_1 -IC:\Keil_v5\A
 RM\PACK\Keil\MDR1986BExx\1.4\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc -I
 C:\Keil_v5\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__UVISION
 _VERSION SETA 526" --predefine="USE_MDR32F9Q2_Rev1 SETA 1" --list=.\listings\ex
+
+
+
+ARM Macro Assembler    Page 3 
+
+
 1.lst ex1.s
 
 
@@ -188,7 +195,7 @@ Symbol: pp1
    Uses
       At line 11 in file ex1.s
 Comment: pp1 used once
-pp2 000000AE
+pp2 0000007E
 
 Symbol: pp2
    Definitions
@@ -196,7 +203,7 @@ Symbol: pp2
    Uses
       At line 12 in file ex1.s
 Comment: pp2 used once
-pp3 000000B6
+pp3 00000086
 
 Symbol: pp3
    Definitions
@@ -220,13 +227,5 @@ Symbol: start
    Uses
       At line 7 in file ex1.s
 Comment: start used once
-tau 000000D6
-
-Symbol: tau
-   Definitions
-      At line 94 in file ex1.s
-   Uses
-      At line 95 in file ex1.s
-Comment: tau used once
-7 symbols
-345 symbols in table
+6 symbols
+344 symbols in table
