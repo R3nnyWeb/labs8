@@ -9,91 +9,53 @@
 </head>
 <body>
 
-<style>
-    :root {
-        --grid-cols: 1;
-        --grid-rows: 1;
-    }
-
-    #cardano-container {
-        margin-top: 50px;
-        display: inline-grid;
-        grid-template-rows: repeat(var(--grid-rows), 1fr);
-        grid-template-columns: repeat(var(--grid-cols), 1fr);
-    }
-
-    .grid-item {
-        background: white;
-        width: 50px;
-        height: 50px;
-        border: 1px solid black;
-    }
-
-    .grid-item-selected {
-        background: gray;
-    }
-</style>
-
 <div class="container">
-    <h1>Кардано</h1>
-    <label for="size" class="form-label">Размер сетки</label>
-    <input type="number" style="max-width: 100px" value="3" min="3" max=6 required name="size"
-           class="form-control p-1 text-center"
-           id="size">
+    <h1>Потоковое шифрование</h1>
     <div id="cardano-container"></div>
     <div class="accordion mt-3" id="accordionExample">
         <div class="accordion-item">
             <h2 class="accordion-header">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
                         aria-expanded="true" aria-controls="collapseOne">
-                    Шифрование
+
                 </button>
             </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" >
+            <div id="collapseOne" class="accordion-collapse collapse show">
                 <div class="accordion-body">
-                    <form id="encrypt">
+                    <form id="form">
                         <div class="mb-3">
-                            <label for="encryptText" class="form-label">Исходный текст</label>
-                            <input type="text" class="form-control" name="source" required id="encryptText"
-                                   maxlength="50" minlength="1"
-                                   placeholder="Исходный текст">
+                            <label for="text" class="form-label">Текст</label>
+                            <input type="text" class="form-control" name="text" required id="text"
+                                   maxlength="1000" minlength="1"
+                                   placeholder="Текст">
                         </div>
-                        <button type="submit" class="btn btn-primary mb-3">Зашифровать</button>
                         <div class="mb-3">
-                            <label for="encryptResult" class="form-label">Результат: </label>
-                            <input id="encryptResult" class="form-control" type="text"
+                            <label for="key" class="form-label">Ключ</label>
+                            <input inputmode="numeric" pattern="[0-1]*" class="form-control" name="key" required
+                                   id="key"
+                                   placeholder="Ключ">
+                        </div>
+                        <div class="mb-3">
+                            <label for="LSR" class="form-label">LSR</label>
+                            <input inputmode="numeric" pattern="[0-1]*" class="form-control" name="LSR" required
+                                   id="LSR"
+                                   placeholder="LSR">
+                        </div>
+                        <div class="d-flex justify-content-around">
+                            <button id="crypt" class="btn btn-primary mb-3">Кодирование</button>
+                            <button id="encryptHex" class="btn btn-primary mb-3">Зашифровать в HEX
+                            </button>
+                            <button id="decryptHex" class="btn btn-primary mb-3">Расшифровать из HEX
+                            </button>
+                        </div>
+                        <div class="mb-3">
+                            <label for="result" class="form-label">Результат: </label>
+                            <input id="result" class="form-control" type="text"
                                    aria-label="readonly input example" disabled readonly>
                         </div>
-                        <span class="text-danger" id="encryptError">Ошибки</span>
+                        <span class="text-danger" id="error">Ошибки</span>
                     </form>
 
-                </div>
-            </div>
-        </div>
-        <div class="accordion-item">
-            <h2 class="accordion-header">
-                <button class="accordion-button " type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Дешифрование
-                </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse show" >
-                <div class="accordion-body">
-                    <form id="decrypt" action="GET">
-                        <div class="mb-3">
-                            <label for="encryptText" class="form-label">Зашифрованный текст</label>
-                            <input type="text" class="form-control" name="source" required id="decryptText"
-                                   maxlength="50" minlength="1"
-                                   placeholder="Зашифрованный текст">
-                        </div>
-                        <button type="submit" class="btn btn-primary mb-3">Расшифровать</button>
-                        <div class="mb-3">
-                            <label for="encryptResult" class="form-label">Результат: </label>
-                            <input id="decryptResult" class="form-control" type="text"
-                                   aria-label="readonly input example" disabled readonly>
-                        </div>
-                        <span class="text-danger" id="decryptError">Ошибки</span>
-                    </form>
                 </div>
             </div>
         </div>
@@ -109,6 +71,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-<script src="cardano.js"></script>
+<script src="gamma.js"></script>
 </body>
 </html>
