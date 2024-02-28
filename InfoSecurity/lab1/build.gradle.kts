@@ -16,6 +16,7 @@ sourceSets.main {
 }
 
 dependencies {
+    implementation("javax.xml.bind:jaxb-api:2.3.1")
     implementation("io.javalin:javalin:6.0.0")
     implementation("org.slf4j:slf4j-simple:2.0.10")
     implementation("com.fasterxml.jackson.core:jackson-databind:2.16.1")

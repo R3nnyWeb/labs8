@@ -16,8 +16,6 @@ class CardanoController {
             ctx.result(Cardano.decrypt(request.source, request.grid))
         }
 
-
-
     }
 
 }

@@ -126,7 +126,6 @@ $('#decrypt').submit(function (event) {
     })
 })
 
-
 function showResult(id, result) {
     const resultField = $(`#${id}`);
     resultField.val(result);
@@ -152,3 +151,4 @@ function getFormObj(formId) {
     });
     return formObj;
 }
+
