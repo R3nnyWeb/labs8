@@ -33,7 +33,7 @@
           <SLE66CMisc></SLE66CMisc>
           <SLE66AMisc></SLE66AMisc>
           <SLE66LinkerMisc></SLE66LinkerMisc>
-          <SFDFile>$$Device:MDR1986BE92$IDE\keil\SVD\MDR1986BE92.svd</SFDFile>
+          <SFDFile>SFD\MDR32F9Qx.SFR</SFDFile>
           <bCustSvd>1</bCustSvd>
           <UseEnv>0</UseEnv>
           <BinPath></BinPath>
