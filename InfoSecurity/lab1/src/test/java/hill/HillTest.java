@@ -34,6 +34,15 @@ class HillTest {
         assertEquals("Для данной матрицы модульной обратной матрицы не существует", e);
     }
 
+        @Test
+    void wrong_symbol() {
+        double[][] key = {{3, 7}, {21, 3}};
+        var e = assertThrows(IllegalArgumentException.class, () -> {
+            Hill.decrypt(key, "не правильный symbol");
+        }).getMessage();
+        assertEquals("Символ не найден", e);
+    }
+
     @Test
     void find_modulo_inverse() {
         assertEquals(6, Hill.modInverse(-2, 11));
