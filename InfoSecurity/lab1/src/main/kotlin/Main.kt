@@ -1,5 +1,6 @@
 import cardano.CardanoController
 import gamma.GammaController
+import hill.HillController
 import io.javalin.Javalin
 
 
@@ -19,6 +20,8 @@ fun main() {
         .post("/gamma/crypt", GammaController.crypt)
         .post("/gamma/encrypt-hex", GammaController.encryptHex)
         .post("/gamma/decrypt-hex", GammaController.decryptHex)
+        .post("/hill/encrypt", HillController.encrypt)
+        .post("/hill/decrypt", HillController.decrypt)
         .exception(Exception::class.java) { e, ctx ->
             ctx.status(500)
             ctx.result(e.message ?: "Unknown error")
