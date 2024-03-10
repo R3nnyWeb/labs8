@@ -71,20 +71,20 @@ pp3
 	ldr  r6, =0x40070000  ;63 _baz_addr_
 	mov  r0, # 0		;64 _Tim1
 	str  r0,[r6,#0x04 ]	;65  PSG
-	movw  r0, #10		;66
+	movw  r0, #379		;66
 	str  r0, [r6, #0x08]	;67  ARR
 	mov  r0, #0x01	;68 
 	str  r0, [r6, #0x0c]	;69  CNTRL 	
 	ldr  r7, =0x40078000  ;70 _baz_addr_
 	mov  r0, # 0		;71 _Tim2
 	str  r0,[r7,#0x04 ]	;72  PSG
-	movw  r0, #50		;73 
+	movw  r0, #589		;73 
 	str  r0, [r7, #0x08]	;74  ARR
 	mov  r0, #0x01	;75 
 	str  r0, [r7, #0x0c]	;76  CNTRL
-	movw  r0, #1		;77 	
+	movw  r0, #68		;77 	
 	str  r0, [r6, #0x10]	;78  CCR1
-	movw  r0, #25		;79 
+	movw  r0, #338		;79 
 	str  r0, [r7, #0x14]	;80  CCR2
 	mov  r0, # 0x0c00	;81 
 	str  r0,[r6, #0x20]	;82  CH1_CNTRL
