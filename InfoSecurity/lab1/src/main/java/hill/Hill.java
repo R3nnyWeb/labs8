@@ -85,7 +85,7 @@ public class Hill {
     private static double[] stringToIndexes(String input) {
         double[] indexes = new double[input.length()];
         for (int i = 0; i < input.length(); i++) {
-            if (!charToIndex.containsKey(input.charAt(i))) throw new IllegalArgumentException("Символ не найден");
+            if (!charToIndex.containsKey(input.charAt(i))) throw new IllegalArgumentException("Символ не найден " + input.charAt(i));
             indexes[i] = charToIndex.get(input.charAt(i));
         }
         return indexes;
