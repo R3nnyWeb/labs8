@@ -40,7 +40,7 @@ class HillTest {
         var e = assertThrows(IllegalArgumentException.class, () -> {
             Hill.decrypt(key, "не правильный symbol");
         }).getMessage();
-        assertEquals("Символ не найден", e);
+        assertEquals("Символ не найден s", e);
     }
 
     @Test
