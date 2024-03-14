@@ -28,9 +28,9 @@ pp1
 	movw  r7, #0xaaaa	;	
 	str	r7, [r2,#0x18]	;PWR 
 	ldr	r3,=0x40030000	;BazAdrUart1
-	mov r7, #0x01		;
+	mov r7, #53		;
 	str r7,[r3, #0x24]	; IBRD	
-	mov r7, #0x0		;
+	mov r7, #0x20		;
 	str r7,[r3, #0x28]	;FBRD
 	mov r7, #0x62		; 
 	str r7,[r3,#0x2c ]	; LCR_H
@@ -42,7 +42,8 @@ pp1
 pp2	add r5, #1		; counter
 
 	str r5,[r2]		;	
-	and r6, r5, #0x07f
+	movw r10, 0x7fff
+	and r6, r5, r10
 	eors r6, #0
 	streq r4, [r3]
 pp3 	
