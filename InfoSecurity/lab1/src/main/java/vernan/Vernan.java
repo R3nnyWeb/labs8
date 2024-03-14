@@ -8,6 +8,7 @@ public class Vernan {
     static Charset charset = Charset.forName("Windows-1251");
 
     public static String generateKey(int size) {
+        System.out.println(size);
         Random random = new Random();
         byte[] keyBytes = new byte[size];
         random.nextBytes(keyBytes);

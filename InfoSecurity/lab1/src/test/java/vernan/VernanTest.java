@@ -15,7 +15,7 @@ class VernanTest {
         assertEquals(input, Vernan.crypt(encrypted, key));
     }
 
-        @Test
+    @Test
     void generate_key() {
         int i = 0;
         while (i++ < 10) {

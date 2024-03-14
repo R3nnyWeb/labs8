@@ -24,7 +24,9 @@ public class Vizhener {
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 table[i][j] = (j + i) % n;
+                System.out.print(indexToChar.get(table[i][j]) + " ");
             }
+            System.out.println();
         }
     }
 
@@ -56,16 +58,6 @@ public class Vizhener {
             sb.append(indexToChar.get(sourceIndex));
         }
 
-        return sb.toString();
-    }
-
-
-    //Как в hill
-    private static String indexesToString(List<Integer> resultIndexes) {
-        var sb = new StringBuilder();
-        for (int i : resultIndexes) {
-            sb.append(indexToChar.get(i));
-        }
         return sb.toString();
     }
 
