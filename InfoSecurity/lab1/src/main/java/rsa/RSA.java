@@ -1,6 +1,7 @@
 package rsa;
 
 import java.math.BigInteger;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 public class RSA {
@@ -52,7 +53,7 @@ public class RSA {
         List<String> encryptedIndexes = new ArrayList<>();
         for (int i = 0; i < message.length(); i++) {
             char character = message.charAt(i);
-            BigInteger encryptedIndex = BigInteger.valueOf((int) character).modPow(publicKey, n);
+            BigInteger encryptedIndex = BigInteger.valueOf(character).modPow(publicKey, n);
             encryptedIndexes.add("Character = " + character + " Char index = " + (int) character + ", Encrypted index = " + encryptedIndex + "!!!"); // Это для защиты, можно не добавлять
             encryptedMessage.append(Base64.getEncoder().encodeToString(encryptedIndex.toByteArray()));
             encryptedMessage.append(" ");
@@ -60,6 +61,61 @@ public class RSA {
         System.out.println("Encrypted indexes: ");
         System.out.println(encryptedIndexes);
         return encryptedMessage.toString().trim();
+    }
+
+    //не надо
+    public static String encrypt2(String message, BigInteger publicKey, BigInteger n) {
+// Получаем длину модуля n в байтах
+        int nByteLength = n.toByteArray().length;
+
+        // Переводим сообщение в числовое представление
+        byte[] bytes = message.getBytes();
+
+        // Разбиваем сообщение на блоки, длиной nByteLength - 1 байт
+        int blockSize = nByteLength - 1;
+        StringBuilder encryptedMessage = new StringBuilder();
+        for (int i = 0; i < bytes.length; i += blockSize) {
+            int endIndex = Math.min(i + blockSize, bytes.length);
+            byte[] block = new byte[endIndex - i];
+            System.arraycopy(bytes, i, block, 0, block.length);
+            BigInteger m = new BigInteger(block);
+            // Вычисляем шифротекст c = m^e mod n
+            BigInteger c = m.modPow(publicKey, n);
+
+
+            // Преобразуем каждый блок шифротекста в строку Base64 и добавляем к зашифрованному сообщению
+            byte[] encryptedBlockBytes = c.toByteArray();
+            String encryptedBlockBase64 = Base64.getEncoder().encodeToString(encryptedBlockBytes);
+            encryptedMessage.append(encryptedBlockBase64).append(" ");
+        }
+
+        // Возвращаем зашифрованное сообщение в виде строки
+        return encryptedMessage.toString().trim();
+    }
+
+    public static String decrypt2(String encryptedMessage, BigInteger privateKey, BigInteger n) {
+        // Разбиваем зашифрованное сообщение на блоки
+        String[] encryptedBlocks = encryptedMessage.split(" ");
+
+        // Декодируем каждый блок из Base64 и расшифровываем его
+        StringBuilder decryptedMessage = new StringBuilder();
+        for (String encryptedBlock : encryptedBlocks) {
+            // Декодируем блок из Base64
+            byte[] encryptedBlockBytes = Base64.getDecoder().decode(encryptedBlock);
+
+            // Преобразуем его в BigInteger
+            BigInteger c = new BigInteger(1, encryptedBlockBytes);
+
+            // Расшифровываем блок c = c^d mod n
+            BigInteger m = c.modPow(privateKey, n);
+
+            // Преобразуем расшифрованный блок в массив байт и добавляем к расшифрованному сообщению
+            byte[] decryptedBlockBytes = m.toByteArray();
+            decryptedMessage.append(new String(decryptedBlockBytes));
+        }
+
+        // Возвращаем расшифрованное сообщение в виде строки
+        return decryptedMessage.toString();
     }
 
     public static String decrypt(String encryptedMessage, BigInteger privateKey, BigInteger n) {
