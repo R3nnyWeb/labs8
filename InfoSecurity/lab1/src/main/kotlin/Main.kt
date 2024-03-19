@@ -2,6 +2,8 @@ import cardano.CardanoController
 import gamma.GammaController
 import hill.HillController
 import io.javalin.Javalin
+import rsa.RSA
+import rsa.RSAController
 import vernam.VernamController
 import vizhener.VizhenerController
 
@@ -28,6 +30,9 @@ fun main() {
         .post("/vizhener/decrypt", VizhenerController.decrypt)
         .post("/vernam/crypt", VernamController.encrypt)
         .get("/vernam/generate", VernamController.generate)
+        .get("/rsa/generate", RSAController.generate)
+        .post("/rsa/encrypt", RSAController.encrypt)
+        .post("/rsa/decrypt", RSAController.decrypt)
         .exception(Exception::class.java) { e, ctx ->
             ctx.status(500)
             ctx.result(e.message ?: "Unknown error")

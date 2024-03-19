@@ -6,7 +6,7 @@ import java.util.*;
 public class RSA {
 
 
-    public static GenerateKeysResponse generatePrivate(int bitLength) {
+    public static GenerateKeysResponse generate(int bitLength) {
         BigInteger p = generatePrimeNumber(bitLength);
 
         BigInteger q = generatePrimeNumber(bitLength);
@@ -19,14 +19,18 @@ public class RSA {
 
         BigInteger privateKey = generatePrivateKey(publicKey, euler);
 
-        return new GenerateKeysResponse(publicKey, privateKey, p, q, euler, n);
+        GenerateKeysResponse response = new GenerateKeysResponse(publicKey, privateKey, p, q, euler, n);
+
+        System.out.println(response);
+
+        return response;
     }
 
-    public static BigInteger generatePrivateKey(BigInteger publicKey, BigInteger euler) {
+    private static BigInteger generatePrivateKey(BigInteger publicKey, BigInteger euler) {
         return publicKey.modInverse(euler);
     }
 
-    public static BigInteger generatePublicKey(BigInteger euler) {
+    private static BigInteger generatePublicKey(BigInteger euler) {
         BigInteger publicKey;
         do {
             publicKey = BigInteger.probablePrime(euler.bitLength() - 1, new Random());
@@ -34,7 +38,7 @@ public class RSA {
         return publicKey;
     }
 
-    public static BigInteger generatePrimeNumber(int bitLength) {
+    private static BigInteger generatePrimeNumber(int bitLength) {
         Random rnd = new Random();
         BigInteger prime = BigInteger.probablePrime(bitLength, rnd);
         while (!prime.isProbablePrime(100)) {
