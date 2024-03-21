@@ -1,0 +1,10 @@
+
+\
+java:S1118":Add a private constructor to hide the implicit public one.(³ÀŸ¦ûÿÿÿÿ8úÞ·ˆæ1
+L	java:S106"+Replace this use of System.out by a logger.(˜Š¿Ûüÿÿÿÿ8‚ß·ˆæ1
+;
+java:S2119."Save and re-use this "Random".(–áÍÈ8†ß·ˆæ1
+G	java:S106@"+Replace this use of System.out by a logger.(Å‡À„8‰ß·ˆæ1
+G	java:S106A"+Replace this use of System.out by a logger.(­û«ù8Šß·ˆæ1
+[
+java:S1128">Remove this unused import 'java.nio.charset.StandardCharsets'.(ï˜ÞÛ8“ß·ˆæ1

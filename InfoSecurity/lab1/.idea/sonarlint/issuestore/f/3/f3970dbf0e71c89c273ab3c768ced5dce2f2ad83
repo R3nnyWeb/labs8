@@ -1,0 +1,8 @@
+
+\
+java:S1118	":Add a private constructor to hide the implicit public one.(à‹’Ìıÿÿÿÿ8ùÀä‹æ1
+L
+java:S2200"/Only the sign of the result should be examined.(‚Ÿâ¹8‰™ñ‹æ1
+L	java:S106"+Replace this use of System.out by a logger.(®ıáëûÿÿÿÿ8ÿÀä‹æ1
+;
+java:S2119'"Save and re-use this "Random".(–áÍÈ8Áä‹æ1

@@ -1,0 +1,13 @@
+
+q
+java:S1104"UMake publicKey a static final constant or non-public and provide accessors if needed.(µ­Ñ}8¦³¦‰æ1
+s
+java:S1104"VMake privateKey a static final constant or non-public and provide accessors if needed.(¨Ì…‘8¦³¦‰æ1
+o
+java:S1104	"MMake n a static final constant or non-public and provide accessors if needed.(µş·øÿÿÿÿ8¦³¦‰æ1
+y
+java:S1104"WMake publicKey64 a static final constant or non-public and provide accessors if needed.(½—÷ïúÿÿÿÿ8¦³¦‰æ1
+z
+java:S1104"XMake privateKey64 a static final constant or non-public and provide accessors if needed.(ÛÔ ùûÿÿÿÿ8¦³¦‰æ1
+l
+java:S1104"OMake n64 a static final constant or non-public and provide accessors if needed.(¨8¦³¦‰æ1

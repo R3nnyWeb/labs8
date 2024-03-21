@@ -16,7 +16,8 @@ class MainKtTest {
         driver = ChromeDriver()
     }
 
-    @Test    fun test() {
+    @Test
+    fun test() {
         driver.get("https://github.com/")
         driver.saveScreenshot("before.png")
         val element = driver.findElement(By.id("user_email"))

@@ -1,6 +1,7 @@
 package rsa;
 
 import java.math.BigInteger;
+import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 
@@ -11,6 +12,8 @@ public class RSA {
         BigInteger p = generatePrimeNumber(bitLength);
 
         BigInteger q = generatePrimeNumber(bitLength);
+        while (Objects.equals(p, q))
+            q = generatePrimeNumber(bitLength);
 
         BigInteger n = p.multiply(q);
 
@@ -69,7 +72,7 @@ public class RSA {
         int nByteLength = n.toByteArray().length;
 
         // Переводим сообщение в числовое представление
-        byte[] bytes = message.getBytes();
+        byte[] bytes = message.getBytes(Charset.forName("Windows-1251"));
 
         // Разбиваем сообщение на блоки, длиной nByteLength - 1 байт
         int blockSize = nByteLength - 1;
@@ -78,7 +81,7 @@ public class RSA {
             int endIndex = Math.min(i + blockSize, bytes.length);
             byte[] block = new byte[endIndex - i];
             System.arraycopy(bytes, i, block, 0, block.length);
-            BigInteger m = new BigInteger(block);
+            BigInteger m = new BigInteger(1, block);
             // Вычисляем шифротекст c = m^e mod n
             BigInteger c = m.modPow(publicKey, n);
 
@@ -111,7 +114,12 @@ public class RSA {
 
             // Преобразуем расшифрованный блок в массив байт и добавляем к расшифрованному сообщению
             byte[] decryptedBlockBytes = m.toByteArray();
-            decryptedMessage.append(new String(decryptedBlockBytes));
+            // Удаляем ведущий нулевой байт, если он есть
+            if (decryptedBlockBytes[0] == 0) {
+                decryptedBlockBytes = Arrays.copyOfRange(decryptedBlockBytes, 1, decryptedBlockBytes.length);
+            }
+
+            decryptedMessage.append(new String(decryptedBlockBytes, Charset.forName("Windows-1251")));
         }
 
         // Возвращаем расшифрованное сообщение в виде строки

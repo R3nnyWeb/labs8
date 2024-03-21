@@ -1,6 +1,7 @@
 package hill;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -18,12 +19,13 @@ public class Hill {
             charToIndex.put(ALPHABET.charAt(i), i);
             indexToChar.put(i, ALPHABET.charAt(i));
         }
+        System.out.println(charToIndex);
     }
 
 
     private static String hillCipher(String input, RealMatrix key) {
         double[] indexes = stringToIndexes(input);
-
+        System.out.println(Arrays.toString(indexes));
         List<Integer> resultIndexes = applyKey(key, indexes);
 
         return indexesToString(resultIndexes);
@@ -40,6 +42,7 @@ public class Hill {
     public static String decrypt(double[][] matrix, String input) {
         var key = MatrixUtils.createRealMatrix(matrix);
         key = modMatrixInverse(key, ALPHABET.length());
+        System.out.println(key);
         return hillCipher(input, key);
 
     }
@@ -65,11 +68,13 @@ public class Hill {
             var multipy = key.multiply(sliceMatrix);
 
             double[] row = multipy.getColumn(0);
-
+            System.out.println(Arrays.toString(row));
             for (double v : row) {
                 var res = Math.round(v);
                 resultIndexes.add((int) res % ALPHABET.length());
             }
+
+            System.out.println(resultIndexes);
         }
         return resultIndexes;
     }
