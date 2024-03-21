@@ -41,7 +41,7 @@ module lpm_rom0 (
 	inclock,
 	q);
 
-	input	[3:0]  address;
+	input	[7:0]  address;
 	input	  inclock;
 	output	[15:0]  q;
 
@@ -61,7 +61,7 @@ module lpm_rom0 (
 		lpm_rom_component.lpm_outdata = "UNREGISTERED",
 		lpm_rom_component.lpm_type = "LPM_ROM",
 		lpm_rom_component.lpm_width = 16,
-		lpm_rom_component.lpm_widthad = 4;
+		lpm_rom_component.lpm_widthad = 8;
 
 
 endmodule

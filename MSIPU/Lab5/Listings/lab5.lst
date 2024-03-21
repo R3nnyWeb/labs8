@@ -16,17 +16,17 @@ ARM Macro Assembler    Page 1
    10 00000008         start
    11 00000008 F000 F803       bl               pp1
    12 0000000C         m
-   13 0000000C F000 F823       bl               pp2
+   13 0000000C F000 F825       bl               pp2
    14 00000010         ; bl   PP3
    15 00000010 E7FC            b                m
    16 00000012         pp1
-   17 00000012 4917            ldr              r1,=0x40020000 ; BazAdr_RST_CLK
+   17 00000012 4918            ldr              r1,=0x40020000 ; BazAdr_RST_CLK
                                                             
-   18 00000014 4F17            ldr              r7,=0x08200050 ; PER_
+   18 00000014 4F18            ldr              r7,=0x08200050 ; PER_
    19 00000016 61CF            str              r7,[r1, #0x1c] ;_CLOCK 
    20 00000018 F04F 7780       ldr              r7,=0x1000000 ; uart1_
    21 0000001C 628F            str              r7,[r1, #0x28] ;_CLOC 
-   22 0000001E 4A16            ldr              r2,=0x400a8000 ;bazAdr_PortA
+   22 0000001E 4A17            ldr              r2,=0x400a8000 ;bazAdr_PortA
    23 00000020 F04F 07FF       mov              r7, #0xff   ;
    24 00000024 6057            str              r7, [r2,#0x04] ; OE
    25 00000026 60D7            str              r7, [r2,#0x0c] ;ANALOG
@@ -34,41 +34,43 @@ ARM Macro Assembler    Page 1
    27 0000002C 6097            str              r7, [r2,#0x08] ; FUNC
    28 0000002E F64A 27AA       movw             r7, #0xaaaa ; 
    29 00000032 6197            str              r7, [r2,#0x18] ;PWR 
-   30 00000034 4B11            ldr              r3,=0x40030000 ;BazAdrUart1
+   30 00000034 4B12            ldr              r3,=0x40030000 ;BazAdrUart1
    31 00000036 F04F 0735       mov              r7, #53     ;
    32 0000003A 625F            str              r7,[r3, #0x24] ; IBRD 
    33 0000003C F04F 0720       mov              r7, #0x20   ;
    34 00000040 629F            str              r7,[r3, #0x28] ;FBRD
-   35 00000042 F04F 0762       mov              r7, #0x62   ; 
+   35 00000042 F04F 0766       mov              r7, #0x66   ; 
    36 00000046 62DF            str              r7,[r3,#0x2c ] ; LCR_H
    37 00000048 F240 1701       movw             r7, #0x0101 ;
    38 0000004C 631F            str              r7,[r3, #0x30] ;CR 
    39 0000004E F04F 0451       mov              r4, #0x51   ; data
    40 00000052 601C            str              r4,[r3]     ; DR
-   41 00000054 4770            bx               lr
-   42 00000056 F105 0501 
+   41 00000054 F04F 0400       mov              r4, #0
+   42 00000058 4770            bx               lr
+   43 0000005A F105 0501 
                        pp2     add              r5, #1      ; counter
-   43 0000005A         
-   44 0000005A 6015            str              r5,[r2]     ; 
-   45 0000005C F647 7AFF       movw             r10, 0x7fff
-   46 00000060 EA05 060A       and              r6, r5, r10
-   47 00000064 F096 0600       eors             r6, #0
-   48 00000068 BF08 601C       streq            r4, [r3]
-   49 0000006C         pp3
-   50 0000006C 4770            bx               lr
-   51 0000006E                 END
-              00 00 40020000 
+   44 0000005E         
+   45 0000005E 6015            str              r5,[r2]     ; 
+   46 00000060 F647 7AFF       movw             r10, 0x7fff
+   47 00000064 EA05 060A       and              r6, r5, r10
+   48 00000068 F096 0600       eors             r6, #0
+   49 0000006C BF04 601C       streq            r4, [r3]
+   50 00000070 3401            addeq            r4, #1
+   51 00000072         pp3
+   52 00000072 4770            bx               lr
+   53 00000074                 END
+              40020000 
               08200050 
               400A8000 
               40030000 
-Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
-ork --depend=.\objects\lab5.d -o.\objects\lab5.o -I.\RTE\_Target_1 -IC:\Keil_v5
 
 
 
 ARM Macro Assembler    Page 2 
 
 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
+ork --depend=.\objects\lab5.d -o.\objects\lab5.o -I.\RTE\_Target_1 -IC:\Keil_v5
 \ARM\PACK\Keil\MDR1986BExx\1.4\Libraries\CMSIS\CM3\DeviceSupport\MDR32F9Qx\inc 
 -IC:\Keil_v5\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predefine="__UVISI
 ON_VERSION SETA 526" --predefine="USE_MDR32F9Q2_Rev1 SETA 1" --list=.\listings\
@@ -133,19 +135,19 @@ Symbol: pp1
    Uses
       At line 11 in file lab5.s
 Comment: pp1 used once
-pp2 00000056
+pp2 0000005A
 
 Symbol: pp2
    Definitions
-      At line 42 in file lab5.s
+      At line 43 in file lab5.s
    Uses
       At line 13 in file lab5.s
 Comment: pp2 used once
-pp3 0000006C
+pp3 00000072
 
 Symbol: pp3
    Definitions
-      At line 49 in file lab5.s
+      At line 51 in file lab5.s
    Uses
       None
 Comment: pp3 unused

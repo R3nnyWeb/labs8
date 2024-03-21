@@ -20,17 +20,17 @@ Altera or its authorized distributors.  Please refer to the
 applicable agreement for further details.
 */
 
-VECTOR("B:/study/labs8/MSIPU/Coursework/KP/ex1.vwf")
+VECTOR("B:/study/labs8/MSIPU/Coursework/KP/db/KP_8.sim.cvwf")
 {
 	ZOOM{
 		ZBEGIN = 0;
-		ZEND = 2500000;
-		NUMERATOR = 1428;
-		DENOMINATOR = 2500000;
+		ZEND = 5000000;
+		NUMERATOR = 1252;
+		DENOMINATOR = 5000000;
 		TOP_INDEX = 0;
 	}
 	CLOCK{
-		PERIOD = 10000;
+		PERIOD = 100000;
 		OFFSET = 0;
 		DUTY_CYCLE = 50;
 	}
@@ -488,6 +488,22 @@ VECTOR("B:/study/labs8/MSIPU/Coursework/KP/ex1.vwf")
 	LINE{
 		SIGNAL = "c";
 		INDEX = 56;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "wmem";
+		INDEX = 57;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "wreg";
+		INDEX = 58;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -495,13 +511,13 @@ VECTOR("B:/study/labs8/MSIPU/Coursework/KP/ex1.vwf")
 	}
 }
 
-VECTOR("B:/study/labs8/MSIPU/Coursework/KP/db/KP_8.sim.cvwf")
+VECTOR("B:/study/labs8/MSIPU/Coursework/KP/ex1.vwf")
 {
 	ZOOM{
 		ZBEGIN = 0;
-		ZEND = 1250000;
-		NUMERATOR = 1365;
-		DENOMINATOR = 1250000;
+		ZEND = 5000000;
+		NUMERATOR = 1478;
+		DENOMINATOR = 5000000;
 		TOP_INDEX = 0;
 	}
 	CLOCK{
@@ -963,6 +979,22 @@ VECTOR("B:/study/labs8/MSIPU/Coursework/KP/db/KP_8.sim.cvwf")
 	LINE{
 		SIGNAL = "c";
 		INDEX = 56;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "wmem";
+		INDEX = 57;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "wreg";
+		INDEX = 58;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;

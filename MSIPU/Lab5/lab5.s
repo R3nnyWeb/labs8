@@ -32,12 +32,13 @@ pp1
 	str r7,[r3, #0x24]	; IBRD	
 	mov r7, #0x20		;
 	str r7,[r3, #0x28]	;FBRD
-	mov r7, #0x62		; 
+	mov r7, #0x66		; 
 	str r7,[r3,#0x2c ]	; LCR_H
 	movw r7, #0x0101	;
 	str r7,[r3, #0x30]	;CR 
 	mov r4, #0x51		; data
 	str r4,[r3]			; DR
+	mov r4, #0
 	bx	lr
 pp2	add r5, #1		; counter
 
@@ -46,6 +47,7 @@ pp2	add r5, #1		; counter
 	and r6, r5, r10
 	eors r6, #0
 	streq r4, [r3]
+	addeq r4, #1
 pp3 	
 	bx lr
 	END
