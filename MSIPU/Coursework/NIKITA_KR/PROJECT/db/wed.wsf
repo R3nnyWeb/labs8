@@ -1006,9 +1006,9 @@ VECTOR("E:/MyDoc/Projects/labs8/MSIPU/Coursework/NIKITA_KR/PROJECT/ex1.vwf")
 {
 	ZOOM{
 		ZBEGIN = 0;
-		ZEND = 0;
-		NUMERATOR = 0;
-		DENOMINATOR = 0;
+		ZEND = 74750;
+		NUMERATOR = 20;
+		DENOMINATOR = 1000;
 		TOP_INDEX = 0;
 	}
 	CLOCK{

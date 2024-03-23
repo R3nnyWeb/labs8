@@ -1,5 +1,5 @@
 Simulator report for KP_8
-Fri Mar 22 22:20:15 2024
+Sat Mar 23 13:08:16 2024
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -48,8 +48,8 @@ applicable agreement for further details.
 ; Simulation Start Time       ; 0 ps          ;
 ; Simulation End Time         ; 5.0 us        ;
 ; Simulation Netlist Size     ; 382 nodes     ;
-; Simulation Coverage         ;      83.55 %  ;
-; Total Number of Transitions ; 5854          ;
+; Simulation Coverage         ;      81.49 %  ;
+; Total Number of Transitions ; 3346          ;
 ; Simulation Breakpoints      ; 0             ;
 ; Family                      ; ACEX1K        ;
 ; Device                      ; EP1K10TC100-1 ;
@@ -111,13 +111,13 @@ Please use Quartus II to view the memory report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      83.55 % ;
+; Total coverage as a percentage                      ;      81.49 % ;
 ; Total nodes checked                                 ; 382          ;
 ; Total output ports checked                          ; 389          ;
-; Total output ports with complete 1/0-value coverage ; 325          ;
-; Total output ports with no 1/0-value coverage       ; 62           ;
-; Total output ports with no 1-value coverage         ; 62           ;
-; Total output ports with no 0-value coverage         ; 64           ;
+; Total output ports with complete 1/0-value coverage ; 317          ;
+; Total output ports with no 1/0-value coverage       ; 70           ;
+; Total output ports with no 1-value coverage         ; 70           ;
+; Total output ports with no 0-value coverage         ; 72           ;
 +-----------------------------------------------------+--------------+
 
 
@@ -157,16 +157,12 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |cpu|alu:inst12|Equal0~57                                                                ; |cpu|alu:inst12|Equal0~57                                                                     ; data_out0        ;
 ; |cpu|blok_ron:inst2|ron__dual~1596                                                       ; |cpu|blok_ron:inst2|ron__dual~1596                                                            ; data_out0        ;
 ; |cpu|blok_ron:inst2|ron__dual~1597                                                       ; |cpu|blok_ron:inst2|ron__dual~1597                                                            ; data_out0        ;
-; |cpu|blok_ron:inst2|ron__dual~1599                                                       ; |cpu|blok_ron:inst2|ron__dual~1599                                                            ; data_out0        ;
-; |cpu|blok_ron:inst2|ron__dual~1600                                                       ; |cpu|blok_ron:inst2|ron__dual~1600                                                            ; data_out0        ;
-; |cpu|blok_ron:inst2|ron__dual~1601                                                       ; |cpu|blok_ron:inst2|ron__dual~1601                                                            ; data_out0        ;
 ; |cpu|blok_ron:inst2|ron__dual~1602                                                       ; |cpu|blok_ron:inst2|ron__dual~1602                                                            ; data_out0        ;
 ; |cpu|blok_ron:inst2|ron__dual~1603                                                       ; |cpu|blok_ron:inst2|ron__dual~1603                                                            ; data_out0        ;
 ; |cpu|blok_ron:inst2|ron__dual~1604                                                       ; |cpu|blok_ron:inst2|ron__dual~1604                                                            ; data_out0        ;
 ; |cpu|blok_ron:inst2|ron__dual~1605                                                       ; |cpu|blok_ron:inst2|ron__dual~1605                                                            ; data_out0        ;
 ; |cpu|blok_ron:inst2|ron__dual~1606                                                       ; |cpu|blok_ron:inst2|ron__dual~1606                                                            ; data_out0        ;
 ; |cpu|blok_ron:inst2|ron__dual~1607                                                       ; |cpu|blok_ron:inst2|ron__dual~1607                                                            ; data_out0        ;
-; |cpu|blok_ron:inst2|ron__dual~1608                                                       ; |cpu|blok_ron:inst2|ron__dual~1608                                                            ; data_out0        ;
 ; |cpu|blok_ron:inst2|ron__dual~1609                                                       ; |cpu|blok_ron:inst2|ron__dual~1609                                                            ; data_out0        ;
 ; |cpu|blok_ron:inst2|ron__dual~1610                                                       ; |cpu|blok_ron:inst2|ron__dual~1610                                                            ; data_out0        ;
 ; |cpu|blok_ron:inst2|ron__dual~1611                                                       ; |cpu|blok_ron:inst2|ron__dual~1611                                                            ; data_out0        ;
@@ -228,9 +224,7 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |cpu|alu:inst12|lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]      ; |cpu|alu:inst12|lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]           ; data_out0        ;
 ; |cpu|alu:inst12|lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]      ; |cpu|alu:inst12|lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node|cout[7]                ; cout             ;
 ; |cpu|alu:inst12|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]      ; |cpu|alu:inst12|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]           ; data_out0        ;
-; |cpu|alu:inst12|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]      ; |cpu|alu:inst12|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cout[6]                ; cout             ;
 ; |cpu|alu:inst12|Mux22~29                                                                 ; |cpu|alu:inst12|Mux22~29                                                                      ; data_out0        ;
-; |cpu|alu:inst12|concat~30                                                                ; |cpu|alu:inst12|concat~30                                                                     ; data_out0        ;
 ; |cpu|alu:inst12|Mux22~30                                                                 ; |cpu|alu:inst12|Mux22~30                                                                      ; data_out0        ;
 ; |cpu|alu:inst12|d_bus[6]~9620                                                            ; |cpu|alu:inst12|d_bus[6]~9620                                                                 ; data_out0        ;
 ; |cpu|alu:inst12|d_bus[6]~9623                                                            ; |cpu|alu:inst12|d_bus[6]~9623                                                                 ; data_out0        ;
@@ -429,8 +423,6 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |cpu|c                                                                                   ; |cpu|c                                                                                        ; padio            ;
 ; |cpu|n                                                                                   ; |cpu|n                                                                                        ; padio            ;
 ; |cpu|y[7]                                                                                ; |cpu|y[7]                                                                                     ; padio            ;
-; |cpu|y[6]                                                                                ; |cpu|y[6]                                                                                     ; padio            ;
-; |cpu|y[5]                                                                                ; |cpu|y[5]                                                                                     ; padio            ;
 ; |cpu|y[4]                                                                                ; |cpu|y[4]                                                                                     ; padio            ;
 ; |cpu|y[3]                                                                                ; |cpu|y[3]                                                                                     ; padio            ;
 ; |cpu|y[2]                                                                                ; |cpu|y[2]                                                                                     ; padio            ;
@@ -469,6 +461,10 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |cpu|control:inst1|lpm_counter:q_pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5] ; |cpu|control:inst1|lpm_counter:q_pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[5]~COUT ; cout             ;
 ; |cpu|sync_wr:inst3|wmem~13                                                               ; |cpu|sync_wr:inst3|wmem~13                                                                    ; data_out0        ;
 ; |cpu|blok_ron:inst2|ron__dual~1598                                                       ; |cpu|blok_ron:inst2|ron__dual~1598                                                            ; data_out0        ;
+; |cpu|blok_ron:inst2|ron__dual~1599                                                       ; |cpu|blok_ron:inst2|ron__dual~1599                                                            ; data_out0        ;
+; |cpu|blok_ron:inst2|ron__dual~1600                                                       ; |cpu|blok_ron:inst2|ron__dual~1600                                                            ; data_out0        ;
+; |cpu|blok_ron:inst2|ron__dual~1601                                                       ; |cpu|blok_ron:inst2|ron__dual~1601                                                            ; data_out0        ;
+; |cpu|blok_ron:inst2|ron__dual~1608                                                       ; |cpu|blok_ron:inst2|ron__dual~1608                                                            ; data_out0        ;
 ; |cpu|alu:inst12|Equal1~43                                                                ; |cpu|alu:inst12|Equal1~43                                                                     ; data_out0        ;
 ; |cpu|control:inst1|branch~346                                                            ; |cpu|control:inst1|branch~346                                                                 ; data_out0        ;
 ; |cpu|control:inst1|branch                                                                ; |cpu|control:inst1|branch                                                                     ; data_out0        ;
@@ -484,6 +480,8 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |cpu|alu:inst12|d_bus[7]~9612                                                            ; |cpu|alu:inst12|d_bus[7]~9612                                                                 ; data_out0        ;
 ; |cpu|alu:inst12|d_bus[6]~9616                                                            ; |cpu|alu:inst12|d_bus[6]~9616                                                                 ; data_out0        ;
 ; |cpu|alu:inst12|d_bus[6]~9617                                                            ; |cpu|alu:inst12|d_bus[6]~9617                                                                 ; data_out0        ;
+; |cpu|alu:inst12|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]      ; |cpu|alu:inst12|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cout[6]                ; cout             ;
+; |cpu|alu:inst12|concat~30                                                                ; |cpu|alu:inst12|concat~30                                                                     ; data_out0        ;
 ; |cpu|alu:inst12|d_bus[6]~9621                                                            ; |cpu|alu:inst12|d_bus[6]~9621                                                                 ; data_out0        ;
 ; |cpu|alu:inst12|d_bus[5]~9624                                                            ; |cpu|alu:inst12|d_bus[5]~9624                                                                 ; data_out0        ;
 ; |cpu|alu:inst12|concat~29                                                                ; |cpu|alu:inst12|concat~29                                                                     ; data_out0        ;
@@ -522,6 +520,8 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |cpu|ak[6]                                                                               ; |cpu|ak[6]                                                                                    ; padio            ;
 ; |cpu|ak[5]                                                                               ; |cpu|ak[5]                                                                                    ; padio            ;
 ; |cpu|wmem                                                                                ; |cpu|wmem                                                                                     ; padio            ;
+; |cpu|y[6]                                                                                ; |cpu|y[6]                                                                                     ; padio            ;
+; |cpu|y[5]                                                                                ; |cpu|y[5]                                                                                     ; padio            ;
 ; |cpu|branch                                                                              ; |cpu|branch                                                                                   ; padio            ;
 +------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
 
@@ -541,6 +541,10 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |cpu|control:inst1|lpm_counter:q_pc_rtl_0|alt_counter_f10ke:wysi_counter|counter_cell[4] ; |cpu|control:inst1|lpm_counter:q_pc_rtl_0|alt_counter_f10ke:wysi_counter|q[4]                 ; data_out0        ;
 ; |cpu|sync_wr:inst3|wmem~13                                                               ; |cpu|sync_wr:inst3|wmem~13                                                                    ; data_out0        ;
 ; |cpu|blok_ron:inst2|ron__dual~1598                                                       ; |cpu|blok_ron:inst2|ron__dual~1598                                                            ; data_out0        ;
+; |cpu|blok_ron:inst2|ron__dual~1599                                                       ; |cpu|blok_ron:inst2|ron__dual~1599                                                            ; data_out0        ;
+; |cpu|blok_ron:inst2|ron__dual~1600                                                       ; |cpu|blok_ron:inst2|ron__dual~1600                                                            ; data_out0        ;
+; |cpu|blok_ron:inst2|ron__dual~1601                                                       ; |cpu|blok_ron:inst2|ron__dual~1601                                                            ; data_out0        ;
+; |cpu|blok_ron:inst2|ron__dual~1608                                                       ; |cpu|blok_ron:inst2|ron__dual~1608                                                            ; data_out0        ;
 ; |cpu|alu:inst12|Equal1~43                                                                ; |cpu|alu:inst12|Equal1~43                                                                     ; data_out0        ;
 ; |cpu|control:inst1|branch~346                                                            ; |cpu|control:inst1|branch~346                                                                 ; data_out0        ;
 ; |cpu|control:inst1|branch                                                                ; |cpu|control:inst1|branch                                                                     ; data_out0        ;
@@ -556,6 +560,8 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |cpu|alu:inst12|d_bus[7]~9612                                                            ; |cpu|alu:inst12|d_bus[7]~9612                                                                 ; data_out0        ;
 ; |cpu|alu:inst12|d_bus[6]~9616                                                            ; |cpu|alu:inst12|d_bus[6]~9616                                                                 ; data_out0        ;
 ; |cpu|alu:inst12|d_bus[6]~9617                                                            ; |cpu|alu:inst12|d_bus[6]~9617                                                                 ; data_out0        ;
+; |cpu|alu:inst12|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]      ; |cpu|alu:inst12|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cout[6]                ; cout             ;
+; |cpu|alu:inst12|concat~30                                                                ; |cpu|alu:inst12|concat~30                                                                     ; data_out0        ;
 ; |cpu|alu:inst12|d_bus[6]~9621                                                            ; |cpu|alu:inst12|d_bus[6]~9621                                                                 ; data_out0        ;
 ; |cpu|alu:inst12|d_bus[5]~9624                                                            ; |cpu|alu:inst12|d_bus[5]~9624                                                                 ; data_out0        ;
 ; |cpu|alu:inst12|concat~29                                                                ; |cpu|alu:inst12|concat~29                                                                     ; data_out0        ;
@@ -595,6 +601,8 @@ The following table displays output ports that do not toggle to 0 during simulat
 ; |cpu|ak[5]                                                                               ; |cpu|ak[5]                                                                                    ; padio            ;
 ; |cpu|ak[4]                                                                               ; |cpu|ak[4]                                                                                    ; padio            ;
 ; |cpu|wmem                                                                                ; |cpu|wmem                                                                                     ; padio            ;
+; |cpu|y[6]                                                                                ; |cpu|y[6]                                                                                     ; padio            ;
+; |cpu|y[5]                                                                                ; |cpu|y[5]                                                                                     ; padio            ;
 ; |cpu|branch                                                                              ; |cpu|branch                                                                                   ; padio            ;
 +------------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------+------------------+
 
@@ -612,18 +620,18 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II Simulator
     Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
-    Info: Processing started: Fri Mar 22 22:20:14 2024
+    Info: Processing started: Sat Mar 23 13:08:16 2024
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off KP_8 -c KP_8
 Info: Using vector source file "E:/MyDoc/Projects/labs8/MSIPU/Coursework/NIKITA_KR/PROJECT/ex1.vwf"
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      83.55 %
-Info: Number of transitions in simulation is 5854
+Info: Simulation coverage is      81.49 %
+Info: Number of transitions in simulation is 3346
 Info: Quartus II Simulator was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 162 megabytes
-    Info: Processing ended: Fri Mar 22 22:20:15 2024
-    Info: Elapsed time: 00:00:01
+    Info: Processing ended: Sat Mar 23 13:08:16 2024
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
 

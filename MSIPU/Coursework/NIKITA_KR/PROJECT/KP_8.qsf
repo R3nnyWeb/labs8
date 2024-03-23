@@ -36,7 +36,6 @@ set_global_assignment -name VERILOG_FILE blok_ron.v
 set_global_assignment -name VERILOG_FILE sync_wr.v
 set_global_assignment -name VERILOG_FILE status_reg.v
 set_global_assignment -name MIF_FILE test.mif
-set_global_assignment -name USE_CONFIGURATION_DEVICE ON
 set_global_assignment -name OPTIMIZE_HOLD_TIMING "IO PATHS AND MINIMUM TPD PATHS"
 set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
 set_global_assignment -name QIP_FILE lpm_rom0.qip

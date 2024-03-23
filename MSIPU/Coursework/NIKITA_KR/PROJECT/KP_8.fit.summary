@@ -1,4 +1,4 @@
-Fitter Status : Successful - Fri Mar 22 22:20:08 2024
+Fitter Status : Successful - Sat Mar 23 13:03:59 2024
 Quartus II Version : 8.1 Build 163 10/28/2008 SJ Web Edition
 Revision Name : KP_8
 Top-level Entity Name : cpu
@@ -7,5 +7,5 @@ Device : EP1K10TC100-1
 Timing Models : Final
 Total logic elements : 303 / 576 ( 53 % )
 Total pins : 55 / 66 ( 83 % )
-Total memory bits : 384 / 12,288 ( 3 % )
+Total memory bits : 4,224 / 12,288 ( 34 % )
 Total PLLs : 0 / 1 ( 0 % )
