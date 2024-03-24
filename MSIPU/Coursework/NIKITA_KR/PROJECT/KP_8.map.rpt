@@ -1,5 +1,5 @@
 Analysis & Synthesis report for KP_8
-Sat Mar 23 13:03:56 2024
+Sun Mar 24 20:33:51 2024
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -58,7 +58,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                          ;
 +-----------------------------+-----------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sat Mar 23 13:03:56 2024   ;
+; Analysis & Synthesis Status ; Successful - Sun Mar 24 20:33:51 2024   ;
 ; Quartus II Version          ; 8.1 Build 163 10/28/2008 SJ Web Edition ;
 ; Revision Name               ; KP_8                                    ;
 ; Top-level Entity Name       ; cpu                                     ;
@@ -399,21 +399,21 @@ Note: All latches listed above may not be present at the end of synthesis due to
 
 +---------------------------------------------------------------------------------------+
 ; Parameter Settings for User Entity Instance: lpm_rom0:inst6|lpm_rom:lpm_rom_component ;
-+------------------------+------------+-------------------------------------------------+
-; Parameter Name         ; Value      ; Type                                            ;
-+------------------------+------------+-------------------------------------------------+
-; LPM_WIDTH              ; 16         ; Signed Integer                                  ;
-; LPM_WIDTHAD            ; 8          ; Signed Integer                                  ;
-; LPM_NUMWORDS           ; 256        ; Untyped                                         ;
-; LPM_ADDRESS_CONTROL    ; REGISTERED ; Untyped                                         ;
-; LPM_OUTDATA            ; REGISTERED ; Untyped                                         ;
-; LPM_FILE               ; test.mif   ; Untyped                                         ;
-; DEVICE_FAMILY          ; ACEX1K     ; Untyped                                         ;
-; AUTO_CARRY_CHAINS      ; ON         ; AUTO_CARRY                                      ;
-; IGNORE_CARRY_BUFFERS   ; OFF        ; IGNORE_CARRY                                    ;
-; AUTO_CASCADE_CHAINS    ; ON         ; AUTO_CASCADE                                    ;
-; IGNORE_CASCADE_BUFFERS ; OFF        ; IGNORE_CASCADE                                  ;
-+------------------------+------------+-------------------------------------------------+
++------------------------+--------------+-----------------------------------------------+
+; Parameter Name         ; Value        ; Type                                          ;
++------------------------+--------------+-----------------------------------------------+
+; LPM_WIDTH              ; 16           ; Signed Integer                                ;
+; LPM_WIDTHAD            ; 8            ; Signed Integer                                ;
+; LPM_NUMWORDS           ; 256          ; Untyped                                       ;
+; LPM_ADDRESS_CONTROL    ; UNREGISTERED ; Untyped                                       ;
+; LPM_OUTDATA            ; REGISTERED   ; Untyped                                       ;
+; LPM_FILE               ; test.mif     ; Untyped                                       ;
+; DEVICE_FAMILY          ; ACEX1K       ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                                ;
++------------------------+--------------+-----------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -641,7 +641,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
-    Info: Processing started: Sat Mar 23 13:03:54 2024
+    Info: Processing started: Sun Mar 24 20:33:49 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off KP_8 -c KP_8
 Info: Found 1 design units, including 1 entities, in source file control.v
     Info: Found entity 1: control
@@ -667,7 +667,7 @@ Info: Elaborating entity "lpm_rom" for hierarchy "lpm_rom0:inst6|lpm_rom:lpm_rom
 Info: Elaborated megafunction instantiation "lpm_rom0:inst6|lpm_rom:lpm_rom_component"
 Info: Instantiated megafunction "lpm_rom0:inst6|lpm_rom:lpm_rom_component" with the following parameter:
     Info: Parameter "intended_device_family" = "ACEX1K"
-    Info: Parameter "lpm_address_control" = "REGISTERED"
+    Info: Parameter "lpm_address_control" = "UNREGISTERED"
     Info: Parameter "lpm_file" = "test.mif"
     Info: Parameter "lpm_outdata" = "REGISTERED"
     Info: Parameter "lpm_type" = "LPM_ROM"
@@ -868,7 +868,7 @@ Info: Implemented 382 device resources after synthesis - the final resource coun
     Info: Implemented 24 RAM segments
 Info: Quartus II Analysis & Synthesis was successful. 0 errors, 106 warnings
     Info: Peak virtual memory: 227 megabytes
-    Info: Processing ended: Sat Mar 23 13:03:56 2024
+    Info: Processing ended: Sun Mar 24 20:33:51 2024
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
