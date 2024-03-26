@@ -43,3 +43,4 @@ set_global_assignment -name BDF_FILE cpu.bdf
 set_global_assignment -name QIP_FILE lpm_ram_dq0.qip
 set_global_assignment -name VECTOR_WAVEFORM_FILE ex1.vwf
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE ex1.vwf
+set_global_assignment -name MIF_FILE ex2.mif
