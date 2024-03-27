@@ -39,26 +39,28 @@
 module lpm_rom0 (
 	address,
 	inclock,
+	outclock,
 	q);
 
 	input	[7:0]  address;
 	input	  inclock;
+	input	  outclock;
 	output	[15:0]  q;
 
 	wire [15:0] sub_wire0;
 	wire [15:0] q = sub_wire0[15:0];
 
 	lpm_rom	lpm_rom_component (
+				.outclock (outclock),
 				.address (address),
 				.inclock (inclock),
 				.q (sub_wire0),
-				.memenab (1'b1),
-				.outclock (1'b1));
+				.memenab (1'b1));
 	defparam
 		lpm_rom_component.intended_device_family = "ACEX1K",
 		lpm_rom_component.lpm_address_control = "REGISTERED",
 		lpm_rom_component.lpm_file = "test.mif",
-		lpm_rom_component.lpm_outdata = "UNREGISTERED",
+		lpm_rom_component.lpm_outdata = "REGISTERED",
 		lpm_rom_component.lpm_type = "LPM_ROM",
 		lpm_rom_component.lpm_width = 16,
 		lpm_rom_component.lpm_widthad = 4;
@@ -88,11 +90,11 @@ endmodule
 // Retrieval info: PRIVATE: MAXIMUM_DEPTH NUMERIC "0"
 // Retrieval info: PRIVATE: MIFfilename STRING "test.mif"
 // Retrieval info: PRIVATE: NUMWORDS_A NUMERIC "16"
-// Retrieval info: PRIVATE: OutputRegistered NUMERIC "0"
+// Retrieval info: PRIVATE: OutputRegistered NUMERIC "1"
 // Retrieval info: PRIVATE: RAM_BLOCK_TYPE NUMERIC "0"
 // Retrieval info: PRIVATE: RegAdd NUMERIC "1"
 // Retrieval info: PRIVATE: RegAddr NUMERIC "1"
-// Retrieval info: PRIVATE: RegOutput NUMERIC "0"
+// Retrieval info: PRIVATE: RegOutput NUMERIC "1"
 // Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
 // Retrieval info: PRIVATE: SingleClock NUMERIC "1"
 // Retrieval info: PRIVATE: UseDQRAM NUMERIC "0"
@@ -102,16 +104,18 @@ endmodule
 // Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "ACEX1K"
 // Retrieval info: CONSTANT: LPM_ADDRESS_CONTROL STRING "REGISTERED"
 // Retrieval info: CONSTANT: LPM_FILE STRING "test.mif"
-// Retrieval info: CONSTANT: LPM_OUTDATA STRING "UNREGISTERED"
+// Retrieval info: CONSTANT: LPM_OUTDATA STRING "REGISTERED"
 // Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_ROM"
 // Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "16"
 // Retrieval info: CONSTANT: LPM_WIDTHAD NUMERIC "4"
 // Retrieval info: USED_PORT: address 0 0 4 0 INPUT NODEFVAL address[3..0]
 // Retrieval info: USED_PORT: inclock 0 0 0 0 INPUT NODEFVAL inclock
+// Retrieval info: USED_PORT: outclock 0 0 0 0 INPUT NODEFVAL outclock
 // Retrieval info: USED_PORT: q 0 0 16 0 OUTPUT NODEFVAL q[15..0]
 // Retrieval info: CONNECT: @address 0 0 4 0 address 0 0 4 0
 // Retrieval info: CONNECT: q 0 0 16 0 @q 0 0 16 0
 // Retrieval info: CONNECT: @inclock 0 0 0 0 inclock 0 0 0 0
+// Retrieval info: CONNECT: @outclock 0 0 0 0 outclock 0 0 0 0
 // Retrieval info: LIBRARY: lpm lpm.lpm_components.all
 // Retrieval info: GEN_FILE: TYPE_NORMAL lpm_rom0.v TRUE
 // Retrieval info: GEN_FILE: TYPE_NORMAL lpm_rom0.inc FALSE
