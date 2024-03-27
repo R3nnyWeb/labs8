@@ -1002,13 +1002,13 @@ VECTOR("B:/study/labs8/MSIPU/Coursework/KP/ex1.vwf")
 	}
 }
 
-VECTOR("E:/MyDoc/Projects/labs8/MSIPU/Coursework/NIKITA_KR/PROJECT/ex1.vwf")
+VECTOR("E:/MyDoc/Projects/labs8/MSIPU/Coursework/NIKITA_KR/PROJECT/db/KP_8.sim.cvwf")
 {
 	ZOOM{
 		ZBEGIN = 0;
-		ZEND = 74750;
-		NUMERATOR = 20;
-		DENOMINATOR = 1000;
+		ZEND = 5000000;
+		NUMERATOR = 1427;
+		DENOMINATOR = 5000000;
 		TOP_INDEX = 0;
 	}
 	CLOCK{
@@ -1501,13 +1501,13 @@ VECTOR("E:/MyDoc/Projects/labs8/MSIPU/Coursework/NIKITA_KR/PROJECT/ex1.vwf")
 	}
 }
 
-VECTOR("E:/MyDoc/Projects/labs8/MSIPU/Coursework/NIKITA_KR/PROJECT/db/KP_8.sim.cvwf")
+VECTOR("E:/MyDoc/Projects/labs8/MSIPU/Coursework/NIKITA_KR/PROJECT/ex1.vwf")
 {
 	ZOOM{
 		ZBEGIN = 0;
-		ZEND = 5000000;
-		NUMERATOR = 1427;
-		DENOMINATOR = 5000000;
+		ZEND = 74750;
+		NUMERATOR = 20;
+		DENOMINATOR = 1000;
 		TOP_INDEX = 0;
 	}
 	CLOCK{
