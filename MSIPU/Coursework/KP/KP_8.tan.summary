@@ -5,7 +5,7 @@ Timing Analyzer Summary
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 16.200 ns
+Actual Time    : 13.400 ns
 From           : alu:inst12|d_bus[5]
 To             : d_bus[5]
 From Clock     : clk
@@ -15,8 +15,8 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clk'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 30.30 MHz ( period = 33.000 ns )
-From           : lpm_rom0:inst6|lpm_rom:lpm_rom_component|altrom:srom|q[8]~reg_ra7
+Actual Time    : 31.65 MHz ( period = 31.600 ns )
+From           : blok_ron:inst2|ron__dual~44
 To             : alu:inst12|cl
 From Clock     : clk
 To Clock       : clk
@@ -26,11 +26,11 @@ Type           : Clock Hold: 'clk'
 Slack          : Not operational: Clock Skew > Data Delay
 Required Time  : None
 Actual Time    : N/A
-From           : blok_ron:inst2|ron__dual~68
-To             : alu:inst12|d_bus[5]
+From           : lpm_rom0:inst|lpm_rom:lpm_rom_component|altrom:srom|q[15]
+To             : alu:inst12|d_bus[7]
 From Clock     : clk
 To Clock       : clk
-Failed Paths   : 510
+Failed Paths   : 140
 
 Type           : Total number of failed paths
 Slack          : 
@@ -40,7 +40,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 510
+Failed Paths   : 140
 
 --------------------------------------------------------------------------------------
 

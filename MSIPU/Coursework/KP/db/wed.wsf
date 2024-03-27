@@ -25,7 +25,7 @@ VECTOR("B:/study/labs8/MSIPU/Coursework/KP/db/KP_8.sim.cvwf")
 	ZOOM{
 		ZBEGIN = 0;
 		ZEND = 5000000;
-		NUMERATOR = 1252;
+		NUMERATOR = 1394;
 		DENOMINATOR = 5000000;
 		TOP_INDEX = 0;
 	}

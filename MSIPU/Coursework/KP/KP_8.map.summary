@@ -1,9 +1,9 @@
-Analysis & Synthesis Status : Successful - Wed Mar 20 16:50:32 2024
+Analysis & Synthesis Status : Successful - Mon Mar 25 12:47:26 2024
 Quartus II Version : 8.1 Build 163 10/28/2008 SJ Web Edition
 Revision Name : KP_8
 Top-level Entity Name : cpu
 Family : ACEX1K
-Total logic elements : 302
+Total logic elements : 303
 Total pins : 54
-Total memory bits : 4,224
+Total memory bits : 384
 Total PLLs : 0

@@ -38,6 +38,13 @@ applicable agreement for further details.
 		(line (pt 0 48)(pt 16 48)(line_width 1))
 	)
 	(port
+		(pt 0 64)
+		(input)
+		(text "outclock" (rect 0 0 53 15)(font "Arial" ))
+		(text "outclock" (rect 21 59 74 74)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 1))
+	)
+	(port
 		(pt 184 32)
 		(output)
 		(text "q[15..0]" (rect 0 0 47 15)(font "Arial" ))
