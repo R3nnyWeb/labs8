@@ -10,8 +10,8 @@ class Workspace(QGraphicsView):
         self.setScene(QGraphicsScene(self))
         self.setSceneRect(0, 0, SCENE_WIDTH, SCENE_HEIGHT)  # Устанавливаем размер рабочей области
         self.setRenderHint(QPainter.Antialiasing)
-        self.setTransformationAnchor(QGraphicsView.AnchorUnderMouse)
-        self.setDragMode(QGraphicsView.ScrollHandDrag)  # Режим перетаскивания для перемещения по области
+
+
         self.zoom_factor = 1.25  # Фактор масштабирования
         self.grid_spacing = 50  # Размер сетки
         self.min_zoom = 1
