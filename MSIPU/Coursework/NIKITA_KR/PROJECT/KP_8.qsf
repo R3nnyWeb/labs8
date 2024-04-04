@@ -30,17 +30,19 @@ set_global_assignment -name ORIGINAL_QUARTUS_VERSION 8.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "12:27:30  MARCH 10, 2024"
 set_global_assignment -name LAST_QUARTUS_VERSION 8.1
 set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id eda_blast_fpga
+set_global_assignment -name OPTIMIZE_HOLD_TIMING "IO PATHS AND MINIMUM TPD PATHS"
+set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
+set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE ex1.vwf
+set_global_assignment -name MIF_FILE ex4.mif
+set_global_assignment -name MIF_FILE ex3.mif
 set_global_assignment -name VERILOG_FILE control.v
 set_global_assignment -name VERILOG_FILE alu.v
 set_global_assignment -name VERILOG_FILE blok_ron.v
 set_global_assignment -name VERILOG_FILE sync_wr.v
 set_global_assignment -name VERILOG_FILE status_reg.v
 set_global_assignment -name MIF_FILE test.mif
-set_global_assignment -name OPTIMIZE_HOLD_TIMING "IO PATHS AND MINIMUM TPD PATHS"
-set_global_assignment -name FITTER_EFFORT "STANDARD FIT"
 set_global_assignment -name QIP_FILE lpm_rom0.qip
 set_global_assignment -name BDF_FILE cpu.bdf
 set_global_assignment -name QIP_FILE lpm_ram_dq0.qip
 set_global_assignment -name VECTOR_WAVEFORM_FILE ex1.vwf
-set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE ex1.vwf
 set_global_assignment -name MIF_FILE ex2.mif

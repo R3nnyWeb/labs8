@@ -25,6 +25,7 @@ if (k[15:12] == 9) case (k [2:0])
 	2: {cl,d_bus}= {1'b0,( ~x)};
 	3: {d_bus,cl}= {x[7], x[7:0]};
 	4: {cl,d_bus}= {x,1'b0};
+	5: {d_bus,cl} = {x};
 endcase else
 if (k[15:12]==4'b1010) case (k [0])
 	0: d_bus=dm; 
