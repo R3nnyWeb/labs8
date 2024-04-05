@@ -1,5 +1,5 @@
 Analysis & Synthesis report for KP_8
-Sat Mar 30 19:42:31 2024
+Fri Apr 05 21:00:18 2024
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -10,29 +10,8 @@ Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Analysis & Synthesis Source Files Read
-  5. Analysis & Synthesis Resource Usage Summary
-  6. Analysis & Synthesis Resource Utilization by Entity
-  7. Analysis & Synthesis RAM Summary
-  8. User-Specified and Inferred Latches
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Source assignments for control:inst1|lpm_counter:q_pc_rtl_0
- 12. Source assignments for alu:inst12|lpm_add_sub:Add0|addcore:adder
- 13. Source assignments for alu:inst12|lpm_add_sub:Add1|addcore:adder
- 14. Source assignments for alu:inst12|lpm_add_sub:Add2|addcore:adder
- 15. Source assignments for alu:inst12|lpm_add_sub:Add3|addcore:adder
- 16. Source assignments for alu:inst12|lpm_add_sub:Add4|addcore:adder
- 17. Source assignments for alu:inst12|lpm_add_sub:Add5|addcore:adder
- 18. Parameter Settings for User Entity Instance: lpm_rom0:inst6|lpm_rom:lpm_rom_component
- 19. Parameter Settings for User Entity Instance: lpm_ram_dq0:inst15|lpm_ram_dq:lpm_ram_dq_component
- 20. Parameter Settings for Inferred Entity Instance: control:inst1|lpm_counter:q_pc_rtl_0
- 21. Parameter Settings for Inferred Entity Instance: alu:inst12|lpm_add_sub:Add0
- 22. Parameter Settings for Inferred Entity Instance: alu:inst12|lpm_add_sub:Add1
- 23. Parameter Settings for Inferred Entity Instance: alu:inst12|lpm_add_sub:Add2
- 24. Parameter Settings for Inferred Entity Instance: alu:inst12|lpm_add_sub:Add3
- 25. Parameter Settings for Inferred Entity Instance: alu:inst12|lpm_add_sub:Add4
- 26. Parameter Settings for Inferred Entity Instance: alu:inst12|lpm_add_sub:Add5
- 27. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -58,15 +37,11 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                          ;
 +-----------------------------+-----------------------------------------+
-; Analysis & Synthesis Status ; Successful - Sat Mar 30 19:42:31 2024   ;
+; Analysis & Synthesis Status ; Failed - Fri Apr 05 21:00:18 2024       ;
 ; Quartus II Version          ; 8.1 Build 163 10/28/2008 SJ Web Edition ;
 ; Revision Name               ; KP_8                                    ;
-; Top-level Entity Name       ; cpu                                     ;
+; Top-level Entity Name       ; cpu_int                                 ;
 ; Family                      ; ACEX1K                                  ;
-; Total logic elements        ; 327                                     ;
-; Total pins                  ; 55                                      ;
-; Total memory bits           ; 4,224                                   ;
-; Total PLLs                  ; 0                                       ;
 +-----------------------------+-----------------------------------------+
 
 
@@ -75,7 +50,7 @@ applicable agreement for further details.
 +----------------------------------------------------------------+--------------+---------------+
 ; Option                                                         ; Setting      ; Default Value ;
 +----------------------------------------------------------------+--------------+---------------+
-; Top-level entity name                                          ; cpu          ; KP_8          ;
+; Top-level entity name                                          ; cpu_int      ; KP_8          ;
 ; Family name                                                    ; ACEX1K       ; Stratix II    ;
 ; Use Generated Physical Constraints File                        ; Off          ;               ;
 ; Use smart compilation                                          ; Off          ; Off           ;
@@ -136,15 +111,12 @@ applicable agreement for further details.
 +----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                             ;
 +----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------+
-; ex4.mif                          ; yes             ; User Memory Initialization File    ; E:/MyDoc/Projects/labs8/MSIPU/Coursework/NIKITA_KR/PROJECT/ex4.mif       ;
+; cpu_int.bdf                      ; yes             ; User Block Diagram/Schematic File  ; E:/MyDoc/Projects/labs8/MSIPU/Coursework/NIKITA_KR/PROJECT/cpu_int.bdf   ;
 ; control.v                        ; yes             ; User Verilog HDL File              ; E:/MyDoc/Projects/labs8/MSIPU/Coursework/NIKITA_KR/PROJECT/control.v     ;
-; alu.v                            ; yes             ; User Verilog HDL File              ; E:/MyDoc/Projects/labs8/MSIPU/Coursework/NIKITA_KR/PROJECT/alu.v         ;
-; blok_ron.v                       ; yes             ; User Verilog HDL File              ; E:/MyDoc/Projects/labs8/MSIPU/Coursework/NIKITA_KR/PROJECT/blok_ron.v    ;
 ; sync_wr.v                        ; yes             ; User Verilog HDL File              ; E:/MyDoc/Projects/labs8/MSIPU/Coursework/NIKITA_KR/PROJECT/sync_wr.v     ;
 ; status_reg.v                     ; yes             ; User Verilog HDL File              ; E:/MyDoc/Projects/labs8/MSIPU/Coursework/NIKITA_KR/PROJECT/status_reg.v  ;
 ; lpm_rom0.v                       ; yes             ; User Wizard-Generated File         ; E:/MyDoc/Projects/labs8/MSIPU/Coursework/NIKITA_KR/PROJECT/lpm_rom0.v    ;
-; cpu.bdf                          ; yes             ; User Block Diagram/Schematic File  ; E:/MyDoc/Projects/labs8/MSIPU/Coursework/NIKITA_KR/PROJECT/cpu.bdf       ;
-; lpm_ram_dq0.v                    ; yes             ; User Wizard-Generated File         ; E:/MyDoc/Projects/labs8/MSIPU/Coursework/NIKITA_KR/PROJECT/lpm_ram_dq0.v ;
+; int_control.v                    ; yes             ; User Verilog HDL File              ; E:/MyDoc/Projects/labs8/MSIPU/Coursework/NIKITA_KR/PROJECT/int_control.v ;
 ; lpm_rom.tdf                      ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/megafunctions/lpm_rom.tdf                 ;
 ; altrom.inc                       ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/megafunctions/altrom.inc                  ;
 ; aglobal81.inc                    ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/megafunctions/aglobal81.inc               ;
@@ -154,486 +126,7 @@ applicable agreement for further details.
 ; lpm_mux.inc                      ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/megafunctions/lpm_mux.inc                 ;
 ; altqpram.inc                     ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/megafunctions/altqpram.inc                ;
 ; altsyncram.inc                   ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/megafunctions/altsyncram.inc              ;
-; lpm_ram_dq.tdf                   ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/megafunctions/lpm_ram_dq.tdf              ;
-; altram.inc                       ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/megafunctions/altram.inc                  ;
-; altram.tdf                       ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/megafunctions/altram.tdf                  ;
-; lpm_counter.tdf                  ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/megafunctions/lpm_counter.tdf             ;
-; lpm_constant.inc                 ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/megafunctions/lpm_constant.inc            ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/megafunctions/lpm_add_sub.inc             ;
-; cmpconst.inc                     ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/megafunctions/cmpconst.inc                ;
-; lpm_compare.inc                  ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/megafunctions/lpm_compare.inc             ;
-; lpm_counter.inc                  ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/megafunctions/lpm_counter.inc             ;
-; dffeea.inc                       ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/megafunctions/dffeea.inc                  ;
-; alt_synch_counter.inc            ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/megafunctions/alt_synch_counter.inc       ;
-; alt_synch_counter_f.inc          ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/megafunctions/alt_synch_counter_f.inc     ;
-; alt_counter_f10ke.inc            ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/megafunctions/alt_counter_f10ke.inc       ;
-; alt_counter_stratix.inc          ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/megafunctions/alt_counter_stratix.inc     ;
-; alt_counter_f10ke.tdf            ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/megafunctions/alt_counter_f10ke.tdf       ;
-; flex10ke_lcell.inc               ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/megafunctions/flex10ke_lcell.inc          ;
-; lpm_add_sub.tdf                  ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/megafunctions/lpm_add_sub.tdf             ;
-; addcore.inc                      ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/megafunctions/addcore.inc                 ;
-; look_add.inc                     ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/megafunctions/look_add.inc                ;
-; bypassff.inc                     ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/megafunctions/bypassff.inc                ;
-; altshift.inc                     ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/megafunctions/altshift.inc                ;
-; alt_stratix_add_sub.inc          ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/megafunctions/alt_stratix_add_sub.inc     ;
-; alt_mercury_add_sub.inc          ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/megafunctions/alt_mercury_add_sub.inc     ;
-; addcore.tdf                      ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/megafunctions/addcore.tdf                 ;
-; a_csnbuffer.inc                  ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/megafunctions/a_csnbuffer.inc             ;
-; a_csnbuffer.tdf                  ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/megafunctions/a_csnbuffer.tdf             ;
-; altshift.tdf                     ; yes             ; Megafunction                       ; c:/altera/81/quartus/libraries/megafunctions/altshift.tdf                ;
 +----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------+
-
-
-+---------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary ;
-+-----------------------------------+---------+
-; Resource                          ; Usage   ;
-+-----------------------------------+---------+
-; Total logic elements              ; 327     ;
-; Total combinational functions     ; 325     ;
-;     -- Total 4-input functions    ; 158     ;
-;     -- Total 3-input functions    ; 85      ;
-;     -- Total 2-input functions    ; 70      ;
-;     -- Total 1-input functions    ; 4       ;
-;     -- Total 0-input functions    ; 8       ;
-; Total registers                   ; 43      ;
-; Total logic cells in carry chains ; 26      ;
-; I/O pins                          ; 55      ;
-; Total memory bits                 ; 4224    ;
-; Maximum fan-out node              ; clk     ;
-; Maximum fan-out                   ; 67      ;
-; Total fan-out                     ; 1381    ;
-; Average fan-out                   ; 3.40    ;
-+-----------------------------------+---------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                        ;
-+-------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node                ; Logic Cells ; LC Registers ; Memory Bits ; Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                                      ; Library Name ;
-+-------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------+--------------+
-; |cpu                                      ; 327 (4)     ; 43           ; 4224        ; 55   ; 284 (4)      ; 2 (0)             ; 41 (0)           ; 26 (0)          ; 0 (0)      ; |cpu                                                                     ; work         ;
-;    |alu:inst12|                           ; 240 (160)   ; 0            ; 0           ; 0    ; 240 (160)    ; 0 (0)             ; 0 (0)            ; 18 (2)          ; 0 (0)      ; |cpu|alu:inst12                                                          ; work         ;
-;       |lpm_add_sub:Add0|                  ; 16 (0)      ; 0            ; 0           ; 0    ; 16 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cpu|alu:inst12|lpm_add_sub:Add0                                         ; work         ;
-;          |addcore:adder|                  ; 16 (0)      ; 0            ; 0           ; 0    ; 16 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cpu|alu:inst12|lpm_add_sub:Add0|addcore:adder                           ; work         ;
-;             |a_csnbuffer:result_node|     ; 16 (16)     ; 0            ; 0           ; 0    ; 16 (16)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cpu|alu:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node   ; work         ;
-;       |lpm_add_sub:Add1|                  ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 8 (0)           ; 0 (0)      ; |cpu|alu:inst12|lpm_add_sub:Add1                                         ; work         ;
-;          |addcore:adder|                  ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 8 (0)           ; 0 (0)      ; |cpu|alu:inst12|lpm_add_sub:Add1|addcore:adder                           ; work         ;
-;             |a_csnbuffer:result_node|     ; 8 (8)       ; 0            ; 0           ; 0    ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 8 (8)           ; 0 (0)      ; |cpu|alu:inst12|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node   ; work         ;
-;       |lpm_add_sub:Add2|                  ; 16 (0)      ; 0            ; 0           ; 0    ; 16 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cpu|alu:inst12|lpm_add_sub:Add2                                         ; work         ;
-;          |addcore:adder|                  ; 16 (0)      ; 0            ; 0           ; 0    ; 16 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cpu|alu:inst12|lpm_add_sub:Add2|addcore:adder                           ; work         ;
-;             |a_csnbuffer:result_node|     ; 16 (16)     ; 0            ; 0           ; 0    ; 16 (16)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cpu|alu:inst12|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node   ; work         ;
-;       |lpm_add_sub:Add3|                  ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 8 (0)           ; 0 (0)      ; |cpu|alu:inst12|lpm_add_sub:Add3                                         ; work         ;
-;          |addcore:adder|                  ; 8 (0)       ; 0            ; 0           ; 0    ; 8 (0)        ; 0 (0)             ; 0 (0)            ; 8 (0)           ; 0 (0)      ; |cpu|alu:inst12|lpm_add_sub:Add3|addcore:adder                           ; work         ;
-;             |a_csnbuffer:result_node|     ; 8 (8)       ; 0            ; 0           ; 0    ; 8 (8)        ; 0 (0)             ; 0 (0)            ; 8 (8)           ; 0 (0)      ; |cpu|alu:inst12|lpm_add_sub:Add3|addcore:adder|a_csnbuffer:result_node   ; work         ;
-;       |lpm_add_sub:Add4|                  ; 16 (0)      ; 0            ; 0           ; 0    ; 16 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cpu|alu:inst12|lpm_add_sub:Add4                                         ; work         ;
-;          |addcore:adder|                  ; 16 (0)      ; 0            ; 0           ; 0    ; 16 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cpu|alu:inst12|lpm_add_sub:Add4|addcore:adder                           ; work         ;
-;             |a_csnbuffer:result_node|     ; 16 (16)     ; 0            ; 0           ; 0    ; 16 (16)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cpu|alu:inst12|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node   ; work         ;
-;       |lpm_add_sub:Add5|                  ; 16 (0)      ; 0            ; 0           ; 0    ; 16 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cpu|alu:inst12|lpm_add_sub:Add5                                         ; work         ;
-;          |addcore:adder|                  ; 16 (0)      ; 0            ; 0           ; 0    ; 16 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cpu|alu:inst12|lpm_add_sub:Add5|addcore:adder                           ; work         ;
-;             |a_csnbuffer:result_node|     ; 16 (16)     ; 0            ; 0           ; 0    ; 16 (16)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cpu|alu:inst12|lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node   ; work         ;
-;    |blok_ron:inst2|                       ; 64 (64)     ; 32           ; 0           ; 0    ; 32 (32)      ; 0 (0)             ; 32 (32)          ; 0 (0)           ; 0 (0)      ; |cpu|blok_ron:inst2                                                      ; work         ;
-;    |control:inst1|                        ; 14 (6)      ; 8            ; 0           ; 0    ; 6 (6)        ; 0 (0)             ; 8 (0)            ; 8 (0)           ; 0 (0)      ; |cpu|control:inst1                                                       ; work         ;
-;       |lpm_counter:q_pc_rtl_0|            ; 8 (0)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (0)            ; 8 (0)           ; 0 (0)      ; |cpu|control:inst1|lpm_counter:q_pc_rtl_0                                ; work         ;
-;          |alt_counter_f10ke:wysi_counter| ; 8 (8)       ; 8            ; 0           ; 0    ; 0 (0)        ; 0 (0)             ; 8 (8)            ; 8 (8)           ; 0 (0)      ; |cpu|control:inst1|lpm_counter:q_pc_rtl_0|alt_counter_f10ke:wysi_counter ; work         ;
-;    |lpm_ram_dq0:inst15|                   ; 0 (0)       ; 0            ; 128         ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cpu|lpm_ram_dq0:inst15                                                  ; work         ;
-;       |lpm_ram_dq:lpm_ram_dq_component|   ; 0 (0)       ; 0            ; 128         ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cpu|lpm_ram_dq0:inst15|lpm_ram_dq:lpm_ram_dq_component                  ; work         ;
-;          |altram:sram|                    ; 0 (0)       ; 0            ; 128         ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cpu|lpm_ram_dq0:inst15|lpm_ram_dq:lpm_ram_dq_component|altram:sram      ; work         ;
-;    |lpm_rom0:inst6|                       ; 0 (0)       ; 0            ; 4096        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cpu|lpm_rom0:inst6                                                      ; work         ;
-;       |lpm_rom:lpm_rom_component|         ; 0 (0)       ; 0            ; 4096        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cpu|lpm_rom0:inst6|lpm_rom:lpm_rom_component                            ; work         ;
-;          |altrom:srom|                    ; 0 (0)       ; 0            ; 4096        ; 0    ; 0 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cpu|lpm_rom0:inst6|lpm_rom:lpm_rom_component|altrom:srom                ; work         ;
-;    |status_reg:inst4|                     ; 3 (3)       ; 3            ; 0           ; 0    ; 0 (0)        ; 2 (2)             ; 1 (1)            ; 0 (0)           ; 0 (0)      ; |cpu|status_reg:inst4                                                    ; work         ;
-;    |sync_wr:inst3|                        ; 2 (2)       ; 0            ; 0           ; 0    ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |cpu|sync_wr:inst3                                                       ; work         ;
-+-------------------------------------------+-------------+--------------+-------------+------+--------------+-------------------+------------------+-----------------+------------+--------------------------------------------------------------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                  ;
-+------------------------------------------------------------------------+-------------+--------------+--------------+--------------+--------------+------+---------+
-; Name                                                                   ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF     ;
-+------------------------------------------------------------------------+-------------+--------------+--------------+--------------+--------------+------+---------+
-; lpm_ram_dq0:inst15|lpm_ram_dq:lpm_ram_dq_component|altram:sram|content ; Single Port ; 16           ; 8            ; --           ; --           ; 128  ; none    ;
-; lpm_rom0:inst6|lpm_rom:lpm_rom_component|altrom:srom|content           ; ROM         ; 256          ; 16           ; --           ; --           ; 4096 ; ex4.mif ;
-+------------------------------------------------------------------------+-------------+--------------+--------------+--------------+--------------+------+---------+
-
-
-+------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                  ;
-+----------------------------------------------------+------------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal    ; Free of Timing Hazards ;
-+----------------------------------------------------+------------------------+------------------------+
-; alu:inst12|d_bus[7]                                ; alu:inst12|d_bus[7]~27 ; yes                    ;
-; alu:inst12|d_bus[6]                                ; alu:inst12|d_bus[7]~27 ; yes                    ;
-; alu:inst12|d_bus[5]                                ; alu:inst12|d_bus[7]~27 ; yes                    ;
-; alu:inst12|d_bus[4]                                ; alu:inst12|d_bus[7]~27 ; yes                    ;
-; alu:inst12|d_bus[3]                                ; alu:inst12|d_bus[7]~27 ; yes                    ;
-; alu:inst12|d_bus[2]                                ; alu:inst12|d_bus[7]~27 ; yes                    ;
-; alu:inst12|d_bus[1]                                ; alu:inst12|d_bus[7]~27 ; yes                    ;
-; alu:inst12|d_bus[0]                                ; alu:inst12|d_bus[7]~27 ; yes                    ;
-; alu:inst12|cl                                      ; alu:inst12|cl~4        ; yes                    ;
-; Number of user-specified and inferred latches = 9  ;                        ;                        ;
-+----------------------------------------------------+------------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
-+----------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                               ;
-+----------------------------------------+-----------------------------------------+
-; Register name                          ; Reason for Removal                      ;
-+----------------------------------------+-----------------------------------------+
-; blok_ron:inst2|ron~58                  ; Merged with blok_ron:inst2|ron__dual~58 ;
-; blok_ron:inst2|ron~42                  ; Merged with blok_ron:inst2|ron__dual~42 ;
-; blok_ron:inst2|ron~26                  ; Merged with blok_ron:inst2|ron__dual~26 ;
-; blok_ron:inst2|ron~74                  ; Merged with blok_ron:inst2|ron__dual~74 ;
-; blok_ron:inst2|ron~40                  ; Merged with blok_ron:inst2|ron__dual~40 ;
-; blok_ron:inst2|ron~56                  ; Merged with blok_ron:inst2|ron__dual~56 ;
-; blok_ron:inst2|ron~24                  ; Merged with blok_ron:inst2|ron__dual~24 ;
-; blok_ron:inst2|ron~72                  ; Merged with blok_ron:inst2|ron__dual~72 ;
-; blok_ron:inst2|ron~54                  ; Merged with blok_ron:inst2|ron__dual~54 ;
-; blok_ron:inst2|ron~38                  ; Merged with blok_ron:inst2|ron__dual~38 ;
-; blok_ron:inst2|ron~22                  ; Merged with blok_ron:inst2|ron__dual~22 ;
-; blok_ron:inst2|ron~70                  ; Merged with blok_ron:inst2|ron__dual~70 ;
-; blok_ron:inst2|ron~36                  ; Merged with blok_ron:inst2|ron__dual~36 ;
-; blok_ron:inst2|ron~52                  ; Merged with blok_ron:inst2|ron__dual~52 ;
-; blok_ron:inst2|ron~20                  ; Merged with blok_ron:inst2|ron__dual~20 ;
-; blok_ron:inst2|ron~68                  ; Merged with blok_ron:inst2|ron__dual~68 ;
-; blok_ron:inst2|ron~50                  ; Merged with blok_ron:inst2|ron__dual~50 ;
-; blok_ron:inst2|ron~34                  ; Merged with blok_ron:inst2|ron__dual~34 ;
-; blok_ron:inst2|ron~18                  ; Merged with blok_ron:inst2|ron__dual~18 ;
-; blok_ron:inst2|ron~66                  ; Merged with blok_ron:inst2|ron__dual~66 ;
-; blok_ron:inst2|ron~32                  ; Merged with blok_ron:inst2|ron__dual~32 ;
-; blok_ron:inst2|ron~48                  ; Merged with blok_ron:inst2|ron__dual~48 ;
-; blok_ron:inst2|ron~16                  ; Merged with blok_ron:inst2|ron__dual~16 ;
-; blok_ron:inst2|ron~64                  ; Merged with blok_ron:inst2|ron__dual~64 ;
-; blok_ron:inst2|ron~46                  ; Merged with blok_ron:inst2|ron__dual~46 ;
-; blok_ron:inst2|ron~30                  ; Merged with blok_ron:inst2|ron__dual~30 ;
-; blok_ron:inst2|ron~14                  ; Merged with blok_ron:inst2|ron__dual~14 ;
-; blok_ron:inst2|ron~62                  ; Merged with blok_ron:inst2|ron__dual~62 ;
-; blok_ron:inst2|ron~28                  ; Merged with blok_ron:inst2|ron__dual~28 ;
-; blok_ron:inst2|ron~44                  ; Merged with blok_ron:inst2|ron__dual~44 ;
-; blok_ron:inst2|ron~12                  ; Merged with blok_ron:inst2|ron__dual~12 ;
-; blok_ron:inst2|ron~60                  ; Merged with blok_ron:inst2|ron__dual~60 ;
-; Total Number of Removed Registers = 32 ;                                         ;
-+----------------------------------------+-----------------------------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 43    ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 8     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 3     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-------------------------------------------------------------+
-; Source assignments for control:inst1|lpm_counter:q_pc_rtl_0 ;
-+---------------------------+-------+------+------------------+
-; Assignment                ; Value ; From ; To               ;
-+---------------------------+-------+------+------------------+
-; SUPPRESS_DA_RULE_INTERNAL ; a101  ; -    ; -                ;
-; SUPPRESS_DA_RULE_INTERNAL ; s102  ; -    ; -                ;
-; SUPPRESS_DA_RULE_INTERNAL ; s103  ; -    ; -                ;
-+---------------------------+-------+------+------------------+
-
-
-+------------------------------------------------------------------+
-; Source assignments for alu:inst12|lpm_add_sub:Add0|addcore:adder ;
-+---------------------------+-------+------+-----------------------+
-; Assignment                ; Value ; From ; To                    ;
-+---------------------------+-------+------+-----------------------+
-; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                     ;
-+---------------------------+-------+------+-----------------------+
-
-
-+------------------------------------------------------------------+
-; Source assignments for alu:inst12|lpm_add_sub:Add1|addcore:adder ;
-+---------------------------+-------+------+-----------------------+
-; Assignment                ; Value ; From ; To                    ;
-+---------------------------+-------+------+-----------------------+
-; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                     ;
-+---------------------------+-------+------+-----------------------+
-
-
-+------------------------------------------------------------------+
-; Source assignments for alu:inst12|lpm_add_sub:Add2|addcore:adder ;
-+---------------------------+-------+------+-----------------------+
-; Assignment                ; Value ; From ; To                    ;
-+---------------------------+-------+------+-----------------------+
-; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                     ;
-+---------------------------+-------+------+-----------------------+
-
-
-+------------------------------------------------------------------+
-; Source assignments for alu:inst12|lpm_add_sub:Add3|addcore:adder ;
-+---------------------------+-------+------+-----------------------+
-; Assignment                ; Value ; From ; To                    ;
-+---------------------------+-------+------+-----------------------+
-; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                     ;
-+---------------------------+-------+------+-----------------------+
-
-
-+------------------------------------------------------------------+
-; Source assignments for alu:inst12|lpm_add_sub:Add4|addcore:adder ;
-+---------------------------+-------+------+-----------------------+
-; Assignment                ; Value ; From ; To                    ;
-+---------------------------+-------+------+-----------------------+
-; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                     ;
-+---------------------------+-------+------+-----------------------+
-
-
-+------------------------------------------------------------------+
-; Source assignments for alu:inst12|lpm_add_sub:Add5|addcore:adder ;
-+---------------------------+-------+------+-----------------------+
-; Assignment                ; Value ; From ; To                    ;
-+---------------------------+-------+------+-----------------------+
-; SUPPRESS_DA_RULE_INTERNAL ; A103  ; -    ; -                     ;
-+---------------------------+-------+------+-----------------------+
-
-
-+---------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lpm_rom0:inst6|lpm_rom:lpm_rom_component ;
-+------------------------+--------------+-----------------------------------------------+
-; Parameter Name         ; Value        ; Type                                          ;
-+------------------------+--------------+-----------------------------------------------+
-; LPM_WIDTH              ; 16           ; Signed Integer                                ;
-; LPM_WIDTHAD            ; 8            ; Signed Integer                                ;
-; LPM_NUMWORDS           ; 256          ; Untyped                                       ;
-; LPM_ADDRESS_CONTROL    ; UNREGISTERED ; Untyped                                       ;
-; LPM_OUTDATA            ; REGISTERED   ; Untyped                                       ;
-; LPM_FILE               ; ex4.mif      ; Untyped                                       ;
-; DEVICE_FAMILY          ; ACEX1K       ; Untyped                                       ;
-; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                                    ;
-; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                                  ;
-; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                                  ;
-; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                                ;
-+------------------------+--------------+-----------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: lpm_ram_dq0:inst15|lpm_ram_dq:lpm_ram_dq_component ;
-+------------------------+--------------+---------------------------------------------------------+
-; Parameter Name         ; Value        ; Type                                                    ;
-+------------------------+--------------+---------------------------------------------------------+
-; LPM_WIDTH              ; 8            ; Signed Integer                                          ;
-; LPM_WIDTHAD            ; 4            ; Signed Integer                                          ;
-; LPM_NUMWORDS           ; 16           ; Untyped                                                 ;
-; LPM_INDATA             ; REGISTERED   ; Untyped                                                 ;
-; LPM_ADDRESS_CONTROL    ; REGISTERED   ; Untyped                                                 ;
-; LPM_OUTDATA            ; UNREGISTERED ; Untyped                                                 ;
-; LPM_FILE               ; UNUSED       ; Untyped                                                 ;
-; USE_EAB                ; ON           ; Untyped                                                 ;
-; DEVICE_FAMILY          ; ACEX1K       ; Untyped                                                 ;
-; CBXI_PARAMETER         ; NOTHING      ; Untyped                                                 ;
-; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                                              ;
-; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                                            ;
-; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                                            ;
-; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                                          ;
-+------------------------+--------------+---------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: control:inst1|lpm_counter:q_pc_rtl_0 ;
-+------------------------+-------------------+------------------------------------------+
-; Parameter Name         ; Value             ; Type                                     ;
-+------------------------+-------------------+------------------------------------------+
-; AUTO_CARRY_CHAINS      ; ON                ; AUTO_CARRY                               ;
-; IGNORE_CARRY_BUFFERS   ; OFF               ; IGNORE_CARRY                             ;
-; AUTO_CASCADE_CHAINS    ; ON                ; AUTO_CASCADE                             ;
-; IGNORE_CASCADE_BUFFERS ; OFF               ; IGNORE_CASCADE                           ;
-; LPM_WIDTH              ; 8                 ; Untyped                                  ;
-; LPM_DIRECTION          ; UP                ; Untyped                                  ;
-; LPM_MODULUS            ; 0                 ; Untyped                                  ;
-; LPM_AVALUE             ; UNUSED            ; Untyped                                  ;
-; LPM_SVALUE             ; UNUSED            ; Untyped                                  ;
-; LPM_PORT_UPDOWN        ; PORT_CONNECTIVITY ; Untyped                                  ;
-; DEVICE_FAMILY          ; ACEX1K            ; Untyped                                  ;
-; CARRY_CHAIN            ; MANUAL            ; Untyped                                  ;
-; CARRY_CHAIN_LENGTH     ; 48                ; CARRY_CHAIN_LENGTH                       ;
-; NOT_GATE_PUSH_BACK     ; ON                ; NOT_GATE_PUSH_BACK                       ;
-; CARRY_CNT_EN           ; SMART             ; Untyped                                  ;
-; LABWIDE_SCLR           ; ON                ; Untyped                                  ;
-; USE_NEW_VERSION        ; TRUE              ; Untyped                                  ;
-; CBXI_PARAMETER         ; NOTHING           ; Untyped                                  ;
-+------------------------+-------------------+------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: alu:inst12|lpm_add_sub:Add0 ;
-+------------------------+-------------+---------------------------------------+
-; Parameter Name         ; Value       ; Type                                  ;
-+------------------------+-------------+---------------------------------------+
-; LPM_WIDTH              ; 9           ; Untyped                               ;
-; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                               ;
-; LPM_DIRECTION          ; ADD         ; Untyped                               ;
-; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                               ;
-; LPM_PIPELINE           ; 0           ; Untyped                               ;
-; MAXIMIZE_SPEED         ; 5           ; Untyped                               ;
-; REGISTERED_AT_END      ; 0           ; Untyped                               ;
-; OPTIMIZE_FOR_SPEED     ; 1           ; Untyped                               ;
-; USE_CS_BUFFERS         ; 1           ; Untyped                               ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                               ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                    ;
-; DEVICE_FAMILY          ; ACEX1K      ; Untyped                               ;
-; USE_WYS                ; OFF         ; Untyped                               ;
-; STYLE                  ; FAST        ; Untyped                               ;
-; CBXI_PARAMETER         ; add_sub_5ih ; Untyped                               ;
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                            ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                          ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                          ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                        ;
-+------------------------+-------------+---------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: alu:inst12|lpm_add_sub:Add1 ;
-+------------------------+-------------+---------------------------------------+
-; Parameter Name         ; Value       ; Type                                  ;
-+------------------------+-------------+---------------------------------------+
-; LPM_WIDTH              ; 10          ; Untyped                               ;
-; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                               ;
-; LPM_DIRECTION          ; ADD         ; Untyped                               ;
-; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                               ;
-; LPM_PIPELINE           ; 0           ; Untyped                               ;
-; MAXIMIZE_SPEED         ; 5           ; Untyped                               ;
-; REGISTERED_AT_END      ; 0           ; Untyped                               ;
-; OPTIMIZE_FOR_SPEED     ; 1           ; Untyped                               ;
-; USE_CS_BUFFERS         ; 1           ; Untyped                               ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                               ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                    ;
-; DEVICE_FAMILY          ; ACEX1K      ; Untyped                               ;
-; USE_WYS                ; OFF         ; Untyped                               ;
-; STYLE                  ; FAST        ; Untyped                               ;
-; CBXI_PARAMETER         ; add_sub_djh ; Untyped                               ;
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                            ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                          ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                          ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                        ;
-+------------------------+-------------+---------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: alu:inst12|lpm_add_sub:Add2 ;
-+------------------------+-------------+---------------------------------------+
-; Parameter Name         ; Value       ; Type                                  ;
-+------------------------+-------------+---------------------------------------+
-; LPM_WIDTH              ; 9           ; Untyped                               ;
-; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                               ;
-; LPM_DIRECTION          ; ADD         ; Untyped                               ;
-; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                               ;
-; LPM_PIPELINE           ; 0           ; Untyped                               ;
-; MAXIMIZE_SPEED         ; 5           ; Untyped                               ;
-; REGISTERED_AT_END      ; 0           ; Untyped                               ;
-; OPTIMIZE_FOR_SPEED     ; 1           ; Untyped                               ;
-; USE_CS_BUFFERS         ; 1           ; Untyped                               ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                               ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                    ;
-; DEVICE_FAMILY          ; ACEX1K      ; Untyped                               ;
-; USE_WYS                ; OFF         ; Untyped                               ;
-; STYLE                  ; FAST        ; Untyped                               ;
-; CBXI_PARAMETER         ; add_sub_5ih ; Untyped                               ;
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                            ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                          ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                          ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                        ;
-+------------------------+-------------+---------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: alu:inst12|lpm_add_sub:Add3 ;
-+------------------------+-------------+---------------------------------------+
-; Parameter Name         ; Value       ; Type                                  ;
-+------------------------+-------------+---------------------------------------+
-; LPM_WIDTH              ; 10          ; Untyped                               ;
-; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                               ;
-; LPM_DIRECTION          ; ADD         ; Untyped                               ;
-; ONE_INPUT_IS_CONSTANT  ; NO          ; Untyped                               ;
-; LPM_PIPELINE           ; 0           ; Untyped                               ;
-; MAXIMIZE_SPEED         ; 5           ; Untyped                               ;
-; REGISTERED_AT_END      ; 0           ; Untyped                               ;
-; OPTIMIZE_FOR_SPEED     ; 1           ; Untyped                               ;
-; USE_CS_BUFFERS         ; 1           ; Untyped                               ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                               ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                    ;
-; DEVICE_FAMILY          ; ACEX1K      ; Untyped                               ;
-; USE_WYS                ; OFF         ; Untyped                               ;
-; STYLE                  ; FAST        ; Untyped                               ;
-; CBXI_PARAMETER         ; add_sub_djh ; Untyped                               ;
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                            ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                          ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                          ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                        ;
-+------------------------+-------------+---------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: alu:inst12|lpm_add_sub:Add4 ;
-+------------------------+-------------+---------------------------------------+
-; Parameter Name         ; Value       ; Type                                  ;
-+------------------------+-------------+---------------------------------------+
-; LPM_WIDTH              ; 9           ; Untyped                               ;
-; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                               ;
-; LPM_DIRECTION          ; ADD         ; Untyped                               ;
-; ONE_INPUT_IS_CONSTANT  ; YES         ; Untyped                               ;
-; LPM_PIPELINE           ; 0           ; Untyped                               ;
-; MAXIMIZE_SPEED         ; 5           ; Untyped                               ;
-; REGISTERED_AT_END      ; 0           ; Untyped                               ;
-; OPTIMIZE_FOR_SPEED     ; 1           ; Untyped                               ;
-; USE_CS_BUFFERS         ; 1           ; Untyped                               ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                               ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                    ;
-; DEVICE_FAMILY          ; ACEX1K      ; Untyped                               ;
-; USE_WYS                ; OFF         ; Untyped                               ;
-; STYLE                  ; FAST        ; Untyped                               ;
-; CBXI_PARAMETER         ; add_sub_plh ; Untyped                               ;
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                            ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                          ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                          ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                        ;
-+------------------------+-------------+---------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: alu:inst12|lpm_add_sub:Add5 ;
-+------------------------+-------------+---------------------------------------+
-; Parameter Name         ; Value       ; Type                                  ;
-+------------------------+-------------+---------------------------------------+
-; LPM_WIDTH              ; 9           ; Untyped                               ;
-; LPM_REPRESENTATION     ; UNSIGNED    ; Untyped                               ;
-; LPM_DIRECTION          ; ADD         ; Untyped                               ;
-; ONE_INPUT_IS_CONSTANT  ; YES         ; Untyped                               ;
-; LPM_PIPELINE           ; 0           ; Untyped                               ;
-; MAXIMIZE_SPEED         ; 5           ; Untyped                               ;
-; REGISTERED_AT_END      ; 0           ; Untyped                               ;
-; OPTIMIZE_FOR_SPEED     ; 1           ; Untyped                               ;
-; USE_CS_BUFFERS         ; 1           ; Untyped                               ;
-; CARRY_CHAIN            ; MANUAL      ; Untyped                               ;
-; CARRY_CHAIN_LENGTH     ; 48          ; CARRY_CHAIN_LENGTH                    ;
-; DEVICE_FAMILY          ; ACEX1K      ; Untyped                               ;
-; USE_WYS                ; OFF         ; Untyped                               ;
-; STYLE                  ; FAST        ; Untyped                               ;
-; CBXI_PARAMETER         ; add_sub_vah ; Untyped                               ;
-; AUTO_CARRY_CHAINS      ; ON          ; AUTO_CARRY                            ;
-; IGNORE_CARRY_BUFFERS   ; OFF         ; IGNORE_CARRY                          ;
-; AUTO_CASCADE_CHAINS    ; ON          ; AUTO_CASCADE                          ;
-; IGNORE_CASCADE_BUFFERS ; OFF         ; IGNORE_CASCADE                        ;
-+------------------------+-------------+---------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings Tables in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------+
@@ -642,8 +135,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 8.1 Build 163 10/28/2008 SJ Web Edition
-    Info: Processing started: Sat Mar 30 19:42:29 2024
+    Info: Processing started: Fri Apr 05 21:00:17 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off KP_8 -c KP_8
+Info: Found 1 design units, including 1 entities, in source file cpu_int.bdf
+    Info: Found entity 1: cpu_int
 Info: Found 1 design units, including 1 entities, in source file control.v
     Info: Found entity 1: control
 Info: Found 1 design units, including 1 entities, in source file alu.v
@@ -660,8 +155,10 @@ Info: Found 1 design units, including 1 entities, in source file cpu.bdf
     Info: Found entity 1: cpu
 Info: Found 1 design units, including 1 entities, in source file lpm_ram_dq0.v
     Info: Found entity 1: lpm_ram_dq0
-Info: Elaborating entity "cpu" for the top level hierarchy
-Info: Elaborating entity "status_reg" for hierarchy "status_reg:inst4"
+Info: Found 1 design units, including 1 entities, in source file int_control.v
+    Info: Found entity 1: int_control
+Info: Elaborating entity "cpu_int" for the top level hierarchy
+Info: Elaborating entity "status_reg" for hierarchy "status_reg:inst16"
 Info: Elaborating entity "sync_wr" for hierarchy "sync_wr:inst3"
 Info: Elaborating entity "lpm_rom0" for hierarchy "lpm_rom0:inst6"
 Info: Elaborating entity "lpm_rom" for hierarchy "lpm_rom0:inst6|lpm_rom:lpm_rom_component"
@@ -669,253 +166,33 @@ Info: Elaborated megafunction instantiation "lpm_rom0:inst6|lpm_rom:lpm_rom_comp
 Info: Instantiated megafunction "lpm_rom0:inst6|lpm_rom:lpm_rom_component" with the following parameter:
     Info: Parameter "intended_device_family" = "ACEX1K"
     Info: Parameter "lpm_address_control" = "UNREGISTERED"
-    Info: Parameter "lpm_file" = "ex4.mif"
+    Info: Parameter "lpm_file" = "int.mif"
     Info: Parameter "lpm_outdata" = "REGISTERED"
     Info: Parameter "lpm_type" = "LPM_ROM"
     Info: Parameter "lpm_width" = "16"
     Info: Parameter "lpm_widthad" = "8"
 Info: Elaborating entity "altrom" for hierarchy "lpm_rom0:inst6|lpm_rom:lpm_rom_component|altrom:srom"
-Critical Warning: Memory depth (256) in the design file differs from memory depth (16) in the Memory Initialization File "ex4.mif" -- setting initial value for remaining addresses to 0
 Info: Elaborated megafunction instantiation "lpm_rom0:inst6|lpm_rom:lpm_rom_component|altrom:srom", which is child of megafunction instantiation "lpm_rom0:inst6|lpm_rom:lpm_rom_component"
-Info: Elaborating entity "control" for hierarchy "control:inst1"
-Warning (10230): Verilog HDL assignment warning at control.v(12): truncated value with size 16 to match size of target (8)
-Warning (10230): Verilog HDL assignment warning at control.v(13): truncated value with size 32 to match size of target (8)
-Info: Elaborating entity "alu" for hierarchy "alu:inst12"
-Warning (10270): Verilog HDL Case Statement warning at alu.v(6): incomplete case statement has no default case item
-Warning (10270): Verilog HDL Case Statement warning at alu.v(14): incomplete case statement has no default case item
-Warning (10230): Verilog HDL assignment warning at alu.v(23): truncated value with size 33 to match size of target (9)
-Warning (10230): Verilog HDL assignment warning at alu.v(24): truncated value with size 33 to match size of target (9)
-Warning (10270): Verilog HDL Case Statement warning at alu.v(22): incomplete case statement has no default case item
-Warning (10240): Verilog HDL Always Construct warning at alu.v(6): inferring latch(es) for variable "cl", which holds its previous value in one or more paths through the always construct
-Warning (10240): Verilog HDL Always Construct warning at alu.v(6): inferring latch(es) for variable "d_bus", which holds its previous value in one or more paths through the always construct
-Info (10041): Inferred latch for "d_bus[0]" at alu.v(14)
-Info (10041): Inferred latch for "d_bus[1]" at alu.v(14)
-Info (10041): Inferred latch for "d_bus[2]" at alu.v(14)
-Info (10041): Inferred latch for "d_bus[3]" at alu.v(14)
-Info (10041): Inferred latch for "d_bus[4]" at alu.v(14)
-Info (10041): Inferred latch for "d_bus[5]" at alu.v(14)
-Info (10041): Inferred latch for "d_bus[6]" at alu.v(14)
-Info (10041): Inferred latch for "d_bus[7]" at alu.v(14)
-Info (10041): Inferred latch for "cl" at alu.v(14)
-Info: Elaborating entity "lpm_ram_dq0" for hierarchy "lpm_ram_dq0:inst15"
-Info: Elaborating entity "lpm_ram_dq" for hierarchy "lpm_ram_dq0:inst15|lpm_ram_dq:lpm_ram_dq_component"
-Info: Elaborated megafunction instantiation "lpm_ram_dq0:inst15|lpm_ram_dq:lpm_ram_dq_component"
-Info: Instantiated megafunction "lpm_ram_dq0:inst15|lpm_ram_dq:lpm_ram_dq_component" with the following parameter:
-    Info: Parameter "intended_device_family" = "ACEX1K"
-    Info: Parameter "lpm_address_control" = "REGISTERED"
-    Info: Parameter "lpm_indata" = "REGISTERED"
-    Info: Parameter "lpm_outdata" = "UNREGISTERED"
-    Info: Parameter "lpm_type" = "LPM_RAM_DQ"
-    Info: Parameter "lpm_width" = "8"
-    Info: Parameter "lpm_widthad" = "4"
-Info: Elaborating entity "altram" for hierarchy "lpm_ram_dq0:inst15|lpm_ram_dq:lpm_ram_dq_component|altram:sram"
-Info: Elaborated megafunction instantiation "lpm_ram_dq0:inst15|lpm_ram_dq:lpm_ram_dq_component|altram:sram", which is child of megafunction instantiation "lpm_ram_dq0:inst15|lpm_ram_dq:lpm_ram_dq_component"
-Info: Elaborating entity "blok_ron" for hierarchy "blok_ron:inst2"
-Warning (12020): Port "address" on the entity instantiation of "lpm_ram_dq_component" is connected to a signal of width 8. The formal width of the signal in the module is 4.  The extra bits will be ignored.
-Info: Found 2 instances of uninferred RAM logic
-    Info: RAM logic "blok_ron:inst2|ron__dual" is uninferred due to inappropriate RAM size
-    Info: RAM logic "blok_ron:inst2|ron" is uninferred due to inappropriate RAM size
-Info: Inferred 1 megafunctions from design logic
-    Info: Inferred lpm_counter megafunction (LPM_WIDTH=8) from the following logic: "control:inst1|q_pc[0]~8"
-Info: Inferred 6 megafunctions from design logic
-    Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "alu:inst12|Add0"
-    Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "alu:inst12|Add1"
-    Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "alu:inst12|Add2"
-    Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "alu:inst12|Add3"
-    Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "alu:inst12|Add4"
-    Info: Inferred adder/subtractor megafunction ("lpm_add_sub") from the following logic: "alu:inst12|Add5"
-Info: Elaborated megafunction instantiation "control:inst1|lpm_counter:q_pc_rtl_0"
-Info: Instantiated megafunction "control:inst1|lpm_counter:q_pc_rtl_0" with the following parameter:
-    Info: Parameter "LPM_WIDTH" = "8"
-    Info: Parameter "LPM_DIRECTION" = "UP"
-    Info: Parameter "LPM_TYPE" = "LPM_COUNTER"
-Info: Elaborated megafunction instantiation "control:inst1|lpm_counter:q_pc_rtl_0|alt_counter_f10ke:wysi_counter", which is child of megafunction instantiation "control:inst1|lpm_counter:q_pc_rtl_0"
-Info: Elaborated megafunction instantiation "alu:inst12|lpm_add_sub:Add0"
-Info: Instantiated megafunction "alu:inst12|lpm_add_sub:Add0" with the following parameter:
-    Info: Parameter "LPM_WIDTH" = "9"
-    Info: Parameter "LPM_DIRECTION" = "ADD"
-    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
-    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "NO"
-Info: Elaborated megafunction instantiation "alu:inst12|lpm_add_sub:Add0|addcore:adder", which is child of megafunction instantiation "alu:inst12|lpm_add_sub:Add0"
-Info: Elaborated megafunction instantiation "alu:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:oflow_node", which is child of megafunction instantiation "alu:inst12|lpm_add_sub:Add0"
-Info: Elaborated megafunction instantiation "alu:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node", which is child of megafunction instantiation "alu:inst12|lpm_add_sub:Add0"
-Info: Elaborated megafunction instantiation "alu:inst12|lpm_add_sub:Add0|altshift:result_ext_latency_ffs", which is child of megafunction instantiation "alu:inst12|lpm_add_sub:Add0"
-Info: Elaborated megafunction instantiation "alu:inst12|lpm_add_sub:Add0|altshift:carry_ext_latency_ffs", which is child of megafunction instantiation "alu:inst12|lpm_add_sub:Add0"
-Info: Elaborated megafunction instantiation "alu:inst12|lpm_add_sub:Add1"
-Info: Instantiated megafunction "alu:inst12|lpm_add_sub:Add1" with the following parameter:
-    Info: Parameter "LPM_WIDTH" = "10"
-    Info: Parameter "LPM_DIRECTION" = "ADD"
-    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
-    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "NO"
-Info: Elaborated megafunction instantiation "alu:inst12|lpm_add_sub:Add1|addcore:adder", which is child of megafunction instantiation "alu:inst12|lpm_add_sub:Add1"
-Info: Elaborated megafunction instantiation "alu:inst12|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:oflow_node", which is child of megafunction instantiation "alu:inst12|lpm_add_sub:Add1"
-Info: Elaborated megafunction instantiation "alu:inst12|lpm_add_sub:Add1|addcore:adder|a_csnbuffer:result_node", which is child of megafunction instantiation "alu:inst12|lpm_add_sub:Add1"
-Info: Elaborated megafunction instantiation "alu:inst12|lpm_add_sub:Add1|altshift:result_ext_latency_ffs", which is child of megafunction instantiation "alu:inst12|lpm_add_sub:Add1"
-Info: Elaborated megafunction instantiation "alu:inst12|lpm_add_sub:Add4"
-Info: Instantiated megafunction "alu:inst12|lpm_add_sub:Add4" with the following parameter:
-    Info: Parameter "LPM_WIDTH" = "9"
-    Info: Parameter "LPM_DIRECTION" = "ADD"
-    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
-    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "YES"
-Info: Elaborated megafunction instantiation "alu:inst12|lpm_add_sub:Add5"
-Info: Instantiated megafunction "alu:inst12|lpm_add_sub:Add5" with the following parameter:
-    Info: Parameter "LPM_WIDTH" = "9"
-    Info: Parameter "LPM_DIRECTION" = "ADD"
-    Info: Parameter "LPM_REPRESENTATION" = "UNSIGNED"
-    Info: Parameter "ONE_INPUT_IS_CONSTANT" = "YES"
-Info: Elaborated megafunction instantiation "alu:inst12|lpm_add_sub:Add5|addcore:adder", which is child of megafunction instantiation "alu:inst12|lpm_add_sub:Add5"
-Warning: Always-enabled tri-state buffer(s) removed
-    Warning: Converted the fanout from the always-enabled tri-state buffer "lpm_rom0:inst6|lpm_rom:lpm_rom_component|otri[15]" to the node "k[15]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "lpm_rom0:inst6|lpm_rom:lpm_rom_component|otri[13]" to the node "k[13]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "lpm_rom0:inst6|lpm_rom:lpm_rom_component|otri[14]" to the node "k[14]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "lpm_rom0:inst6|lpm_rom:lpm_rom_component|otri[12]" to the node "k[12]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "lpm_rom0:inst6|lpm_rom:lpm_rom_component|otri[11]" to the node "k[11]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "lpm_rom0:inst6|lpm_rom:lpm_rom_component|otri[10]" to the node "k[10]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "lpm_rom0:inst6|lpm_rom:lpm_rom_component|otri[9]" to the node "k[9]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "lpm_rom0:inst6|lpm_rom:lpm_rom_component|otri[8]" to the node "k[8]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "lpm_rom0:inst6|lpm_rom:lpm_rom_component|otri[7]" to the node "k[7]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "lpm_rom0:inst6|lpm_rom:lpm_rom_component|otri[6]" to the node "k[6]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "lpm_rom0:inst6|lpm_rom:lpm_rom_component|otri[5]" to the node "k[5]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "lpm_rom0:inst6|lpm_rom:lpm_rom_component|otri[4]" to the node "k[4]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "lpm_rom0:inst6|lpm_rom:lpm_rom_component|otri[3]" to the node "k[3]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "lpm_rom0:inst6|lpm_rom:lpm_rom_component|otri[2]" to the node "k[2]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "lpm_rom0:inst6|lpm_rom:lpm_rom_component|otri[1]" to the node "k[1]" into a wire
-    Warning: Converted the fanout from the always-enabled tri-state buffer "lpm_rom0:inst6|lpm_rom:lpm_rom_component|otri[0]" to the node "k[0]" into a wire
-Warning: Tri-state node(s) do not directly drive top-level pin(s)
-    Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst6|lpm_rom:lpm_rom_component|otri[15]" to the node "alu:inst12|cl" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst6|lpm_rom:lpm_rom_component|otri[13]" to the node "sync_wr:inst3|wreg" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst6|lpm_rom:lpm_rom_component|otri[14]" to the node "sync_wr:inst3|wreg" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst6|lpm_rom:lpm_rom_component|otri[12]" to the node "alu:inst12|Equal0" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst6|lpm_rom:lpm_rom_component|otri[11]" to the node "control:inst1|Equal1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst6|lpm_rom:lpm_rom_component|otri[10]" to the node "control:inst1|Equal1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst6|lpm_rom:lpm_rom_component|otri[9]" to the node "control:inst1|Equal1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst6|lpm_rom:lpm_rom_component|otri[8]" to the node "control:inst1|Equal1" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst6|lpm_rom:lpm_rom_component|otri[7]" to the node "alu:inst12|concat" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst6|lpm_rom:lpm_rom_component|otri[6]" to the node "alu:inst12|concat" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst6|lpm_rom:lpm_rom_component|otri[5]" to the node "alu:inst12|concat" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst6|lpm_rom:lpm_rom_component|otri[4]" to the node "alu:inst12|concat" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst6|lpm_rom:lpm_rom_component|otri[3]" to the node "alu:inst12|concat" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst6|lpm_rom:lpm_rom_component|otri[2]" to the node "alu:inst12|concat" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst6|lpm_rom:lpm_rom_component|otri[1]" to the node "alu:inst12|concat" into an OR gate
-    Warning: Converted the fan-out from the tri-state buffer "lpm_rom0:inst6|lpm_rom:lpm_rom_component|otri[0]" to the node "alu:inst12|concat" into an OR gate
-Warning: Latch alu:inst12|d_bus[7] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal lpm_rom0:inst6|lpm_rom:lpm_rom_component|altrom:srom|q[15]
-Warning: Latch alu:inst12|d_bus[6] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal lpm_rom0:inst6|lpm_rom:lpm_rom_component|altrom:srom|q[15]
-Warning: Latch alu:inst12|d_bus[5] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal lpm_rom0:inst6|lpm_rom:lpm_rom_component|altrom:srom|q[15]
-Warning: Latch alu:inst12|d_bus[4] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal lpm_rom0:inst6|lpm_rom:lpm_rom_component|altrom:srom|q[15]
-Warning: Latch alu:inst12|d_bus[3] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal lpm_rom0:inst6|lpm_rom:lpm_rom_component|altrom:srom|q[15]
-Warning: Latch alu:inst12|d_bus[2] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal lpm_rom0:inst6|lpm_rom:lpm_rom_component|altrom:srom|q[15]
-Warning: Latch alu:inst12|d_bus[1] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal lpm_rom0:inst6|lpm_rom:lpm_rom_component|altrom:srom|q[15]
-Warning: Latch alu:inst12|d_bus[0] has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal lpm_rom0:inst6|lpm_rom:lpm_rom_component|altrom:srom|q[15]
-Warning: Latch alu:inst12|cl has unsafe behavior
-    Warning: Ports D and ENA on the latch are fed by the same signal lpm_rom0:inst6|lpm_rom:lpm_rom_component|altrom:srom|q[15]
-Warning: Ignored 28 CARRY_SUM primitives
-    Warning: Ignored 28 CARRY_SUM primitive(s) -- cannot place fan-out logic in single logic cell
-        Warning: Can't place logic fed by CARRY_SUM primitive "alu:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]" into a single logic cell
-            Warning: Node "alu:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]~80" of type LUT
-            Warning: Node "alu:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]~84" of type LUT
-        Warning: Can't place logic fed by CARRY_SUM primitive "alu:inst12|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]" into a single logic cell
-            Warning: Node "alu:inst12|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]~80" of type LUT
-            Warning: Node "alu:inst12|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]~84" of type LUT
-        Warning: Can't place logic fed by CARRY_SUM primitive "alu:inst12|lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]" into a single logic cell
-            Warning: Node "alu:inst12|lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]~57" of type LUT
-            Warning: Node "alu:inst12|lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]~60" of type LUT
-        Warning: Can't place logic fed by CARRY_SUM primitive "alu:inst12|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]" into a single logic cell
-            Warning: Node "alu:inst12|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]~57" of type LUT
-            Warning: Node "alu:inst12|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[7]~60" of type LUT
-        Warning: Can't place logic fed by CARRY_SUM primitive "alu:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]" into a single logic cell
-            Warning: Node "alu:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]~88" of type LUT
-            Warning: Node "alu:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]~92" of type LUT
-        Warning: Can't place logic fed by CARRY_SUM primitive "alu:inst12|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]" into a single logic cell
-            Warning: Node "alu:inst12|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]~88" of type LUT
-            Warning: Node "alu:inst12|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]~92" of type LUT
-        Warning: Can't place logic fed by CARRY_SUM primitive "alu:inst12|lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]" into a single logic cell
-            Warning: Node "alu:inst12|lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]~63" of type LUT
-            Warning: Node "alu:inst12|lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]~66" of type LUT
-        Warning: Can't place logic fed by CARRY_SUM primitive "alu:inst12|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]" into a single logic cell
-            Warning: Node "alu:inst12|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]~63" of type LUT
-            Warning: Node "alu:inst12|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[6]~66" of type LUT
-        Warning: Can't place logic fed by CARRY_SUM primitive "alu:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]" into a single logic cell
-            Warning: Node "alu:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]~96" of type LUT
-            Warning: Node "alu:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]~100" of type LUT
-        Warning: Can't place logic fed by CARRY_SUM primitive "alu:inst12|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]" into a single logic cell
-            Warning: Node "alu:inst12|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]~96" of type LUT
-            Warning: Node "alu:inst12|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]~100" of type LUT
-        Warning: Can't place logic fed by CARRY_SUM primitive "alu:inst12|lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]" into a single logic cell
-            Warning: Node "alu:inst12|lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]~69" of type LUT
-            Warning: Node "alu:inst12|lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]~72" of type LUT
-        Warning: Can't place logic fed by CARRY_SUM primitive "alu:inst12|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]" into a single logic cell
-            Warning: Node "alu:inst12|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]~69" of type LUT
-            Warning: Node "alu:inst12|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[5]~72" of type LUT
-        Warning: Can't place logic fed by CARRY_SUM primitive "alu:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]" into a single logic cell
-            Warning: Node "alu:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]~104" of type LUT
-            Warning: Node "alu:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]~108" of type LUT
-        Warning: Can't place logic fed by CARRY_SUM primitive "alu:inst12|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]" into a single logic cell
-            Warning: Node "alu:inst12|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]~104" of type LUT
-            Warning: Node "alu:inst12|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]~108" of type LUT
-        Warning: Can't place logic fed by CARRY_SUM primitive "alu:inst12|lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]" into a single logic cell
-            Warning: Node "alu:inst12|lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]~75" of type LUT
-            Warning: Node "alu:inst12|lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]~78" of type LUT
-        Warning: Can't place logic fed by CARRY_SUM primitive "alu:inst12|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]" into a single logic cell
-            Warning: Node "alu:inst12|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]~75" of type LUT
-            Warning: Node "alu:inst12|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[4]~78" of type LUT
-        Warning: Can't place logic fed by CARRY_SUM primitive "alu:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]" into a single logic cell
-            Warning: Node "alu:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]~112" of type LUT
-            Warning: Node "alu:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]~116" of type LUT
-        Warning: Can't place logic fed by CARRY_SUM primitive "alu:inst12|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]" into a single logic cell
-            Warning: Node "alu:inst12|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]~112" of type LUT
-            Warning: Node "alu:inst12|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]~116" of type LUT
-        Warning: Can't place logic fed by CARRY_SUM primitive "alu:inst12|lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]" into a single logic cell
-            Warning: Node "alu:inst12|lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]~81" of type LUT
-            Warning: Node "alu:inst12|lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]~84" of type LUT
-        Warning: Can't place logic fed by CARRY_SUM primitive "alu:inst12|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]" into a single logic cell
-            Warning: Node "alu:inst12|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]~81" of type LUT
-            Warning: Node "alu:inst12|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[3]~84" of type LUT
-        Warning: Can't place logic fed by CARRY_SUM primitive "alu:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]" into a single logic cell
-            Warning: Node "alu:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]~120" of type LUT
-            Warning: Node "alu:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]~124" of type LUT
-        Warning: Can't place logic fed by CARRY_SUM primitive "alu:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]" into a single logic cell
-            Warning: Node "alu:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~128" of type LUT
-            Warning: Node "alu:inst12|lpm_add_sub:Add0|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~132" of type LUT
-        Warning: Can't place logic fed by CARRY_SUM primitive "alu:inst12|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]" into a single logic cell
-            Warning: Node "alu:inst12|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]~120" of type LUT
-            Warning: Node "alu:inst12|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]~124" of type LUT
-        Warning: Can't place logic fed by CARRY_SUM primitive "alu:inst12|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]" into a single logic cell
-            Warning: Node "alu:inst12|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~128" of type LUT
-            Warning: Node "alu:inst12|lpm_add_sub:Add2|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~132" of type LUT
-        Warning: Can't place logic fed by CARRY_SUM primitive "alu:inst12|lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]" into a single logic cell
-            Warning: Node "alu:inst12|lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]~87" of type LUT
-            Warning: Node "alu:inst12|lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]~90" of type LUT
-        Warning: Can't place logic fed by CARRY_SUM primitive "alu:inst12|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]" into a single logic cell
-            Warning: Node "alu:inst12|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]~87" of type LUT
-            Warning: Node "alu:inst12|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[2]~90" of type LUT
-        Warning: Can't place logic fed by CARRY_SUM primitive "alu:inst12|lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]" into a single logic cell
-            Warning: Node "alu:inst12|lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~93" of type LUT
-            Warning: Node "alu:inst12|lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~96" of type LUT
-        Warning: Can't place logic fed by CARRY_SUM primitive "alu:inst12|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]" into a single logic cell
-            Warning: Node "alu:inst12|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~93" of type LUT
-            Warning: Node "alu:inst12|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[1]~96" of type LUT
-Info: Found the following redundant logic cells in design
-    Info (17048): Logic cell "alu:inst12|lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~98"
-    Info (17048): Logic cell "alu:inst12|lpm_add_sub:Add5|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~100"
-    Info (17048): Logic cell "alu:inst12|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~98"
-    Info (17048): Logic cell "alu:inst12|lpm_add_sub:Add4|addcore:adder|a_csnbuffer:result_node|cs_buffer[0]~100"
-Info: Implemented 406 device resources after synthesis - the final resource count might be different
-    Info: Implemented 1 input pins
-    Info: Implemented 54 output pins
-    Info: Implemented 327 logic cells
-    Info: Implemented 24 RAM segments
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 149 warnings
-    Info: Peak virtual memory: 228 megabytes
-    Info: Processing ended: Sat Mar 30 19:42:31 2024
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+Info: Elaborating entity "control" for hierarchy "control:inst13"
+Warning (10230): Verilog HDL assignment warning at control.v(16): truncated value with size 16 to match size of target (8)
+Warning (10230): Verilog HDL assignment warning at control.v(17): truncated value with size 32 to match size of target (8)
+Info: Elaborating entity "int_control" for hierarchy "int_control:inst5"
+Warning (10240): Verilog HDL Always Construct warning at int_control.v(29): inferring latch(es) for variable "int_load", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "int_load" at int_control.v(29)
+Error (10028): Can't resolve multiple constant drivers for net "int_load" at int_control.v(31) File: E:/MyDoc/Projects/labs8/MSIPU/Coursework/NIKITA_KR/PROJECT/int_control.v Line: 31
+Error (10029): Constant driver at int_control.v(29) File: E:/MyDoc/Projects/labs8/MSIPU/Coursework/NIKITA_KR/PROJECT/int_control.v Line: 29
+Error: Can't elaborate user hierarchy "int_control:inst5"
+Info: Generated suppressed messages file E:/MyDoc/Projects/labs8/MSIPU/Coursework/NIKITA_KR/PROJECT/KP_8.map.smsg
+Error: Quartus II Analysis & Synthesis was unsuccessful. 3 errors, 3 warnings
+    Error: Peak virtual memory: 223 megabytes
+    Error: Processing ended: Fri Apr 05 21:00:18 2024
+    Error: Elapsed time: 00:00:01
+    Error: Total CPU time (on all processors): 00:00:01
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in E:/MyDoc/Projects/labs8/MSIPU/Coursework/NIKITA_KR/PROJECT/KP_8.map.smsg.
 
 

@@ -1,0 +1,10 @@
+
+State Machine - |cpu_int|int_control:inst5|state
+Name state.CHECK_K 
+state.IDLE 0 
+state.CHECK_K 1 
+
+State Machine - |cpu_int|int_control:inst5|next_state
+Name next_state.CHECK_K 
+next_state.IDLE 0 
+next_state.CHECK_K 1 

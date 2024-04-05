@@ -57,7 +57,7 @@ module lpm_rom0 (
 	defparam
 		lpm_rom_component.intended_device_family = "ACEX1K",
 		lpm_rom_component.lpm_address_control = "UNREGISTERED",
-		lpm_rom_component.lpm_file = "ex4.mif",
+		lpm_rom_component.lpm_file = "int.mif",
 		lpm_rom_component.lpm_outdata = "REGISTERED",
 		lpm_rom_component.lpm_type = "LPM_ROM",
 		lpm_rom_component.lpm_width = 16,
@@ -86,7 +86,7 @@ endmodule
 // Retrieval info: PRIVATE: JTAG_ENABLED NUMERIC "0"
 // Retrieval info: PRIVATE: JTAG_ID STRING "NONE"
 // Retrieval info: PRIVATE: MAXIMUM_DEPTH NUMERIC "0"
-// Retrieval info: PRIVATE: MIFfilename STRING "ex4.mif"
+// Retrieval info: PRIVATE: MIFfilename STRING "int.mif"
 // Retrieval info: PRIVATE: NUMWORDS_A NUMERIC "256"
 // Retrieval info: PRIVATE: OutputRegistered NUMERIC "1"
 // Retrieval info: PRIVATE: RAM_BLOCK_TYPE NUMERIC "0"
@@ -101,7 +101,7 @@ endmodule
 // Retrieval info: PRIVATE: rden NUMERIC "0"
 // Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "ACEX1K"
 // Retrieval info: CONSTANT: LPM_ADDRESS_CONTROL STRING "UNREGISTERED"
-// Retrieval info: CONSTANT: LPM_FILE STRING "ex4.mif"
+// Retrieval info: CONSTANT: LPM_FILE STRING "int.mif"
 // Retrieval info: CONSTANT: LPM_OUTDATA STRING "REGISTERED"
 // Retrieval info: CONSTANT: LPM_TYPE STRING "LPM_ROM"
 // Retrieval info: CONSTANT: LPM_WIDTH NUMERIC "16"
