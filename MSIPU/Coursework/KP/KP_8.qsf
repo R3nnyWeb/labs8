@@ -23,7 +23,7 @@
 # and any changes you make may be lost or overwritten.
 
 
-set_global_assignment -name FAMILY ACEX1K
+set_global_assignment -name FAMILY FLEX10K
 set_global_assignment -name DEVICE AUTO
 set_global_assignment -name TOP_LEVEL_ENTITY cpu
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 8.1
@@ -43,3 +43,12 @@ set_global_assignment -name BDF_FILE cpu.bdf
 set_global_assignment -name QIP_FILE lpm_ram_dq0.qip
 set_global_assignment -name VECTOR_WAVEFORM_FILE ex1.vwf
 set_global_assignment -name INCREMENTAL_VECTOR_INPUT_SOURCE ex1.vwf
+set_global_assignment -name MIF_FILE output.mif
+set_global_assignment -name MISC_FILE "B:/study/labs8/MSIPU/Coursework/KP/KP_8.dpf"
+set_global_assignment -name CHECK_OUTPUTS OFF
+set_global_assignment -name GLITCH_DETECTION OFF
+set_global_assignment -name INCREMENTAL_COMPILATION OFF
+set_global_assignment -name ADD_DEFAULT_PINS_TO_SIMULATION_OUTPUT_WAVEFORMS OFF
+set_global_assignment -name MIF_FILE test_sample.mif
+set_global_assignment -name MIF_FILE ex2.mif
+set_global_assignment -name MIF_FILE ex3.mif

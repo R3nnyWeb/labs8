@@ -48,9 +48,9 @@ endmodule
 // CNX file retrieval info
 // ============================================================
 // Retrieval info: PRIVATE: ADDRESSSTALL_A NUMERIC "0"
-// Retrieval info: PRIVATE: AclrAddr NUMERIC "0"
+// Retrieval info: PRIVATE: AclrAddr NUMERIC "1"
 // Retrieval info: PRIVATE: AclrByte NUMERIC "0"
-// Retrieval info: PRIVATE: AclrOutput NUMERIC "0"
+// Retrieval info: PRIVATE: AclrOutput NUMERIC "1"
 // Retrieval info: PRIVATE: BYTE_ENABLE NUMERIC "0"
 // Retrieval info: PRIVATE: BYTE_SIZE NUMERIC "8"
 // Retrieval info: PRIVATE: BlankMemory NUMERIC "0"
@@ -72,7 +72,7 @@ endmodule
 // Retrieval info: PRIVATE: RegAddr NUMERIC "1"
 // Retrieval info: PRIVATE: RegOutput NUMERIC "1"
 // Retrieval info: PRIVATE: SYNTH_WRAPPER_GEN_POSTFIX STRING "0"
-// Retrieval info: PRIVATE: SingleClock NUMERIC "1"
+// Retrieval info: PRIVATE: SingleClock NUMERIC "0"
 // Retrieval info: PRIVATE: UseDQRAM NUMERIC "0"
 // Retrieval info: PRIVATE: WidthAddr NUMERIC "4"
 // Retrieval info: PRIVATE: WidthData NUMERIC "16"

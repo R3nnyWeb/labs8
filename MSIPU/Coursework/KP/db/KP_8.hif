@@ -1,5 +1,5 @@
 Version 8.1 Build 163 10/28/2008 SJ Web Edition
-2
+18
 2996
 OFF
 OFF
@@ -121,7 +121,7 @@ REGISTERED
 PARAMETER_UNKNOWN
 USR
 LPM_OUTDATA
-UNREGISTERED
+REGISTERED
 PARAMETER_UNKNOWN
 USR
 LPM_FILE
@@ -129,7 +129,7 @@ test.mif
 PARAMETER_UNKNOWN
 USR
 DEVICE_FAMILY
-ACEX1K
+FLEX10K
 PARAMETER_UNKNOWN
 USR
 AUTO_CARRY_CHAINS
@@ -153,182 +153,27 @@ USR
 q
 -1
 3
+outclock
+-1
+3
 inclock
 -1
 3
 address
 -1
 3
-outclock
--1
-2
 memenab
 -1
 2
 }
 # include_file {
-c:|altera|81|quartus|libraries|megafunctions|aglobal81.inc
-ba79644cade9dcbd5df4af72a9b02986
 c:|altera|81|quartus|libraries|megafunctions|altrom.inc
 d4e3a69a331d3a99d3281790d99a1ebd
-}
-# macro_sequence
-
-# end
-# entity
-altrom
-# storage
-db|KP_8.(5).cnf
-db|KP_8.(5).cnf
-# case_insensitive
-# source_file
-c:|altera|81|quartus|libraries|megafunctions|altrom.tdf
-e06ad387aa7b72cc2b1c37ed83ac9ad
-7
-# user_parameter {
-WIDTH_BYTEENA_A
-1
-PARAMETER_UNKNOWN
-DEF
-WIDTH_BYTEENA_B
-1
-PARAMETER_UNKNOWN
-DEF
-WIDTH
-16
-PARAMETER_UNKNOWN
-USR
-AD_WIDTH
-4
-PARAMETER_UNKNOWN
-USR
-NUMWORDS
-16
-PARAMETER_UNKNOWN
-USR
-FILE
-test.mif
-PARAMETER_UNKNOWN
-USR
-REGISTERINPUTMODE
-ADDRESS_CONTROL
-PARAMETER_UNKNOWN
-USR
-MAXIMUM_DEPTH
-2048
-PARAMETER_UNKNOWN
-DEF
-DEVICE_FAMILY
-ACEX1K
-PARAMETER_UNKNOWN
-USR
-SUPPRESS_MEMORY_CONVERSION_WARNINGS
-OFF
-PARAMETER_UNKNOWN
-DEF
-CBXI_PARAMETER
-NOTHING
-PARAMETER_UNKNOWN
-DEF
-AUTO_CARRY_CHAINS
-ON
-AUTO_CARRY
-USR
-IGNORE_CARRY_BUFFERS
-OFF
-IGNORE_CARRY
-USR
-AUTO_CASCADE_CHAINS
-ON
-AUTO_CASCADE
-USR
-IGNORE_CASCADE_BUFFERS
-OFF
-IGNORE_CASCADE
-USR
-}
-# used_port {
-q9
--1
-3
-q8
--1
-3
-q7
--1
-3
-q6
--1
-3
-q5
--1
-3
-q4
--1
-3
-q3
--1
-3
-q2
--1
-3
-q15
--1
-3
-q14
--1
-3
-q13
--1
-3
-q12
--1
-3
-q11
--1
-3
-q10
--1
-3
-q1
--1
-3
-q0
--1
-3
-clocki
--1
-3
-address3
--1
-3
-address2
--1
-3
-address1
--1
-3
-address0
--1
-3
-}
-# include_file {
-c:|altera|81|quartus|libraries|megafunctions|altqpram.inc
-74e08939f96a7ea8e7a4d59a5b01fe7
-c:|altera|81|quartus|libraries|megafunctions|lpm_decode.inc
-bd0e2f5e01c1bd360461dceb53d48
-c:|altera|81|quartus|libraries|megafunctions|altsyncram.inc
-1b5760dd55919ddb45bfb2c0e896218b
-c:|altera|81|quartus|libraries|megafunctions|lpm_mux.inc
-c22bfd353214c01495b560fc34e47d79
 c:|altera|81|quartus|libraries|megafunctions|aglobal81.inc
 ba79644cade9dcbd5df4af72a9b02986
-c:|altera|81|quartus|libraries|others|maxplus2|memmodes.inc
-44d4551a35f349f0dbacaf799d39950
 }
-# memory_file {
-test.mif
-9cc0ffcaa26c7ae868f7f3fe2717a86
+# hierarchies {
+lpm_rom0:inst|lpm_rom:lpm_rom_component
 }
 # macro_sequence
 
@@ -370,42 +215,6 @@ alu:inst12
 
 # end
 # entity
-lpm_ram_dq0
-# storage
-db|KP_8.(8).cnf
-db|KP_8.(8).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-lpm_ram_dq0.v
-e8a24bb1db3779bdcb6b8246cf75aef6
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-lpm_ram_dq0:inst15
-}
-# macro_sequence
-
-# end
-# entity
 lpm_ram_dq
 # storage
 db|KP_8.(9).cnf
@@ -441,15 +250,15 @@ UNREGISTERED
 PARAMETER_UNKNOWN
 USR
 LPM_FILE
-UNUSED
+output.mif
 PARAMETER_UNKNOWN
-DEF
+USR
 USE_EAB
 ON
 PARAMETER_UNKNOWN
 DEF
 DEVICE_FAMILY
-ACEX1K
+FLEX10K
 PARAMETER_UNKNOWN
 USR
 CBXI_PARAMETER
@@ -494,14 +303,14 @@ outclock
 2
 }
 # include_file {
-c:|altera|81|quartus|libraries|megafunctions|lpm_decode.inc
-bd0e2f5e01c1bd360461dceb53d48
-c:|altera|81|quartus|libraries|megafunctions|lpm_mux.inc
-c22bfd353214c01495b560fc34e47d79
 c:|altera|81|quartus|libraries|megafunctions|altram.inc
 e66a83eccf6717bed97c99d891ad085
+c:|altera|81|quartus|libraries|megafunctions|lpm_mux.inc
+c22bfd353214c01495b560fc34e47d79
 c:|altera|81|quartus|libraries|megafunctions|aglobal81.inc
 ba79644cade9dcbd5df4af72a9b02986
+c:|altera|81|quartus|libraries|megafunctions|lpm_decode.inc
+bd0e2f5e01c1bd360461dceb53d48
 }
 # hierarchies {
 lpm_ram_dq0:inst15|lpm_ram_dq:lpm_ram_dq_component
@@ -557,9 +366,9 @@ NUMWORDS
 PARAMETER_UNKNOWN
 USR
 FILE
-UNUSED
+output.mif
 PARAMETER_UNKNOWN
-DEF
+USR
 REGISTERINPUTMODE
 ALL
 PARAMETER_UNKNOWN
@@ -573,7 +382,7 @@ MAXIMUM_DEPTH
 PARAMETER_UNKNOWN
 DEF
 DEVICE_FAMILY
-ACEX1K
+FLEX10K
 PARAMETER_UNKNOWN
 USR
 SUPPRESS_MEMORY_CONVERSION_WARNINGS
@@ -654,10 +463,6 @@ address0
 3
 }
 # include_file {
-c:|altera|81|quartus|libraries|megafunctions|altqpram.inc
-74e08939f96a7ea8e7a4d59a5b01fe7
-c:|altera|81|quartus|libraries|megafunctions|lpm_decode.inc
-bd0e2f5e01c1bd360461dceb53d48
 c:|altera|81|quartus|libraries|megafunctions|altsyncram.inc
 1b5760dd55919ddb45bfb2c0e896218b
 c:|altera|81|quartus|libraries|megafunctions|lpm_mux.inc
@@ -666,10 +471,14 @@ c:|altera|81|quartus|libraries|megafunctions|aglobal81.inc
 ba79644cade9dcbd5df4af72a9b02986
 c:|altera|81|quartus|libraries|others|maxplus2|memmodes.inc
 44d4551a35f349f0dbacaf799d39950
+c:|altera|81|quartus|libraries|megafunctions|altqpram.inc
+74e08939f96a7ea8e7a4d59a5b01fe7
+c:|altera|81|quartus|libraries|megafunctions|lpm_decode.inc
+bd0e2f5e01c1bd360461dceb53d48
 }
 # memory_file {
-none
-0
+output.mif
+56c35375be11c8ee434677f899ab8de6
 }
 # hierarchies {
 lpm_ram_dq0:inst15|lpm_ram_dq:lpm_ram_dq_component|altram:sram
@@ -765,7 +574,7 @@ PORT_CONNECTIVITY
 PARAMETER_UNKNOWN
 DEF
 DEVICE_FAMILY
-ACEX1K
+FLEX10K
 PARAMETER_UNKNOWN
 USR
 CARRY_CHAIN
@@ -854,30 +663,30 @@ clock
 3
 }
 # include_file {
-c:|altera|81|quartus|libraries|megafunctions|cmpconst.inc
-e61874547688138e6fc0b49ff8760
-c:|altera|81|quartus|libraries|megafunctions|lpm_decode.inc
-bd0e2f5e01c1bd360461dceb53d48
-c:|altera|81|quartus|libraries|megafunctions|lpm_compare.inc
-aec4ea1b78f4cda1c3effe18f1abbf63
-c:|altera|81|quartus|libraries|megafunctions|alt_synch_counter.inc
-09966d10c3e95c888bf8e443df34d8
-c:|altera|81|quartus|libraries|megafunctions|lpm_counter.inc
-7f888b135ddf66f0653c44cb18ac5
-c:|altera|81|quartus|libraries|megafunctions|dffeea.inc
-55d29d20f7e852c37746bec4e2495ec
-c:|altera|81|quartus|libraries|megafunctions|alt_counter_f10ke.inc
-536f8da8218b4a93689416f9baea1880
 c:|altera|81|quartus|libraries|megafunctions|alt_synch_counter_f.inc
 93a5aae1d8bd19c9e8e8eef93ab2177d
-c:|altera|81|quartus|libraries|megafunctions|alt_counter_stratix.inc
-2251b94d26afaa53635df1aff6b6e7be
+c:|altera|81|quartus|libraries|megafunctions|alt_synch_counter.inc
+09966d10c3e95c888bf8e443df34d8
 c:|altera|81|quartus|libraries|megafunctions|lpm_constant.inc
 dcde44eee59335c1e2fe75d574f9646
-c:|altera|81|quartus|libraries|megafunctions|aglobal81.inc
-ba79644cade9dcbd5df4af72a9b02986
 c:|altera|81|quartus|libraries|megafunctions|lpm_add_sub.inc
 7d9a33dd39f13aa690c3d0edd88351
+c:|altera|81|quartus|libraries|megafunctions|alt_counter_stratix.inc
+2251b94d26afaa53635df1aff6b6e7be
+c:|altera|81|quartus|libraries|megafunctions|cmpconst.inc
+e61874547688138e6fc0b49ff8760
+c:|altera|81|quartus|libraries|megafunctions|dffeea.inc
+55d29d20f7e852c37746bec4e2495ec
+c:|altera|81|quartus|libraries|megafunctions|lpm_compare.inc
+aec4ea1b78f4cda1c3effe18f1abbf63
+c:|altera|81|quartus|libraries|megafunctions|aglobal81.inc
+ba79644cade9dcbd5df4af72a9b02986
+c:|altera|81|quartus|libraries|megafunctions|alt_counter_f10ke.inc
+536f8da8218b4a93689416f9baea1880
+c:|altera|81|quartus|libraries|megafunctions|lpm_counter.inc
+7f888b135ddf66f0653c44cb18ac5
+c:|altera|81|quartus|libraries|megafunctions|lpm_decode.inc
+bd0e2f5e01c1bd360461dceb53d48
 }
 # macro_sequence
 
@@ -942,7 +751,7 @@ CARRY_CHAIN_LENGTH
 CARRY_CHAIN_LENGTH
 USR
 DEVICE_FAMILY
-ACEX1K
+FLEX10K
 PARAMETER_UNKNOWN
 USR
 }
@@ -1006,12 +815,12 @@ clock
 3
 }
 # include_file {
-c:|altera|81|quartus|libraries|megafunctions|lpm_compare.inc
-aec4ea1b78f4cda1c3effe18f1abbf63
 c:|altera|81|quartus|libraries|megafunctions|flex10ke_lcell.inc
 c89a3d47968155565cd6d7fab3ae6a
 c:|altera|81|quartus|libraries|megafunctions|lpm_constant.inc
 dcde44eee59335c1e2fe75d574f9646
+c:|altera|81|quartus|libraries|megafunctions|lpm_compare.inc
+aec4ea1b78f4cda1c3effe18f1abbf63
 c:|altera|81|quartus|libraries|megafunctions|aglobal81.inc
 ba79644cade9dcbd5df4af72a9b02986
 }
@@ -1074,7 +883,7 @@ CARRY_CHAIN_LENGTH
 CARRY_CHAIN_LENGTH
 USR
 DEVICE_FAMILY
-ACEX1K
+FLEX10K
 PARAMETER_UNKNOWN
 USR
 USE_WYS
@@ -1086,7 +895,7 @@ FAST
 PARAMETER_UNKNOWN
 USR
 CBXI_PARAMETER
-add_sub_5ih
+add_sub_sjh
 PARAMETER_UNKNOWN
 USR
 AUTO_CARRY_CHAINS
@@ -1201,12 +1010,12 @@ c:|altera|81|quartus|libraries|megafunctions|alt_mercury_add_sub.inc
 ae39f15ed67cc9a095d29f68f6ad0f8
 c:|altera|81|quartus|libraries|megafunctions|bypassff.inc
 8e8df160d449a63ec15dc86ecf2b373f
+c:|altera|81|quartus|libraries|megafunctions|aglobal81.inc
+ba79644cade9dcbd5df4af72a9b02986
 c:|altera|81|quartus|libraries|megafunctions|altshift.inc
 70fa13aee7d6d160ef20b2de32813a
 c:|altera|81|quartus|libraries|megafunctions|alt_stratix_add_sub.inc
 c08f604aefba5b4f1f554e565113c6
-c:|altera|81|quartus|libraries|megafunctions|aglobal81.inc
-ba79644cade9dcbd5df4af72a9b02986
 }
 # macro_sequence
 
@@ -1263,7 +1072,7 @@ CARRY_CHAIN_LENGTH
 CARRY_CHAIN_LENGTH
 USR
 DEVICE_FAMILY
-ACEX1K
+FLEX10K
 PARAMETER_UNKNOWN
 USR
 }
@@ -1354,10 +1163,10 @@ cin
 3
 }
 # include_file {
-c:|altera|81|quartus|libraries|megafunctions|addcore.inc
-ff795e21e4847824c03218724f1a1252
 c:|altera|81|quartus|libraries|megafunctions|a_csnbuffer.inc
 49de46f6a395e2e6edecabe6eac9d873
+c:|altera|81|quartus|libraries|megafunctions|addcore.inc
+ff795e21e4847824c03218724f1a1252
 c:|altera|81|quartus|libraries|megafunctions|aglobal81.inc
 ba79644cade9dcbd5df4af72a9b02986
 }
@@ -1702,7 +1511,7 @@ CARRY_CHAIN_LENGTH
 CARRY_CHAIN_LENGTH
 USR
 DEVICE_FAMILY
-ACEX1K
+FLEX10K
 PARAMETER_UNKNOWN
 USR
 USE_WYS
@@ -1714,7 +1523,7 @@ FAST
 PARAMETER_UNKNOWN
 USR
 CBXI_PARAMETER
-add_sub_djh
+add_sub_4lh
 PARAMETER_UNKNOWN
 USR
 AUTO_CARRY_CHAINS
@@ -1835,12 +1644,12 @@ c:|altera|81|quartus|libraries|megafunctions|alt_mercury_add_sub.inc
 ae39f15ed67cc9a095d29f68f6ad0f8
 c:|altera|81|quartus|libraries|megafunctions|bypassff.inc
 8e8df160d449a63ec15dc86ecf2b373f
+c:|altera|81|quartus|libraries|megafunctions|aglobal81.inc
+ba79644cade9dcbd5df4af72a9b02986
 c:|altera|81|quartus|libraries|megafunctions|altshift.inc
 70fa13aee7d6d160ef20b2de32813a
 c:|altera|81|quartus|libraries|megafunctions|alt_stratix_add_sub.inc
 c08f604aefba5b4f1f554e565113c6
-c:|altera|81|quartus|libraries|megafunctions|aglobal81.inc
-ba79644cade9dcbd5df4af72a9b02986
 }
 # macro_sequence
 
@@ -1897,7 +1706,7 @@ CARRY_CHAIN_LENGTH
 CARRY_CHAIN_LENGTH
 USR
 DEVICE_FAMILY
-ACEX1K
+FLEX10K
 PARAMETER_UNKNOWN
 USR
 }
@@ -1997,10 +1806,10 @@ cin
 3
 }
 # include_file {
-c:|altera|81|quartus|libraries|megafunctions|addcore.inc
-ff795e21e4847824c03218724f1a1252
 c:|altera|81|quartus|libraries|megafunctions|a_csnbuffer.inc
 49de46f6a395e2e6edecabe6eac9d873
+c:|altera|81|quartus|libraries|megafunctions|addcore.inc
+ff795e21e4847824c03218724f1a1252
 c:|altera|81|quartus|libraries|megafunctions|aglobal81.inc
 ba79644cade9dcbd5df4af72a9b02986
 }
@@ -2332,7 +2141,7 @@ CARRY_CHAIN_LENGTH
 CARRY_CHAIN_LENGTH
 USR
 DEVICE_FAMILY
-ACEX1K
+FLEX10K
 PARAMETER_UNKNOWN
 USR
 USE_WYS
@@ -2344,7 +2153,7 @@ FAST
 PARAMETER_UNKNOWN
 USR
 CBXI_PARAMETER
-add_sub_plh
+add_sub_gnh
 PARAMETER_UNKNOWN
 USR
 AUTO_CARRY_CHAINS
@@ -2459,12 +2268,12 @@ c:|altera|81|quartus|libraries|megafunctions|alt_mercury_add_sub.inc
 ae39f15ed67cc9a095d29f68f6ad0f8
 c:|altera|81|quartus|libraries|megafunctions|bypassff.inc
 8e8df160d449a63ec15dc86ecf2b373f
+c:|altera|81|quartus|libraries|megafunctions|aglobal81.inc
+ba79644cade9dcbd5df4af72a9b02986
 c:|altera|81|quartus|libraries|megafunctions|altshift.inc
 70fa13aee7d6d160ef20b2de32813a
 c:|altera|81|quartus|libraries|megafunctions|alt_stratix_add_sub.inc
 c08f604aefba5b4f1f554e565113c6
-c:|altera|81|quartus|libraries|megafunctions|aglobal81.inc
-ba79644cade9dcbd5df4af72a9b02986
 }
 # macro_sequence
 
@@ -2525,7 +2334,7 @@ CARRY_CHAIN_LENGTH
 CARRY_CHAIN_LENGTH
 USR
 DEVICE_FAMILY
-ACEX1K
+FLEX10K
 PARAMETER_UNKNOWN
 USR
 USE_WYS
@@ -2537,7 +2346,7 @@ FAST
 PARAMETER_UNKNOWN
 USR
 CBXI_PARAMETER
-add_sub_vah
+add_sub_mch
 PARAMETER_UNKNOWN
 USR
 AUTO_CARRY_CHAINS
@@ -2649,12 +2458,12 @@ c:|altera|81|quartus|libraries|megafunctions|alt_mercury_add_sub.inc
 ae39f15ed67cc9a095d29f68f6ad0f8
 c:|altera|81|quartus|libraries|megafunctions|bypassff.inc
 8e8df160d449a63ec15dc86ecf2b373f
+c:|altera|81|quartus|libraries|megafunctions|aglobal81.inc
+ba79644cade9dcbd5df4af72a9b02986
 c:|altera|81|quartus|libraries|megafunctions|altshift.inc
 70fa13aee7d6d160ef20b2de32813a
 c:|altera|81|quartus|libraries|megafunctions|alt_stratix_add_sub.inc
 c08f604aefba5b4f1f554e565113c6
-c:|altera|81|quartus|libraries|megafunctions|aglobal81.inc
-ba79644cade9dcbd5df4af72a9b02986
 }
 # macro_sequence
 
@@ -2711,7 +2520,7 @@ CARRY_CHAIN_LENGTH
 CARRY_CHAIN_LENGTH
 USR
 DEVICE_FAMILY
-ACEX1K
+FLEX10K
 PARAMETER_UNKNOWN
 USR
 }
@@ -2799,10 +2608,10 @@ dataa0
 3
 }
 # include_file {
-c:|altera|81|quartus|libraries|megafunctions|addcore.inc
-ff795e21e4847824c03218724f1a1252
 c:|altera|81|quartus|libraries|megafunctions|a_csnbuffer.inc
 49de46f6a395e2e6edecabe6eac9d873
+c:|altera|81|quartus|libraries|megafunctions|addcore.inc
+ff795e21e4847824c03218724f1a1252
 c:|altera|81|quartus|libraries|megafunctions|aglobal81.inc
 ba79644cade9dcbd5df4af72a9b02986
 }
@@ -2810,270 +2619,18 @@ ba79644cade9dcbd5df4af72a9b02986
 
 # end
 # entity
-lpm_rom
+lpm_ram_dq0
 # storage
-db|KP_8.(28).cnf
-db|KP_8.(28).cnf
-# case_insensitive
-# source_file
-c:|altera|81|quartus|libraries|megafunctions|lpm_rom.tdf
-3e1a9c1ea6273c914482801024e7171
-7
-# user_parameter {
-LPM_WIDTH
-16
-PARAMETER_SIGNED_DEC
-USR
-LPM_WIDTHAD
-8
-PARAMETER_SIGNED_DEC
-USR
-LPM_NUMWORDS
-256
-PARAMETER_UNKNOWN
-DEF
-LPM_ADDRESS_CONTROL
-REGISTERED
-PARAMETER_UNKNOWN
-USR
-LPM_OUTDATA
-UNREGISTERED
-PARAMETER_UNKNOWN
-USR
-LPM_FILE
-test.mif
-PARAMETER_UNKNOWN
-USR
-DEVICE_FAMILY
-ACEX1K
-PARAMETER_UNKNOWN
-USR
-AUTO_CARRY_CHAINS
-ON
-AUTO_CARRY
-USR
-IGNORE_CARRY_BUFFERS
-OFF
-IGNORE_CARRY
-USR
-AUTO_CASCADE_CHAINS
-ON
-AUTO_CASCADE
-USR
-IGNORE_CASCADE_BUFFERS
-OFF
-IGNORE_CASCADE
-USR
-}
-# used_port {
-q
--1
-3
-inclock
--1
-3
-address
--1
-3
-outclock
--1
-2
-memenab
--1
-2
-}
-# include_file {
-c:|altera|81|quartus|libraries|megafunctions|altrom.inc
-d4e3a69a331d3a99d3281790d99a1ebd
-c:|altera|81|quartus|libraries|megafunctions|aglobal81.inc
-ba79644cade9dcbd5df4af72a9b02986
-}
-# macro_sequence
-
-# end
-# entity
-altrom
-# storage
-db|KP_8.(29).cnf
-db|KP_8.(29).cnf
-# case_insensitive
-# source_file
-c:|altera|81|quartus|libraries|megafunctions|altrom.tdf
-e06ad387aa7b72cc2b1c37ed83ac9ad
-7
-# user_parameter {
-WIDTH_BYTEENA_A
-1
-PARAMETER_UNKNOWN
-DEF
-WIDTH_BYTEENA_B
-1
-PARAMETER_UNKNOWN
-DEF
-WIDTH
-16
-PARAMETER_UNKNOWN
-USR
-AD_WIDTH
-8
-PARAMETER_UNKNOWN
-USR
-NUMWORDS
-256
-PARAMETER_UNKNOWN
-USR
-FILE
-test.mif
-PARAMETER_UNKNOWN
-USR
-REGISTERINPUTMODE
-ADDRESS_CONTROL
-PARAMETER_UNKNOWN
-USR
-MAXIMUM_DEPTH
-2048
-PARAMETER_UNKNOWN
-DEF
-DEVICE_FAMILY
-ACEX1K
-PARAMETER_UNKNOWN
-USR
-SUPPRESS_MEMORY_CONVERSION_WARNINGS
-OFF
-PARAMETER_UNKNOWN
-DEF
-CBXI_PARAMETER
-NOTHING
-PARAMETER_UNKNOWN
-DEF
-AUTO_CARRY_CHAINS
-ON
-AUTO_CARRY
-USR
-IGNORE_CARRY_BUFFERS
-OFF
-IGNORE_CARRY
-USR
-AUTO_CASCADE_CHAINS
-ON
-AUTO_CASCADE
-USR
-IGNORE_CASCADE_BUFFERS
-OFF
-IGNORE_CASCADE
-USR
-}
-# used_port {
-q9
--1
-3
-q8
--1
-3
-q7
--1
-3
-q6
--1
-3
-q5
--1
-3
-q4
--1
-3
-q3
--1
-3
-q2
--1
-3
-q15
--1
-3
-q14
--1
-3
-q13
--1
-3
-q12
--1
-3
-q11
--1
-3
-q10
--1
-3
-q1
--1
-3
-q0
--1
-3
-clocki
--1
-3
-address7
--1
-3
-address6
--1
-3
-address5
--1
-3
-address4
--1
-3
-address3
--1
-3
-address2
--1
-3
-address1
--1
-3
-address0
--1
-3
-}
-# include_file {
-c:|altera|81|quartus|libraries|megafunctions|lpm_mux.inc
-c22bfd353214c01495b560fc34e47d79
-c:|altera|81|quartus|libraries|others|maxplus2|memmodes.inc
-44d4551a35f349f0dbacaf799d39950
-c:|altera|81|quartus|libraries|megafunctions|altsyncram.inc
-1b5760dd55919ddb45bfb2c0e896218b
-c:|altera|81|quartus|libraries|megafunctions|lpm_decode.inc
-bd0e2f5e01c1bd360461dceb53d48
-c:|altera|81|quartus|libraries|megafunctions|aglobal81.inc
-ba79644cade9dcbd5df4af72a9b02986
-c:|altera|81|quartus|libraries|megafunctions|altqpram.inc
-74e08939f96a7ea8e7a4d59a5b01fe7
-}
-# memory_file {
-test.mif
-9cc0ffcaa26c7ae868f7f3fe2717a86
-}
-# macro_sequence
-
-# end
-# entity
-control
-# storage
-db|KP_8.(6).cnf
-db|KP_8.(6).cnf
+db|KP_8.(8).cnf
+db|KP_8.(8).cnf
 # logic_option {
 AUTO_RAM_RECOGNITION
 ON
 }
 # case_sensitive
 # source_file
-control.v
-fe8611a3818bf2273e7b440ba642a86
+lpm_ram_dq0.v
+ff16b65667223f4b6488c5c5da45664
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -3092,148 +2649,7 @@ VERILOG_NON_CONSTANT_LOOP_LIMIT
 250
 }
 # hierarchies {
-control:inst1
-}
-# macro_sequence
-
-# end
-# entity
-cpu
-# storage
-db|KP_8.(0).cnf
-db|KP_8.(0).cnf
-# case_insensitive
-# source_file
-cpu.bdf
-951fb2e4b7e87ea94b60abc81a2a91d6
-26
-# internal_option {
-BLOCK_DESIGN_NAMING
-AUTO
-}
-# hierarchies {
-|
-}
-# macro_sequence
-
-# end
-# entity
-lpm_rom0
-# storage
-db|KP_8.(3).cnf
-db|KP_8.(3).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_sensitive
-# source_file
-lpm_rom0.v
-f899dccfeee75e86f722bc6b65c367e2
-8
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-IGNORE_VERILOG_INITIAL_CONSTRUCTS
-OFF
-VERILOG_CONSTANT_LOOP_LIMIT
-5000
-VERILOG_NON_CONSTANT_LOOP_LIMIT
-250
-}
-# hierarchies {
-lpm_rom0:inst
-}
-# macro_sequence
-
-# end
-# entity
-lpm_rom
-# storage
-db|KP_8.(30).cnf
-db|KP_8.(30).cnf
-# case_insensitive
-# source_file
-c:|altera|81|quartus|libraries|megafunctions|lpm_rom.tdf
-3e1a9c1ea6273c914482801024e7171
-7
-# user_parameter {
-LPM_WIDTH
-16
-PARAMETER_SIGNED_DEC
-USR
-LPM_WIDTHAD
-4
-PARAMETER_SIGNED_DEC
-USR
-LPM_NUMWORDS
-16
-PARAMETER_UNKNOWN
-DEF
-LPM_ADDRESS_CONTROL
-REGISTERED
-PARAMETER_UNKNOWN
-USR
-LPM_OUTDATA
-REGISTERED
-PARAMETER_UNKNOWN
-USR
-LPM_FILE
-test.mif
-PARAMETER_UNKNOWN
-USR
-DEVICE_FAMILY
-ACEX1K
-PARAMETER_UNKNOWN
-USR
-AUTO_CARRY_CHAINS
-ON
-AUTO_CARRY
-USR
-IGNORE_CARRY_BUFFERS
-OFF
-IGNORE_CARRY
-USR
-AUTO_CASCADE_CHAINS
-ON
-AUTO_CASCADE
-USR
-IGNORE_CASCADE_BUFFERS
-OFF
-IGNORE_CASCADE
-USR
-}
-# used_port {
-q
--1
-3
-outclock
--1
-3
-inclock
--1
-3
-address
--1
-3
-memenab
--1
-2
-}
-# include_file {
-c:|altera|81|quartus|libraries|megafunctions|altrom.inc
-d4e3a69a331d3a99d3281790d99a1ebd
-c:|altera|81|quartus|libraries|megafunctions|aglobal81.inc
-ba79644cade9dcbd5df4af72a9b02986
-}
-# hierarchies {
-lpm_rom0:inst|lpm_rom:lpm_rom_component
+lpm_ram_dq0:inst15
 }
 # macro_sequence
 
@@ -3241,8 +2657,8 @@ lpm_rom0:inst|lpm_rom:lpm_rom_component
 # entity
 altrom
 # storage
-db|KP_8.(31).cnf
-db|KP_8.(31).cnf
+db|KP_8.(5).cnf
+db|KP_8.(5).cnf
 # case_insensitive
 # source_file
 c:|altera|81|quartus|libraries|megafunctions|altrom.tdf
@@ -3282,7 +2698,7 @@ MAXIMUM_DEPTH
 PARAMETER_UNKNOWN
 DEF
 DEVICE_FAMILY
-ACEX1K
+FLEX10K
 PARAMETER_UNKNOWN
 USR
 SUPPRESS_MEMORY_CONVERSION_WARNINGS
@@ -3379,25 +2795,357 @@ address0
 3
 }
 # include_file {
+c:|altera|81|quartus|libraries|others|maxplus2|memmodes.inc
+44d4551a35f349f0dbacaf799d39950
 c:|altera|81|quartus|libraries|megafunctions|aglobal81.inc
 ba79644cade9dcbd5df4af72a9b02986
 c:|altera|81|quartus|libraries|megafunctions|lpm_mux.inc
 c22bfd353214c01495b560fc34e47d79
-c:|altera|81|quartus|libraries|others|maxplus2|memmodes.inc
-44d4551a35f349f0dbacaf799d39950
-c:|altera|81|quartus|libraries|megafunctions|altsyncram.inc
-1b5760dd55919ddb45bfb2c0e896218b
 c:|altera|81|quartus|libraries|megafunctions|lpm_decode.inc
 bd0e2f5e01c1bd360461dceb53d48
+c:|altera|81|quartus|libraries|megafunctions|altsyncram.inc
+1b5760dd55919ddb45bfb2c0e896218b
 c:|altera|81|quartus|libraries|megafunctions|altqpram.inc
 74e08939f96a7ea8e7a4d59a5b01fe7
 }
 # memory_file {
 test.mif
-9cc0ffcaa26c7ae868f7f3fe2717a86
+541ac1538ee7197895335badacb5a287
 }
 # hierarchies {
 lpm_rom0:inst|lpm_rom:lpm_rom_component|altrom:srom
+}
+# macro_sequence
+
+# end
+# entity
+control
+# storage
+db|KP_8.(6).cnf
+db|KP_8.(6).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+control.v
+fe8611a3818bf2273e7b440ba642a86
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+control:inst1
+}
+# macro_sequence
+
+# end
+# entity
+lpm_rom
+# storage
+db|KP_8.(28).cnf
+db|KP_8.(28).cnf
+# case_insensitive
+# source_file
+c:|altera|81|quartus|libraries|megafunctions|lpm_rom.tdf
+3e1a9c1ea6273c914482801024e7171
+7
+# user_parameter {
+LPM_WIDTH
+16
+PARAMETER_SIGNED_DEC
+USR
+LPM_WIDTHAD
+4
+PARAMETER_SIGNED_DEC
+USR
+LPM_NUMWORDS
+16
+PARAMETER_UNKNOWN
+DEF
+LPM_ADDRESS_CONTROL
+UNREGISTERED
+PARAMETER_UNKNOWN
+USR
+LPM_OUTDATA
+REGISTERED
+PARAMETER_UNKNOWN
+USR
+LPM_FILE
+test.mif
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+FLEX10K
+PARAMETER_UNKNOWN
+USR
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+q
+-1
+3
+outclock
+-1
+3
+address
+-1
+3
+memenab
+-1
+2
+inclock
+-1
+2
+}
+# include_file {
+c:|altera|81|quartus|libraries|megafunctions|aglobal81.inc
+ba79644cade9dcbd5df4af72a9b02986
+c:|altera|81|quartus|libraries|megafunctions|altrom.inc
+d4e3a69a331d3a99d3281790d99a1ebd
+}
+# macro_sequence
+
+# end
+# entity
+altrom
+# storage
+db|KP_8.(29).cnf
+db|KP_8.(29).cnf
+# case_insensitive
+# source_file
+c:|altera|81|quartus|libraries|megafunctions|altrom.tdf
+e06ad387aa7b72cc2b1c37ed83ac9ad
+7
+# user_parameter {
+WIDTH_BYTEENA_A
+1
+PARAMETER_UNKNOWN
+DEF
+WIDTH_BYTEENA_B
+1
+PARAMETER_UNKNOWN
+DEF
+WIDTH
+16
+PARAMETER_UNKNOWN
+USR
+AD_WIDTH
+4
+PARAMETER_UNKNOWN
+USR
+NUMWORDS
+16
+PARAMETER_UNKNOWN
+USR
+FILE
+test.mif
+PARAMETER_UNKNOWN
+USR
+REGISTERINPUTMODE
+DEFAULT
+PARAMETER_UNKNOWN
+USR
+MAXIMUM_DEPTH
+2048
+PARAMETER_UNKNOWN
+DEF
+DEVICE_FAMILY
+FLEX10K
+PARAMETER_UNKNOWN
+USR
+SUPPRESS_MEMORY_CONVERSION_WARNINGS
+OFF
+PARAMETER_UNKNOWN
+DEF
+CBXI_PARAMETER
+NOTHING
+PARAMETER_UNKNOWN
+DEF
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+q9
+-1
+3
+q8
+-1
+3
+q7
+-1
+3
+q6
+-1
+3
+q5
+-1
+3
+q4
+-1
+3
+q3
+-1
+3
+q2
+-1
+3
+q15
+-1
+3
+q14
+-1
+3
+q13
+-1
+3
+q12
+-1
+3
+q11
+-1
+3
+q10
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+clocko
+-1
+3
+address3
+-1
+3
+address2
+-1
+3
+address1
+-1
+3
+address0
+-1
+3
+}
+# include_file {
+c:|altera|81|quartus|libraries|megafunctions|altsyncram.inc
+1b5760dd55919ddb45bfb2c0e896218b
+c:|altera|81|quartus|libraries|megafunctions|altqpram.inc
+74e08939f96a7ea8e7a4d59a5b01fe7
+c:|altera|81|quartus|libraries|megafunctions|lpm_mux.inc
+c22bfd353214c01495b560fc34e47d79
+c:|altera|81|quartus|libraries|megafunctions|lpm_decode.inc
+bd0e2f5e01c1bd360461dceb53d48
+c:|altera|81|quartus|libraries|megafunctions|aglobal81.inc
+ba79644cade9dcbd5df4af72a9b02986
+c:|altera|81|quartus|libraries|others|maxplus2|memmodes.inc
+44d4551a35f349f0dbacaf799d39950
+}
+# memory_file {
+test.mif
+541ac1538ee7197895335badacb5a287
+}
+# macro_sequence
+
+# end
+# entity
+cpu
+# storage
+db|KP_8.(0).cnf
+db|KP_8.(0).cnf
+# case_insensitive
+# source_file
+cpu.bdf
+7124afa95a5adb30772fbb069e62748
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+lpm_rom0
+# storage
+db|KP_8.(3).cnf
+db|KP_8.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+lpm_rom0.v
+f33515d08f1d409ce511b7aab17ed824
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+lpm_rom0:inst
 }
 # macro_sequence
 

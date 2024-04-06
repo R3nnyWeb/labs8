@@ -1,11 +1,10 @@
-Fitter Status : Successful - Mon Mar 25 12:47:30 2024
+Fitter Status : Successful - Sat Apr 06 06:08:03 2024
 Quartus II Version : 8.1 Build 163 10/28/2008 SJ Web Edition
 Revision Name : KP_8
 Top-level Entity Name : cpu
-Family : ACEX1K
-Device : EP1K10TC100-1
+Family : FLEX10K
+Device : EPF10K10LC84-3
 Timing Models : Final
 Total logic elements : 303 / 576 ( 53 % )
-Total pins : 54 / 66 ( 82 % )
-Total memory bits : 384 / 12,288 ( 3 % )
-Total PLLs : 0 / 1 ( 0 % )
+Total pins : 54 / 59 ( 92 % )
+Total memory bits : 384 / 6,144 ( 6 % )

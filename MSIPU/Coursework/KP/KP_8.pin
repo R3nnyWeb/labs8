@@ -22,7 +22,7 @@
 
  ------------------------------------------------------------------------------
  -- NC         : No Connect. This pin has no internal connection to the device.
- -- VCC_INT    : Dedicated power pin, which MUST be connected to VCC  (2.5V).
+ -- VCC_INT    : Dedicated power pin, which MUST be connected to VCC  (5.0V).
  -- VCC_IO     : Dedicated power pin, which MUST be connected to VCC  (Refer to
  --              the table below for voltage).
  -- GND        : Dedicated ground pin, which MUST be connected to GND.
@@ -37,107 +37,91 @@
 
 
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
-CHIP  "KP_8"  ASSIGNED TO AN: EP1K10TC100-1
+CHIP  "KP_8"  ASSIGNED TO AN: EPF10K10LC84-3
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
-CONF_DONE                    : 1         : bidir  :                   :         :           :                
-nCEO                         : 2         : output :                   :         :           :                
-TDO                          : 3         : output :                   :         :           :                
-VCC_IO                       : 4         : power  :                   : 3.3V    :           :                
-n                            : 5         : output : LVTTL/LVCMOS      :         :           : N              
-k[12]                        : 6         : output : LVTTL/LVCMOS      :         :           : N              
-k[1]                         : 7         : output : LVTTL/LVCMOS      :         :           : N              
-x[3]                         : 8         : output : LVTTL/LVCMOS      :         :           : N              
-k[3]                         : 9         : output : LVTTL/LVCMOS      :         :           : N              
-k[2]                         : 10        : output : LVTTL/LVCMOS      :         :           : N              
-GND_INT                      : 11        : gnd    :                   :         :           :                
-VCC_INT                      : 12        : power  :                   : 2.5V    :           :                
-wreg                         : 13        : output : LVTTL/LVCMOS      :         :           : N              
-k[15]                        : 14        : output : LVTTL/LVCMOS      :         :           : N              
-k[8]                         : 15        : output : LVTTL/LVCMOS      :         :           : N              
-k[5]                         : 16        : output : LVTTL/LVCMOS      :         :           : N              
-VCC_IO                       : 17        : power  :                   : 3.3V    :           :                
-GND_INT                      : 18        : gnd    :                   :         :           :                
-ak[0]                        : 19        : output : LVTTL/LVCMOS      :         :           : N              
-ak[1]                        : 20        : output : LVTTL/LVCMOS      :         :           : N              
-ak[3]                        : 21        : output : LVTTL/LVCMOS      :         :           : N              
-k[10]                        : 22        : output : LVTTL/LVCMOS      :         :           : N              
-ak[6]                        : 23        : output : LVTTL/LVCMOS      :         :           : N              
-TMS                          : 24        : input  :                   :         :           :                
-nSTATUS                      : 25        : bidir  :                   :         :           :                
-d_bus[4]                     : 26        : output : LVTTL/LVCMOS      :         :           : N              
-y[2]                         : 27        : output : LVTTL/LVCMOS      :         :           : N              
-x[4]                         : 28        : output : LVTTL/LVCMOS      :         :           : N              
-y[1]                         : 29        : output : LVTTL/LVCMOS      :         :           : N              
-y[3]                         : 30        : output : LVTTL/LVCMOS      :         :           : N              
-k[6]                         : 31        : output : LVTTL/LVCMOS      :         :           : N              
-k[4]                         : 32        : output : LVTTL/LVCMOS      :         :           : N              
-d_bus[2]                     : 33        : output : LVTTL/LVCMOS      :         :           : N              
-d_bus[1]                     : 34        : output : LVTTL/LVCMOS      :         :           : N              
-VCC_INT                      : 35        : power  :                   : 2.5V    :           :                
-GND_INT                      : 36        : gnd    :                   :         :           :                
-VCC_CKLK                     : 37        : power  :                   : 2.5V    :           :                
-GND+                         : 38        :        :                   :         :           :                
-clk                          : 39        : input  : LVTTL/LVCMOS      :         :           : N              
-GND+                         : 40        :        :                   :         :           :                
-GND_CKLK                     : 41        : gnd    :                   :         :           :                
-GND_INT                      : 42        : gnd    :                   :         :           :                
-x[7]                         : 43        : output : LVTTL/LVCMOS      :         :           : N              
-VCC_IO                       : 44        : power  :                   : 3.3V    :           :                
-y[7]                         : 45        : output : LVTTL/LVCMOS      :         :           : N              
-k[0]                         : 46        : output : LVTTL/LVCMOS      :         :           : N              
-ak[7]                        : 47        : output : LVTTL/LVCMOS      :         :           : N              
-d_bus[6]                     : 48        : output : LVTTL/LVCMOS      :         :           : N              
-x[6]                         : 49        : output : LVTTL/LVCMOS      :         :           : N              
-d_bus[7]                     : 50        : output : LVTTL/LVCMOS      :         :           : N              
-nCONFIG                      : 51        : input  :                   :         :           :                
-VCC_INT                      : 52        : power  :                   : 2.5V    :           :                
-MSEL1                        : 53        : input  :                   :         :           :                
-MSEL0                        : 54        : input  :                   :         :           :                
-k[11]                        : 55        : output : LVTTL/LVCMOS      :         :           : N              
-ak[4]                        : 56        : output : LVTTL/LVCMOS      :         :           : N              
-ak[2]                        : 57        : output : LVTTL/LVCMOS      :         :           : N              
-z                            : 58        : output : LVTTL/LVCMOS      :         :           : N              
-GND_INT                      : 59        : gnd    :                   :         :           :                
-VCC_INT                      : 60        : power  :                   : 2.5V    :           :                
-wmem                         : 61        : output : LVTTL/LVCMOS      :         :           : N              
-k[7]                         : 62        : output : LVTTL/LVCMOS      :         :           : N              
-k[14]                        : 63        : output : LVTTL/LVCMOS      :         :           : N              
-k[9]                         : 64        : output : LVTTL/LVCMOS      :         :           : N              
-GND*                         : 65        :        :                   :         :           :                
-GND_INT                      : 66        : gnd    :                   :         :           :                
-VCC_IO                       : 67        : power  :                   : 3.3V    :           :                
-d_bus[5]                     : 68        : output : LVTTL/LVCMOS      :         :           : N              
-y[0]                         : 69        : output : LVTTL/LVCMOS      :         :           : N              
-y[4]                         : 70        : output : LVTTL/LVCMOS      :         :           : N              
-x[0]                         : 71        : output : LVTTL/LVCMOS      :         :           : N              
-VCC_INT                      : 72        : power  :                   : 2.5V    :           :                
-TDI                          : 73        : input  :                   :         :           :                
-nCE                          : 74        : input  :                   :         :           :                
-DCLK                         : 75        : bidir  :                   :         :           :                
-DATA0                        : 76        : input  :                   :         :           :                
-GND*                         : 77        :        :                   :         :           :                
-GND*                         : 78        :        :                   :         :           :                
-GND*                         : 79        :        :                   :         :           :                
-GND*                         : 80        :        :                   :         :           :                
-c                            : 81        : output : LVTTL/LVCMOS      :         :           : N              
-GND*                         : 82        :        :                   :         :           :                
-VCC_IO                       : 83        : power  :                   : 3.3V    :           :                
-y[6]                         : 84        : output : LVTTL/LVCMOS      :         :           : N              
-GND*                         : 85        :        :                   :         :           :                
-ak[5]                        : 86        : output : LVTTL/LVCMOS      :         :           : N              
-d_bus[3]                     : 87        : output : LVTTL/LVCMOS      :         :           : N              
-GND_INT                      : 88        : gnd    :                   :         :           :                
-GND+                         : 89        :        :                   :         :           :                
-GND+                         : 90        :        :                   :         :           :                
-GND+                         : 91        :        :                   :         :           :                
-VCC_INT                      : 92        : power  :                   : 2.5V    :           :                
-d_bus[0]                     : 93        : output : LVTTL/LVCMOS      :         :           : N              
-x[1]                         : 94        : output : LVTTL/LVCMOS      :         :           : N              
-GND_INT                      : 95        : gnd    :                   :         :           :                
-x[2]                         : 96        : output : LVTTL/LVCMOS      :         :           : N              
-x[5]                         : 97        : output : LVTTL/LVCMOS      :         :           : N              
-y[5]                         : 98        : output : LVTTL/LVCMOS      :         :           : N              
-k[13]                        : 99        : output : LVTTL/LVCMOS      :         :           : N              
-TCK                          : 100       : input  :                   :         :           :                
+GND+                         : 1         :        :                   :         :           :                
+GND+                         : 2         :        :                   :         :           :                
+wreg                         : 3         : output : TTL               :         :           : N              
+VCC_INT                      : 4         : power  :                   : 5.0V    :           :                
+ak[1]                        : 5         : output : TTL               :         :           : N              
+d_bus[2]                     : 6         : output : TTL               :         :           : N              
+y[5]                         : 7         : output : TTL               :         :           : N              
+x[5]                         : 8         : output : TTL               :         :           : N              
+x[6]                         : 9         : output : TTL               :         :           : N              
+d_bus[4]                     : 10        : output : TTL               :         :           : N              
+y[6]                         : 11        : output : TTL               :         :           : N              
+DATA0                        : 12        : input  :                   :         :           :                
+DCLK                         : 13        : bidir  :                   :         :           :                
+nCE                          : 14        : input  :                   :         :           :                
+TDI                          : 15        : input  :                   :         :           :                
+d_bus[3]                     : 16        : output : TTL               :         :           : N              
+k[6]                         : 17        : output : TTL               :         :           : N              
+k[14]                        : 18        : output : TTL               :         :           : N              
+k[1]                         : 19        : output : TTL               :         :           : N              
+VCC_INT                      : 20        : power  :                   : 5.0V    :           :                
+z                            : 21        : output : TTL               :         :           : N              
+k[3]                         : 22        : output : TTL               :         :           : N              
+k[7]                         : 23        : output : TTL               :         :           : N              
+ak[5]                        : 24        : output : TTL               :         :           : N              
+ak[7]                        : 25        : output : TTL               :         :           : N              
+GND_INT                      : 26        : gnd    :                   :         :           :                
+ak[0]                        : 27        : output : TTL               :         :           : N              
+ak[2]                        : 28        : output : TTL               :         :           : N              
+k[4]                         : 29        : output : TTL               :         :           : N              
+k[5]                         : 30        : output : TTL               :         :           : N              
+MSEL0                        : 31        : input  :                   :         :           :                
+MSEL1                        : 32        : input  :                   :         :           :                
+VCC_INT                      : 33        : power  :                   : 5.0V    :           :                
+nCONFIG                      : 34        : input  :                   :         :           :                
+ak[3]                        : 35        : output : TTL               :         :           : N              
+k[13]                        : 36        : output : TTL               :         :           : N              
+c                            : 37        : output : TTL               :         :           : N              
+k[2]                         : 38        : output : TTL               :         :           : N              
+d_bus[5]                     : 39        : output : TTL               :         :           : N              
+VCC_INT                      : 40        : power  :                   : 5.0V    :           :                
+GND_INT                      : 41        : gnd    :                   :         :           :                
+GND+                         : 42        :        :                   :         :           :                
+clk                          : 43        : input  : TTL               :         :           : N              
+GND+                         : 44        :        :                   :         :           :                
+VCC_INT                      : 45        : power  :                   : 5.0V    :           :                
+GND_INT                      : 46        : gnd    :                   :         :           :                
+k[11]                        : 47        : output : TTL               :         :           : N              
+y[7]                         : 48        : output : TTL               :         :           : N              
+x[7]                         : 49        : output : TTL               :         :           : N              
+y[4]                         : 50        : output : TTL               :         :           : N              
+d_bus[6]                     : 51        : output : TTL               :         :           : N              
+d_bus[1]                     : 52        : output : TTL               :         :           : N              
+d_bus[0]                     : 53        : output : TTL               :         :           : N              
+x[0]                         : 54        : output : TTL               :         :           : N              
+nSTATUS                      : 55        : bidir  :                   :         :           :                
+TRST                         : 56        : input  :                   :         :           :                
+TMS                          : 57        : input  :                   :         :           :                
+x[3]                         : 58        : output : TTL               :         :           : N              
+x[4]                         : 59        : output : TTL               :         :           : N              
+k[8]                         : 60        : output : TTL               :         :           : N              
+y[2]                         : 61        : output : TTL               :         :           : N              
+y[3]                         : 62        : output : TTL               :         :           : N              
+VCC_INT                      : 63        : power  :                   : 5.0V    :           :                
+ak[6]                        : 64        : output : TTL               :         :           : N              
+ak[4]                        : 65        : output : TTL               :         :           : N              
+k[10]                        : 66        : output : TTL               :         :           : N              
+wmem                         : 67        : output : TTL               :         :           : N              
+GND_INT                      : 68        : gnd    :                   :         :           :                
+k[12]                        : 69        : output : TTL               :         :           : N              
+k[15]                        : 70        : output : TTL               :         :           : N              
+k[0]                         : 71        : output : TTL               :         :           : N              
+y[0]                         : 72        : output : TTL               :         :           : N              
+x[2]                         : 73        : output : TTL               :         :           : N              
+TDO                          : 74        : output :                   :         :           :                
+nCEO                         : 75        : output :                   :         :           :                
+CONF_DONE                    : 76        : bidir  :                   :         :           :                
+TCK                          : 77        : input  :                   :         :           :                
+k[9]                         : 78        : output : TTL               :         :           : N              
+x[1]                         : 79        : output : TTL               :         :           : N              
+y[1]                         : 80        : output : TTL               :         :           : N              
+n                            : 81        : output : TTL               :         :           : N              
+GND_INT                      : 82        : gnd    :                   :         :           :                
+d_bus[7]                     : 83        : output : TTL               :         :           : N              
+GND+                         : 84        :        :                   :         :           :                
