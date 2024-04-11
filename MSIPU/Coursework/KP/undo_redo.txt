@@ -1,0 +1,145 @@
+MED
+B:\study\labs8\MSIPU\Coursework\KP\test.mif
+
+	Undo Commands
+	     1.	Paste from Clipboard
+	     2.	Paste from Clipboard
+	     3.	Paste from Clipboard
+	     4.	Cells
+	     5.	Cells
+	     6.	Cells
+	     7.	Paste from Clipboard
+	     8.	Paste from Clipboard
+
+
+MED
+B:\study\labs8\MSIPU\Coursework\KP\ex5.mif
+
+	Undo Commands
+	     1.	Cells
+	     2.	Cells
+	     3.	Cells
+	     4.	Cells
+	     5.	Cells
+	     6.	Cells
+	     7.	Cells
+
+
+GED
+
+	Undo Commands
+	     1.	Move
+	     2.	Move
+	     3.	Move
+	     4.	Move
+	     5.	Properties
+	     6.	Resize
+	     7.	Insert Bus
+	     8.	Move
+	     9.	Delete
+	    10.	Delete
+	    11.	Delete
+	    12.	Update Symbol or Block
+	    13.	Update Symbol or Block
+	    14.	Properties
+	    15.	Move
+	    16.	Properties
+	    17.	Insert Bus
+	    18.	Move
+	    19.	Move
+	    20.	Move
+	    21.	Move
+	    22.	Move
+	    23.	Move
+	    24.	Move
+	    25.	Resize
+	    26.	Move
+	    27.	Move
+	    28.	Insert Bus
+	    29.	Insert Bus
+	    30.	Update Symbol or Block
+	    31.	Move
+	    32.	Move
+	    33.	Move
+	    34.	Move
+	    35.	Move
+	    36.	Properties
+	    37.	Insert Bus
+	    38.	Insert Bus
+	    39.	Move
+	    40.	Move
+	    41.	Move
+	    42.	Move
+	    43.	Move
+	    44.	Move
+	    45.	Move
+	    46.	Move
+	    47.	Move
+	    48.	Delete
+	    49.	Resize
+	    50.	Resize
+	    51.	Move
+	    52.	Move
+	    53.	Resize
+	    54.	Move
+	    55.	Move
+	    56.	Move
+	    57.	Move
+	    58.	Move
+	    59.	Move
+	    60.	Resize
+	    61.	Move
+	    62.	Move
+	    63.	Resize
+	    64.	Resize
+	    65.	Move
+	    66.	Move
+	    67.	Insert Symbol
+	    68.	Move
+	    69.	Move
+	    70.	Move
+	    71.	Move
+	    72.	Move
+	    73.	Move
+	    74.	Move
+	    75.	Move
+	    76.	Move
+	    77.	Move
+	    78.	Move
+	    79.	Move
+	    80.	Move
+	    81.	Move
+	    82.	Move
+	    83.	Move
+	    84.	Move
+	    85.	Update Symbol or Block
+	    86.	Delete
+	    87.	Delete
+	    88.	Delete Insert
+	    89.	Delete
+	    90.	Delete
+	    91.	Delete
+	    92.	Delete
+	    93.	Update Symbol or Block
+	    94.	Properties
+	    95.	Insert Bus
+	    96.	Properties
+	    97.	Insert Bus
+	    98.	Properties
+	    99.	Insert Bus
+	   100.	Properties
+
+
+WED
+
+	Undo Commands
+	     1.	Delete Node, Bus or Waveform Divider
+	     2.	Insert Node or Bus
+
+
+RPW
+
+	Undo Commands
+	     1.	||Compilation Report||Flow Summary
+
+

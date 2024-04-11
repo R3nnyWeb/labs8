@@ -1,11 +1,16 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="KP_8">
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|alu:inst12|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_sjh.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|alu:inst12|lpm_add_sub:Add2" CBX_FILE_NAME="add_sub_sjh.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|alu:inst12|lpm_add_sub:Add4" CBX_FILE_NAME="add_sub_gnh.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|alu:inst12|lpm_add_sub:Add1" CBX_FILE_NAME="add_sub_4lh.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|alu:inst12|lpm_add_sub:Add3" CBX_FILE_NAME="add_sub_4lh.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|alu:inst12|lpm_add_sub:Add5" CBX_FILE_NAME="add_sub_mch.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|alu:inst12|lpm_divide:Div0" CBX_FILE_NAME="lpm_divide_m1m.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|alu:inst12|lpm_mult:Mult0" CBX_FILE_NAME="mult_1h01.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|alu:inst12|lpm_mult:Mult0|mult_1h01:auto_generated|lpm_add_sub:op_2" CBX_FILE_NAME="add_sub_t8h.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|alu:inst12|lpm_add_sub:Add0" CBX_FILE_NAME="add_sub_sjh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|alu:inst12|lpm_add_sub:Add4" CBX_FILE_NAME="add_sub_gnh.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|alu:inst12|lpm_mult:Mult0|mult_1h01:auto_generated|lpm_add_sub:op_1" CBX_FILE_NAME="add_sub_v8h.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|cpu|alu:inst12|lpm_mult:Mult0|mult_1h01:auto_generated|lpm_add_sub:op_5" CBX_FILE_NAME="add_sub_19h.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

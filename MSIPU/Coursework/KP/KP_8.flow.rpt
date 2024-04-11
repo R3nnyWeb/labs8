@@ -1,5 +1,5 @@
 Flow report for KP_8
-Sat Apr 06 06:08:05 2024
+Wed Apr 10 11:05:47 2024
 Quartus II Version 8.1 Build 163 10/28/2008 SJ Web Edition
 
 
@@ -38,16 +38,16 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; Flow Summary                                                      ;
 +-------------------------+-----------------------------------------+
-; Flow Status             ; Successful - Sat Apr 06 06:08:05 2024   ;
+; Flow Status             ; Successful - Wed Apr 10 11:05:47 2024   ;
 ; Quartus II Version      ; 8.1 Build 163 10/28/2008 SJ Web Edition ;
 ; Revision Name           ; KP_8                                    ;
 ; Top-level Entity Name   ; cpu                                     ;
 ; Family                  ; FLEX10K                                 ;
 ; Met timing requirements ; No                                      ;
-; Total logic elements    ; 303 / 576 ( 53 % )                      ;
-; Total pins              ; 54 / 59 ( 92 % )                        ;
-; Total memory bits       ; 384 / 6,144 ( 6 % )                     ;
-; Device                  ; EPF10K10LC84-3                          ;
+; Total logic elements    ; 791 / 1,152 ( 69 % )                    ;
+; Total pins              ; 54 / 102 ( 53 % )                       ;
+; Total memory bits       ; 4,224 / 12,288 ( 34 % )                 ;
+; Device                  ; EPF10K20TC144-3                         ;
 ; Timing Models           ; Final                                   ;
 +-------------------------+-----------------------------------------+
 
@@ -57,7 +57,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/06/2024 06:07:57 ;
+; Start date & time ; 04/10/2024 11:05:32 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; KP_8                ;
 +-------------------+---------------------+
@@ -68,7 +68,7 @@ applicable agreement for further details.
 +------------------------------------+---------------------------------------------+------------------------------+-------------+----------------+
 ; Assignment Name                    ; Value                                       ; Default Value                ; Entity Name ; Section Id     ;
 +------------------------------------+---------------------------------------------+------------------------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID              ; 9447194415088.171237287715268               ; --                           ; --          ; --             ;
+; COMPILER_SIGNATURE_ID              ; 9447194415088.171273633215632               ; --                           ; --          ; --             ;
 ; FITTER_EFFORT                      ; Standard Fit                                ; Auto Fit                     ; --          ; --             ;
 ; INCREMENTAL_COMPILATION            ; Off                                         ; FULL_INCREMENTAL_COMPILATION ; --          ; --             ;
 ; IP_TOOL_NAME                       ; LPM_ROM                                     ; --                           ; --          ; --             ;
@@ -91,11 +91,11 @@ applicable agreement for further details.
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:02     ; 1.0                     ; 223 MB              ; 00:00:01                           ;
-; Fitter                  ; 00:00:03     ; 1.0                     ; 203 MB              ; 00:00:03                           ;
-; Assembler               ; 00:00:00     ; 1.0                     ; 195 MB              ; 00:00:00                           ;
-; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 164 MB              ; 00:00:00                           ;
-; Total                   ; 00:00:05     ; --                      ; --                  ; 00:00:04                           ;
+; Analysis & Synthesis    ; 00:00:05     ; 1.0                     ; 228 MB              ; 00:00:02                           ;
+; Fitter                  ; 00:00:06     ; 1.0                     ; 207 MB              ; 00:00:04                           ;
+; Assembler               ; 00:00:00     ; 1.0                     ; 197 MB              ; 00:00:00                           ;
+; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 168 MB              ; 00:00:00                           ;
+; Total                   ; 00:00:11     ; --                      ; --                  ; 00:00:06                           ;
 +-------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

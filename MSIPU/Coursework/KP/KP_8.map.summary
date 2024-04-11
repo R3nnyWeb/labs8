@@ -1,8 +1,8 @@
-Analysis & Synthesis Status : Successful - Sat Apr 06 06:07:59 2024
+Analysis & Synthesis Status : Successful - Wed Apr 10 11:05:37 2024
 Quartus II Version : 8.1 Build 163 10/28/2008 SJ Web Edition
 Revision Name : KP_8
 Top-level Entity Name : cpu
 Family : FLEX10K
-Total logic elements : 303
+Total logic elements : 791
 Total pins : 54
-Total memory bits : 384
+Total memory bits : 4,224

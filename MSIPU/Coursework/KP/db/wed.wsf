@@ -24,9 +24,9 @@ VECTOR("B:/study/labs8/MSIPU/Coursework/KP/ex1.vwf")
 {
 	ZOOM{
 		ZBEGIN = 0;
-		ZEND = 5000000;
-		NUMERATOR = 1048;
-		DENOMINATOR = 5000000;
+		ZEND = 2500000;
+		NUMERATOR = 1107;
+		DENOMINATOR = 2500000;
 		TOP_INDEX = 0;
 	}
 	CLOCK{
@@ -493,16 +493,32 @@ VECTOR("B:/study/labs8/MSIPU/Coursework/KP/ex1.vwf")
 		VISIBLE = Y;
 		FLAG = N;
 	}
+	LINE{
+		SIGNAL = "wreg";
+		INDEX = 57;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "wmem";
+		INDEX = 58;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
 }
 
 VECTOR("B:/study/labs8/MSIPU/Coursework/KP/db/KP_8.sim.cvwf")
 {
 	ZOOM{
 		ZBEGIN = 0;
-		ZEND = 5000000;
-		NUMERATOR = 994;
-		DENOMINATOR = 5000000;
-		TOP_INDEX = 27;
+		ZEND = 3271902;
+		NUMERATOR = 1100;
+		DENOMINATOR = 3271902;
+		TOP_INDEX = 1;
 	}
 	CLOCK{
 		PERIOD = 100000;
@@ -963,6 +979,22 @@ VECTOR("B:/study/labs8/MSIPU/Coursework/KP/db/KP_8.sim.cvwf")
 	LINE{
 		SIGNAL = "c";
 		INDEX = 56;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "wreg";
+		INDEX = 57;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "wmem";
+		INDEX = 58;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;

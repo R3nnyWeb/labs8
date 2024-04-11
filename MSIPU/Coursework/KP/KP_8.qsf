@@ -52,3 +52,6 @@ set_global_assignment -name ADD_DEFAULT_PINS_TO_SIMULATION_OUTPUT_WAVEFORMS OFF
 set_global_assignment -name MIF_FILE test_sample.mif
 set_global_assignment -name MIF_FILE ex2.mif
 set_global_assignment -name MIF_FILE ex3.mif
+set_global_assignment -name MIF_FILE ex5.mif
+set_global_assignment -name VERILOG_FILE shifter.v
+set_global_assignment -name MIF_FILE ex4.mif

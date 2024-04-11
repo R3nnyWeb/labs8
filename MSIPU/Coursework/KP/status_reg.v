@@ -5,6 +5,6 @@ output z; reg z;
 output c; reg c;
 always @ (posedge clk)
 if (wreg==1) begin
-	n=nl; z=zl; c=cl ; 
+	n<=nl; z<=zl; c<=cl ; 
 end
 endmodule
